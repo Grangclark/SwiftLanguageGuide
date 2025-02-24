@@ -38,3 +38,18 @@ welcomeMessage = "Hello"
 // １行の中で、同じ型の複数の変数をカンマで区切って定義することもできます。
 // この際、型注釈は最後の変数の後に 1 つ付けます。
 var red, green, blue: Double
+
+
+// 2025/02/24[月]
+// 定数と変数の命名(Naming Constants and Variables)
+// 定数名と変数名には、Unicode 文字も含めた、ほとんどの文字を含めることができます
+let π = 3.14159
+let 你好 = "你好世界"
+let 🐶🐮 = "dogcow"
+
+var friendlyWelcome = "Hello!"
+friendlyWelcome = "Bonjour!"
+
+let languageName = "Swift"
+// languageName = "Swift++"
+// コンパイルエラー: languageName は変更できません
