@@ -53,3 +53,46 @@ friendlyWelcome = "Bonjour!"
 let languageName = "Swift"
 // languageName = "Swift++"
 // コンパイルエラー: languageName は変更できません
+
+
+// 2025/03/05[水]
+// 定数と変数の出力(Printing Constants and Variables)
+print(friendlyWelcome)
+// Bonjour!
+
+
+// 変数をプレースホルダとして使用
+print("The current value of friendlyWelcome is \(friendlyWelcome)")
+
+
+// セミコロン(Semicolons)
+// Swift ではコードの 1 つ 1 つの宣言の最後に、セミコロン(;)を付ける必要がありません
+// 一方で、1 行に複数のステートメントを書きたい場合は必要になります。
+let cat = "🐱"; print(cat)
+
+
+// 整数(Integers)
+// 整数は小数点のない整数値を全部含みます(42、-23 など)。
+// 整数とは符号付き(正の値、または 0、または負の値) または符号なし(正の値、または 0) です
+
+
+// Int
+// 整数値のサイズを特定する必要はありません。
+// Swift はプラットフォームに応じて決まるサイズと同じサイズをもつ Int という型を提供しています。
+// 32 ビットのプラットフォームの場合、Int は Int32 と等しい
+// 64 ビットのプラットフォームの場合、Int は Int64 と等しい
+// 32 ビットのプラットフォームでは、Int は -2,147,483,648 から
+// 2,147,483,647 まで保持することができます。
+// これは整数値が使われる多くの場合において、十分に大きい範囲です。
+
+
+// 浮動小数点数(Floating-Point Numbers)
+// 浮動小数点数は、は、小数部分を持つ数値です(3.14159, 0.1, -273.15 など)
+// Double は 64 ビットの浮動小数点数を表します
+// Float は 32 ビットの浮動小数点数を表します
+
+
+// 型安全と型推論(Type Safety and Type Inference)
+// Swiftは型安全な言語です。型安全な言語は、扱っている値の型を明確にします。
+// String が必要な場合に、間違って Int を渡すようなことはありません。
+
