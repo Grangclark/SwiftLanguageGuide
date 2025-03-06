@@ -96,3 +96,31 @@ let cat = "🐱"; print(cat)
 // Swiftは型安全な言語です。型安全な言語は、扱っている値の型を明確にします。
 // String が必要な場合に、間違って Int を渡すようなことはありません。
 
+
+// 2025/03/06[木]
+// 数値リテラル(Numeric Literals)
+// 17 という 10 進数を下記のように保持します
+let decimalInteger = 17
+let binaryInteger = 0b10001       // 17 は２進数表記
+let octalInteger = 0o21           // 17 は8進数表記
+let hexadecimalInteger = 0x11     // 17 は16進数表記
+
+// 下記の浮動小数点数は、全て 12.1875 という 10 進数を表しています。
+let decimalDouble = 12.1875
+let exponentDouble = 1.21875e1
+let hexadecimalDouble = 0xC.3p0
+
+// 数値型の変換(Numeric Type Conversion)
+// 整数の変換(Integer Conversion)
+// 整数と浮動小数点数の変換(Integer and Floating-Point Conversion)
+// 整数値と浮動小数点数の変換は明示的に行わなければなりません
+let three = 3
+let pointOneFourOneFiveNine = 0.14159
+let pi = Double(three) + pointOneFourOneFiveNine
+// pi は 3.14159 で Double 型と推論されます
+// 定数 3 の値が Double 型の新しい値を作って使われています。
+// そのため、両方の型が同じになり、足し算が可能です。変換をしない場合、足し算はできません。
+
+// タイプエイリアス(Type Aliases)
+// タイプエイリアス(Type Aliases)は既存の型に別の名前を定義します。typealias キーワードを使います。
+// （よくわからん・・・）
