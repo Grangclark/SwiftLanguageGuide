@@ -145,20 +145,112 @@ if turnipsAreDelicious {
 
 // Swiftは、型安全なので、Bool 以外の値を Bool として使うことはできません。
 // 次の例はコンパイルエラーになります
+/*
 let i = 1
 if i {
     // この例はコンパイルされず、エラーになります
 }
-
+*/
+ 
+/*
 // 一方で、次の例は問題ありません
 let i = 1
 if i == 1 {
     // コンパイルできます
 }
-
 // i == 1 の比較結果は Bool なので、型チェックを通過できます
+*/
 
 
+// 2025/03/07[金] 続き
+// タプル(Tuples)
+// タプル(Tuples)は、複数の値を 1 つのまとまりにグループ化します。
+// タプル内の値にはどんな型も入れることができ、全ての型を同じにする必要はありません
+let http404Error = (404, "Not Found")
+// http404Error は (Int, String)型で (404, "Not Found")と等しい
+
+// タプルは、任意の順序で、異なる任意の型を組み合わせることができます。
+// 例えば、(Int, Int, Int) や (String, Bool) 型のタプルも作ることができますし、必要に応じて順番の入れ替えも可能です。
+// タプルの個々の内容をそれぞれ定数や変数に分けて扱うこともでき、他の値と同じようにアクセスすることができます:
+let (statusCode, statusMessage) = http404Error
+print("The status code is \(statusCode)")
+// The status code is 404
+print("The status message is \(statusMessage)")
+// The status message is Not Found
+
+// もしタプルの一部だけが必要な場合、タプルを展開するときに、アンダースコア(_)を使用して無視することができます。
+let (justTheStatusCode, _) = http404Error
+print("The status code is \(justTheStatusCode)")
+// The status code is 404
+
+// 各値へのアクセス方法としては、0 から始まるインデックスを使用することもできます
+print("The status code is \(http404Error.0)")
+// The status code is 404
+print("The status message is \(http404Error.1)")
+// The status message is Not Found
+
+// タプルの定義時に、名前を付けることもできます
+let http200Status = (statusCode: 200, description: "OK")
+
+// 名前を付けた場合、その名前を使用して各値へアクセスすることができます
+print("The status code is \(http200Status.statusCode)")
+// The status code is 200
+print("The status message is \(http200Status.description)")
+// The status message is OK
 
 
+// オプショナル(Optionals)
+// オプショナルは、値が存在しないかもしれないときに使用します。
+// オプショナルは 2 つの可能性を表します:
+// 指定された型の値が存在してアンラップすることで値にアクセスすることができる、
+// もしくは、値が全く存在しない
 
+// 下記の例は String を Int へ変換するイニシャライザの例です
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+// convertedNumber の型は 「Optional<Int>」 です。
+
+// オプショナル型を記述するには、オプショナルが含む型の名前の後に疑問符( ? ) を書きます。
+// 例えば、オプショナルな Int の型は Int? です。
+// オプショナルな Int は常にある Int の値を含むか、 nil かのどちらかです。
+
+// デフォルトで値を与えずにオプショナルな変数を定義した場合、その変数には自動で nil が設定されます
+var surveyAnswer: String?
+// surveyAnswer には自動で nil が設定されます
+
+// if文を使用してオプショナル値を nil と比較することで、
+// 値を含んでいるかどうかのチェックができます。
+// この比較は、等しい(==)または等しくない(!=)演算子を使用して行います。
+if convertedNumber != nil {
+    print("convertedNumber contains some integer value.")
+}
+// convertedNumber contains some integer value.
+
+
+// オプショナルバインディング(Optional Binding)
+// オプショナル値に、オプショナルバインディングを使用して、値を含んでいるかどうかを判定できます。
+
+// 上記の例で出てきたの例で出てきた possibleNumber は、強制アンラップの代わりに、
+// オプショナルバインディングを使用して書き換えることができます
+if let actualNumber = Int(possibleNumber) {
+    print("The string \(possibleNumber) has an integer value of \(actualNumber)")
+} else {
+    print("The string \(possibleNumber) couldn't be converted to an integer")
+}
+// The string 123 has an integer value of 123
+
+// １つのif 文の中に、複数のオプショナルバインディングとブール値をカンマ(,)区切りで含めることができます
+// そのうちのいずれかが nil または false の場合、if 文全体が false と判断されます。次の if 文はこれに該当します
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+// 4 < 42 < 100
+
+if let firstNumber = Int("4") {
+    if let secondNumber = Int("42") {
+        if firstNumber < secondNumber && secondNumber < 100 {
+            print("\(firstNumber) < \(secondNumber) < 100")
+        }
+    }
+}
+// 4 < 42 < 100
