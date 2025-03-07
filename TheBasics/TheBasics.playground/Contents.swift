@@ -124,3 +124,41 @@ let pi = Double(three) + pointOneFourOneFiveNine
 // タイプエイリアス(Type Aliases)
 // タイプエイリアス(Type Aliases)は既存の型に別の名前を定義します。typealias キーワードを使います。
 // （よくわからん・・・）
+
+
+// 2025/03/07[金]
+// ブール値(Booleans)
+// Swiftは、Bool と呼ばれる基本的なブール値を持っています。
+// ブール値は、真(true)か偽(false)のみを値として取ることから、
+// 論理値(logical)として参照されます。
+// Swift では true と false の 2 つのブールの定数を提供しています。
+let orangesAreOrange = true
+let turnipsAreDelicious = false
+
+// ブール値は、条件文を扱う際にとても有効です。例えば、if 文など
+if turnipsAreDelicious {
+    print("Mmm, tasty turnips!")
+} else {
+    print("Eww, turnips are horrible.")
+}
+// Eww, turnips are horrible.
+
+// Swiftは、型安全なので、Bool 以外の値を Bool として使うことはできません。
+// 次の例はコンパイルエラーになります
+let i = 1
+if i {
+    // この例はコンパイルされず、エラーになります
+}
+
+// 一方で、次の例は問題ありません
+let i = 1
+if i == 1 {
+    // コンパイルできます
+}
+
+// i == 1 の比較結果は Bool なので、型チェックを通過できます
+
+
+
+
+
