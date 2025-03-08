@@ -1,6 +1,6 @@
 import UIKit
 
-var greeting = "Hello, playground"
+// var greeting = "Hello, playground"
 
 // 2025/02/23[日]
 // 整数のための Int、浮動小数点の値のための Double、真偽値のための Bool、文字列のための String を含む、
@@ -206,8 +206,11 @@ print("The status message is \(http200Status.description)")
 // もしくは、値が全く存在しない
 
 // 下記の例は String を Int へ変換するイニシャライザの例です
-let possibleNumber = "123"
-let convertedNumber = Int(possibleNumber)
+
+// let possibleNumber = "123"
+
+// let convertedNumber = Int(possibleNumber)
+
 // convertedNumber の型は 「Optional<Int>」 です。
 
 // オプショナル型を記述するには、オプショナルが含む型の名前の後に疑問符( ? ) を書きます。
@@ -232,11 +235,15 @@ if convertedNumber != nil {
 
 // 上記の例で出てきたの例で出てきた possibleNumber は、強制アンラップの代わりに、
 // オプショナルバインディングを使用して書き換えることができます
+
+/*
 if let actualNumber = Int(possibleNumber) {
     print("The string \(possibleNumber) has an integer value of \(actualNumber)")
 } else {
     print("The string \(possibleNumber) couldn't be converted to an integer")
 }
+ */
+ 
 // The string 123 has an integer value of 123
 
 // １つのif 文の中に、複数のオプショナルバインディングとブール値をカンマ(,)区切りで含めることができます
@@ -254,3 +261,78 @@ if let firstNumber = Int("4") {
     }
 }
 // 4 < 42 < 100
+
+
+// 2025/03/08[土]
+// フォールバック値の提供(Providing a Fallback Value)
+// 欠如している値を処理する別の方法は、
+// nil 結合演算子( ?? ) を使用してデフォルトの値を提供することです。
+// ?? の左側のオプショナル値が nil でなければ、その値はアンラップされて使用されます。
+// それ以外の場合、 ?? の右側の値が使用されます。
+let name: String? = nil
+let greeting = "Hello, " + (name ?? "friend") + "!"
+print(greeting)
+// Hello, friend!
+
+// 強制アンラップ(Force Unwrapping)
+// nil がプログラマのエラーや破損した状態などの回復不可能な失敗を表す場合、
+// オプショナル値の名前の末尾に感嘆符( ! )を追加することで、その基本の値にアクセスすることができます。
+
+// 強制アンラップ（Forced Unwrapping） とは、オプショナル（Optional<T>）に格納された値を ! を使って 強制的に取り出す 方法です。
+// ただし、値が nil の場合は クラッシュ（runtime error） する危険があります。
+
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+
+// アプローチ①
+// ! を使って 強制的にアンラップ し、Int 型の number を取得する
+// convertedNumber が nil の場合、プログラムは クラッシュ（fatal error） する
+let number = convertedNumber!
+
+// アプローチ②
+// guard let を使うことで、convertedNumber が nil の場合は即座にエラーメッセージを出して終了 するようにしている
+guard let number = convertedNumber else {
+    fatalError("The number was invalid")
+}
+
+
+// 暗黙アンラップオプショナル(Implicitly Unwrapped Optionals)
+// オプショナルに一度値が設定された後は必ず値が存在するということが明らかなこともあります。
+// このような場合、常に値があることはわかっているので、アクセスする度にオプショナル値のチェックとアンラップすることを省略できれば便利です。
+
+// ? の代わりに ! を型の後に付けることで、暗黙アンラップオプショナルを書くことができます(String? の代わりに String! と書くなど)
+let possibleString: String? = "An optional string."
+let forcedString: String = possibleString! // ! が必要
+
+// possibleString は String?（オプショナル型）
+// nil になる可能性がある。
+// そのまま String 型の変数 forcedString に代入できない。
+// possibleString! を使って強制アンラップ
+// possibleString に値が入っていれば、String 型として forcedString に代入できる。
+// でも、もし possibleString が nil だった場合、クラッシュする！
+
+let assumedString: String! = "An implicitly unwrapped optional string."
+let implicitString: String = assumedString // ! は自動的に不要になる
+
+// String!（暗黙的アンラップオプショナル）とは？
+// String?（普通のオプショナル）と似ているが、値を取り出すときに ! を明示的に書かなくてもOK！
+// assumedString は "ほぼ確実に nil じゃない" という前提で扱う。
+// implicitString に代入するとき、自動でアンラップされて String 型になる！
+// 何が違う？
+// String? は ! を使わないと String に変換できない。
+// String! は ! を使わなくても String 型として扱える。
+
+// 暗黙アンラップオプショナル値が nil かどうかのチェックは通常のオプショナル値と同じ方法でできます。
+if assumedString != nil {
+    print(assumedString!)
+}
+// An implicitly unwrapped optional string.
+
+// 暗黙アンラップオプショナルはオプショナルバインディングもできます。
+// 1 つの文の中で、チェックとアンラップができます。
+if let definiteString = assumedString {
+    print(definiteString)
+}
+// An implicitly unwrapped optional string.
+
+
