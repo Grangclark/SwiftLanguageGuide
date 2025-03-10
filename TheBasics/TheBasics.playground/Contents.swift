@@ -357,3 +357,34 @@ do {
     // エラーがスローされました
 }
 // doは新しいスコープを生成して、エラーを 1 つ以上の catch 句でキャッチすることができます。
+
+// これは複数のエラーに応答するためにエラーハンドリングを使った例です
+// 実際の処理は省略されていますが、サンドイッチを作る際に
+// 何らかのエラー（例えば、材料が足りない、皿がないなど）が発生する可能性があります
+func makeASandwich() throws {
+    // ...
+}
+// try を使うことで、「この関数はエラーをスローする可能性がある」ということを明示しています。
+// もし makeASandwich() が エラーをスローしなかった場合：
+// eatASandwich() が実行される（サンドイッチが無事に作られて食べられる）。
+// もし makeASandwich() が エラーをスローした場合：
+// eatASandwich() はスキップされ、対応する catch ブロックに処理が移る。
+do {
+    // throws を持つ関数は、エラーをスローする可能性があるため、try をつけて呼び出す必要がある。
+    try makeASandwich()
+    eatASandwich()
+  // もしエラーが "皿がない" (outOfCleanDishes) なら、washDishes() を実行し、皿を洗う。
+} catch SandwichError.outOfCleanDishes {
+    washDishes()
+  // もしエラーが "材料が足りない" (missingIngredients) なら、
+  // 不足している材料（ingredients）を取得し、
+  // それを buyGroceries(ingredients) に渡して買い物をする。
+} catch SandwichError.missingIngredients(let ingredients) {
+    buyGroceries(ingredients)
+}
+
+// スローされない場合、eatASandwich() 関数が呼ばれます。エラーがスローされ、
+// それが SandwichError.outOfCleanDishescase と合致する場合、washDishes() 関数が呼ばれます。
+// SandwichError.missingIngredients ケースに合致する場合、
+// buyGroceries(_:) 関数が catch でキャッチされた [String] 値をパラメータに呼び出されます。
+
