@@ -369,6 +369,8 @@ func makeASandwich() throws {
 // eatASandwich() が実行される（サンドイッチが無事に作られて食べられる）。
 // もし makeASandwich() が エラーをスローした場合：
 // eatASandwich() はスキップされ、対応する catch ブロックに処理が移る。
+
+/*
 do {
     // throws を持つ関数は、エラーをスローする可能性があるため、try をつけて呼び出す必要がある。
     try makeASandwich()
@@ -382,9 +384,32 @@ do {
 } catch SandwichError.missingIngredients(let ingredients) {
     buyGroceries(ingredients)
 }
+*/
 
 // スローされない場合、eatASandwich() 関数が呼ばれます。エラーがスローされ、
 // それが SandwichError.outOfCleanDishescase と合致する場合、washDishes() 関数が呼ばれます。
 // SandwichError.missingIngredients ケースに合致する場合、
 // buyGroceries(_:) 関数が catch でキャッチされた [String] 値をパラメータに呼び出されます。
 
+
+// 2025/03/13[木]
+// アサーションと事前条件(Assertions and Preconditions)
+// アサーションの基本構文
+// Swift の標準ライブラリの assert(::file:line:)関数を呼ぶことでアサーションを書くことができます。
+// true か false と評価される式と、false だった場合に出力するメッセージを式として渡すことができます。
+let age = -3
+assert(age >= 0, "A person's age can't be less than zero.")
+// -3 は >=0 ではないので、このアサーションは失敗する
+
+// この例では、age >= 0、つまり負の値ではない場合 true となり、コードは継続して実行されます。
+// 負の値の場合、age >= 0 は false となり、アサーションは失敗しアプリは終了します。
+
+// 既にチェック済みの条件に対してアサーションを呼び出したい場合、
+// assertionFailure(_:file:line:)関数を使用して、アサーションが失敗したことを示すことができます。
+if age > 10 {
+    print("You can ride the roller-coaster or the ferris wheel.")
+} else if age >= 0 {
+    print("You can ride the ferris wheel.")
+} else {
+    assertionFailure("A person's age can't be less than zero.")
+}
