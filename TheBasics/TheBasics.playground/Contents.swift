@@ -413,3 +413,14 @@ if age > 10 {
 } else {
     assertionFailure("A person's age can't be less than zero.")
 }
+
+// 2025/03/14[金]
+// 事前条件を強制する(Enforcing Preconditions)
+// false になる可能性があるものの、コードの実行を継続するためには必ず true にならなければならない条件に対しては、
+// 事前条件を使いましょう。
+// 例えば、サブスクリプトが範囲超えエラーを起こしていないかの確認や、適切な値を関数に渡しているかなどには、事前条件を使いましょう。
+
+/*
+// サブスクリプトの実装内で
+precondition(index > 0, "Index must be greater than zero.")
+*/
