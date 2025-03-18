@@ -55,3 +55,28 @@ let plusThree = -minusThree
 let minuSix = -6
 let alsoMinusSix = +minusSix
 
+
+// 2025/03/18[火]
+// 複合代入演算子(Compound Assignment Operators)
+// C言語と同様に、Swift の複合代入演算子は、代入演算子(=)と他の演算子を組み合わせることができます。
+// 1 つの例として、加算代入演算子(+=)があります
+var a = 1
+a += 2
+// a は 3 と等しい
+
+// 比較演算子(Comparison Operators)
+// Swift は、次の比較演算子をサポートしています。
+// ・等価演算子(a == b)
+// ・不等価演算子(a != b)
+// ・より大きい(a > b)
+// ・より小さい(a < b)
+// ・等しいかそれ以上(a >= b)
+// ・等しいかそれ以下(a <= b)
+
+// 比較演算子は、if などの条件文でよく使われます。
+let name = "world"
+if name == "world" {
+    print("こんにちは、world")
+} else {
+    print("ごめんなさい \(name)、あなただと気づきませんでした")
+}
