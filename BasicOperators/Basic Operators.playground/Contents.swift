@@ -93,3 +93,28 @@ if question {
 } else {
     answer2
 }
+
+
+// 2025/03/20[木]
+// 三項条件演算子(Ternary Conditional Operator) 続き
+// 下記の例は、table の行の高さを計算しています。
+// ヘッダーがある場合、行の高さは内容の高さよりも 50 ポイント高く、ない場合は、20 ポイント高くします。
+let contentHeight = 40
+let hasHeader = true
+let rowHeight = contentHeight + (hasHeader ? 50 : 20)
+// rowHeight は 90
+
+// 上記のコードは下記のショートカットです。
+let contentHeight = 40
+let hasHeader = true
+let rowHeight: Int
+if hasHeader {
+    rowHeight = contentHeight + 50
+} else {
+    rowHeight = contentHeight + 20
+}
+// rowHeight は 90
+// 三項条件演算子は 2 つの式のどちらが使われるのかを決める効率的なショートカットです。
+// しかし、三項条件演算子にも注意が必要です。
+// あまり使いすぎると可読性を損なう場合もあります。
+// 複数の三項条件演算子を 1 つのステートメントに含めることは避けましょう。
