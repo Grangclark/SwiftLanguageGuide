@@ -80,3 +80,16 @@ if name == "world" {
 } else {
     print("ごめんなさい \(name)、あなただと気づきませんでした")
 }
+
+
+// 2025/03/19[水]
+// 三項条件演算子(Ternary Conditional Operator)
+// 三項条件演算子は、question ? answer1 : answer2 という形式の、3 つの部分を持った特別な演算子です。
+// これは、question が true か false かを基に 2 つの式のどちらかを評価するショートカットです。
+// question が true ならば、answer1 が評価され、false だと answer2 が評価されます。
+// 三項条件演算子は下記のコードのショートカットです。
+if question {
+    answer1
+} else {
+    answer2
+}
