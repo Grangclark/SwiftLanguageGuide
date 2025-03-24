@@ -118,3 +118,31 @@ if hasHeader {
 // しかし、三項条件演算子にも注意が必要です。
 // あまり使いすぎると可読性を損なう場合もあります。
 // 複数の三項条件演算子を 1 つのステートメントに含めることは避けましょう。
+
+
+// 2025/03/24[月]
+// nil 合体演算子(Nil-Coalescing Operator)
+// (a ?? b) の nil 合体演算子は、オプショナルの a にもし値が存在すれば a をアンラップし、
+// a が nil の場合は b をデフォルトとして返します。
+// 式 a は常にオプショナル型です。式 b は a が内包する値の型と一致していなけばなりません。
+
+// nil 合体演算子は下記のコードのショートカットです。
+a != nil ? a! : b
+// 上記のコードは、三項条件演算子を使用して、
+// a が nil ではない場合は、
+// a が内包する値へアクセスするために強制アンラップ(a!)し、それ以外は b を返します。
+
+// 下記の例では、デフォルトのカラー名かユーザ定義のオプショナルなカラー名を選択するために、nil 合体演算子を使用しています。
+let defaultColorName = "red"
+var userDefinedColorName: String? // defaults は nil
+
+var colorNameToUse = userDefinedColorName ?? defaultColorName
+// userDefinedColorName が nil なので、colorNameToUse にデフォルトの"red"が設定されます
+
+// userDefinedColorName は、オプショナルの String として定義され、デフォルトは nil です。
+// userDefinedColorName はオプショナル型なので、
+// その値を検討するために、nil 合体演算子を使用することができます。
+// 上記の例では、colorNameToUse という
+// String 型の変数の初期値を決めるために nil 合体演算子を使用しています。
+// userDefinedColorName は nil なので、
+// 式 userDefinedColorName ?? defaultColorName は、defaultColorName、つまり "red" を返します。
