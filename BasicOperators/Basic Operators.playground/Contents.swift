@@ -146,3 +146,19 @@ var colorNameToUse = userDefinedColorName ?? defaultColorName
 // String 型の変数の初期値を決めるために nil 合体演算子を使用しています。
 // userDefinedColorName は nil なので、
 // 式 userDefinedColorName ?? defaultColorName は、defaultColorName、つまり "red" を返します。
+
+
+// 2025/03/25[火]
+// 範囲演算子(Range Operators)
+// Swiftは、値の範囲を表すショートカットとして複数の範囲演算子を提供しています。
+
+// 閉範囲演算子(Closed Range Operator)
+// a...b は、a から b までの連続した、a も b も含んだ範囲を定義します。a を b よりも大きい値にしてはいけません。
+for index in 1...5 {
+    print("\(index) x 5 は \(index * 5)")
+}
+// 1 x 5 は 5
+// 2 x 5 は 10
+// 3 x 5 は 15
+// 4 x 5 は 20
+// 5 x 5 は 25
