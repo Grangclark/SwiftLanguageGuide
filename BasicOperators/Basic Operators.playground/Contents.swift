@@ -172,7 +172,7 @@ for index in 1...5 {
 
 // 半開範囲演算子は、配列などの 0 ベースのリストで特に有用です。
 // 例えば、リストの要素数に順番にアクセスする場合などあります
-let names = ["Anna", "Alex", "Brian", "Jack"]
+// let names = ["Anna", "Alex", "Brian", "Jack"]
 let count = names.count
 for i in 0..<count {
     print("人物 \(i + 1) の名前は \(names[i])")
@@ -181,3 +181,39 @@ for i in 0..<count {
 // 人物２の名前は Alex
 // 人物３の名前は Brian
 // 人物４の名前は Jack
+
+
+// 2025/03/29[土]
+// 片側範囲演算子(One-Sided Ranges)
+// 閉範囲演算子は、1 つの方向へ可能な限り続く範囲に対して違った形式で書くことができます。
+// 例えば、ある配列のインデックス 2 から配列の最後までの要素を含んだ範囲などがこれに当たります。
+// これらの場合では、範囲演算子の片方の値を省略できます。
+// この種類の範囲は、片方しか値を持たないので、片側範囲と呼ばれています。
+let names = ["Anna", "Alex", "Brian", "Jack"]
+for name in names[2...] {
+    print(name)
+}
+// Brian
+// Jack
+
+for name in names[...2] {
+    print(name)
+}
+// Anna
+// Alex
+// Brian
+
+// 最後の値のみを書くことで、片側範囲の形式で半開範囲演算子を書くことができます。
+// 両側の値を書いたときと同様に、記載した最後の値は範囲に含まれません。
+for name in names[..<2] {
+    print(name)
+}
+// Anna
+// Alex
+
+// 片側範囲は、サブスクリプト以外の他のコンテキストでも使用することができます。
+let range = ...5
+range.contains(7)  // false
+range.contains(4)  // true
+range.contains(-1) // true
+
