@@ -217,3 +217,13 @@ range.contains(7)  // false
 range.contains(4)  // true
 range.contains(-1) // true
 
+
+// 2025/03/30[日]
+// 論理否定演算子(Logical NOT Operator)
+// !a のような論理否定演算子は、true を false に、false を true にブール値を反転させます。
+// 論理否定演算子は、操作する値の直前にスペースなしで付けます。
+let alloweEntry = false
+if !allowedEntry {
+    print("アクセス拒否")
+}
+
