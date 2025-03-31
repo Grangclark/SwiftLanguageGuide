@@ -227,3 +227,17 @@ if !allowedEntry {
     print("アクセス拒否")
 }
 
+
+// 2025/03/31[月]
+// 論理積演算子(Logical AND Operator)
+// a && b のような論理積演算子は、両方の値が true の場合に、全体の式も true になる論理式を作ります。
+// もしどちらかが false ならば、全体の式は false になります。
+let enteredDoorCode = true
+let passedRetinaScan = false
+if enteredDoorCode && passedRetinaScan {
+    print("こんにちは！")
+} else {
+    print("アクセス拒否")
+}
+// アクセス拒否
+
