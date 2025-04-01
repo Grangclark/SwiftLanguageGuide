@@ -254,3 +254,18 @@ if hasDoorKey || knowsOverridePassword {
 }
 // こんにちは！
 
+
+// 2025/04/02[水]
+// 論理演算子の合成(Combining Logical Operators)
+// let enteredDoorCode = true
+// let passedRetinaScan = false
+// let hasDoorKey = false
+// let knowsOverridePassword = true
+if enteredDoorCode && passedRetinaScan || hasDoorKey || knowsOverridePassword {
+    print("こんにちは！")
+} else {
+    print("アクセス拒否")
+}
+// こんにちは！
+// 最終的に、条件が一つでも満たされるため、結果は true となる！
+
