@@ -241,3 +241,16 @@ if enteredDoorCode && passedRetinaScan {
 }
 // アクセス拒否
 
+
+// 2025/04/01[火]
+// 論理和演算子(Logical OR Operator)
+// 片方の値が true の場合に、全体の式も true になる論理式を作ります。
+let hasDoorKey = false
+let knowsOverridePassword = true
+if hasDoorKey || knowsOverridePassword {
+    print("こんにちは！")
+} else {
+    print("アクセス拒否")
+}
+// こんにちは！
+
