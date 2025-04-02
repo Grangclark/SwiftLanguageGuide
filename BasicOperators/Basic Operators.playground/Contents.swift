@@ -269,3 +269,14 @@ if enteredDoorCode && passedRetinaScan || hasDoorKey || knowsOverridePassword {
 // こんにちは！
 // 最終的に、条件が一つでも満たされるため、結果は true となる！
 
+
+// 2025/04/03[木]
+// 明示的な括弧(Explicit Parentheses)
+// 厳密には必要ありませんが、複雑な式の意図を分かりやすくするために、括弧(())を使用すると有用なときがあります。
+if (enteredDoorCode && passedRetinaScan) || hasDoorKey || knowsOverridePassword {
+    print("こんにちは！")
+} else {
+    print("アクセス拒否")
+}
+// こんにちは！
+// 意図を明確にすることができるならば、括弧を使いましょう。
