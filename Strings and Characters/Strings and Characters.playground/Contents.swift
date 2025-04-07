@@ -30,3 +30,17 @@ let singleLineString = "These are the same."
 let multilineString = """
 These are the same.
 """
+
+
+// 2025/04/07[月]
+// もし改行が含まれている場合、文字列にも反映されます。
+// 改行を文字列の中に入れずに改行したい場合、
+// 行の最後にバックスラッシュ(\)を書きましょう:
+let softWrappedQuotation = """
+The White Rabbit put on his spectacles.  "Where shall I begin, \
+please your Majesty?" he asked.
+
+"Begin at the beginning," the King said gravely, "and go on \
+till you come to the end; then stop."
+"""
+
