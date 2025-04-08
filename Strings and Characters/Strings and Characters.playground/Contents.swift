@@ -54,3 +54,17 @@ It also ends with a line break.
 
 """
 
+
+// 2025/04/09[水]
+// 文字列内の特殊文字(Special Characters in String Literals)
+// 文字列リテラルには次の特殊文字が含まれています。
+
+// ・エスケープされた特殊文字 \0 (null文字)、\\ (バックスラッシュ)、\t (水平タブ)、\n (ラインフィード)、\r (キャリッジリターン)、\" (ダブルクォーテーション)、\' (シングルクォーテーション)
+// ・\u{n} で書ける任意の Unicode スカラ、ただし n には 1〜8 桁の 16 進数が入ります(Unicode については下記のUnicodeに書かれています)
+// 下記のコードは、4 つの特殊文字の例を示しています。wiseWords 定数は 2 つのエスケープされたダブルクォーテーションを含んでいます。
+// dollarSign と blackHeart と sparklingHeart 定数は、Unicode スカラの例です:
+let wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
+let dollarSign = "\u{24}"
+let blackHeart = "\u{2665}"
+let sparklingHeart = "\u{1F496}"
+
