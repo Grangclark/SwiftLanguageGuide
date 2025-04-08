@@ -44,3 +44,13 @@ please your Majesty?" he asked.
 till you come to the end; then stop."
 """
 
+
+// 2025/04/08[火]
+// 複数行文字列リテラルを改行で開始(終了)したい場合は、最初(最後)に空白の行を入れましょう。
+let lineBreaks = """
+
+This string stars with a line break.
+It also ends with a line break.
+
+"""
+
