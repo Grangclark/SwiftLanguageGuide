@@ -68,3 +68,12 @@ let dollarSign = "\u{24}"
 let blackHeart = "\u{2665}"
 let sparklingHeart = "\u{1F496}"
 
+
+// 2025/04/11[金]
+// リテラルは 1 つではなく 3 つのダブルクォーテーションを使用しているので、
+// 複数行文字列リテラルの中にエスケープなしでダブルクォーテーションを含めることができます。
+// 文字列にテキストとして """ を含めたい場合、少なくともその中の 1 つをエスケープしてください。
+let threeDoubleQuotationMarks = """
+Escaping the first quotation mark \"""
+Escaping all three quotation marks \"\"\"
+"""
