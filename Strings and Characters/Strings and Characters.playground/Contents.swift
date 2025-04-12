@@ -76,4 +76,12 @@ let sparklingHeart = "\u{1F496}"
 let threeDoubleQuotationMarks = """
 Escaping the first quotation mark \"""
 Escaping all three quotation marks \"\"\"
-"""
+
+
+// 拡張区切り文字(Extended String Delimiters)
+// 拡張区切り文字は複数文字列リテラルにも使用できます。
+// テキストとして """ を含めたい場合、文字列を終わらせる記号を変えましょう。例えば:
+let threeMoreDoubleQuotationMarks = #"""
+Here are three more double quotes: """
+"""#
+
