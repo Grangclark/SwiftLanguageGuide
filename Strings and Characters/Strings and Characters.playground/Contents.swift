@@ -94,3 +94,11 @@ Here are three more double quotes: """
 var emptyString = ""              // 空の文字列
 var anotherEmptyString = String() // イニシャライザ
 // ２つの変数はどちらも空の文字列で等しいです
+
+
+// 2025/04/14[月]
+// isEmpty というブール値のプロパティをチェックすることで String が空文字かどうかを判定できます。
+if emptyString.isEmpty {
+    print("Nothing to see here")
+}
+// Nothing to see here
