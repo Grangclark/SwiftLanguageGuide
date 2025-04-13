@@ -85,3 +85,12 @@ let threeMoreDoubleQuotationMarks = #"""
 Here are three more double quotes: """
 """#
 
+
+// 2025/04/13[日]
+// 空の文字列の作成(Initializing an Empty String)
+// 長い文字列を構築するときに、初期値として空の文字列を作るとき、
+// 文字列リテラルを変数に設定するか、
+// String のイニシャライザを使用して新しいインスタンスを初期化します。
+var emptyString = ""              // 空の文字列
+var anotherEmptyString = String() // イニシャライザ
+// ２つの変数はどちらも空の文字列で等しいです
