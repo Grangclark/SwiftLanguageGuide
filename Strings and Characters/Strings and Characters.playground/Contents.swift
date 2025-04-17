@@ -76,7 +76,7 @@ let sparklingHeart = "\u{1F496}"
 let threeDoubleQuotationMarks = """
 Escaping the first quotation mark \"""
 Escaping all three quotation marks \"\"\"
-
+"""
 
 // 拡張区切り文字(Extended String Delimiters)
 // 拡張区切り文字は複数文字列リテラルにも使用できます。
@@ -102,3 +102,15 @@ if emptyString.isEmpty {
     print("Nothing to see here")
 }
 // Nothing to see here
+
+
+// 2025/04/17[木]
+// 文字列の可変性(String Mutability)
+// String が変更可能かどうかは、変数(変更可能)か定数(変更不可能)のどちらに設定するかによって示すことができます:
+var variableString = "Horse"
+variableString += " and carriage"
+// variableString は "Horse and carriage"
+
+let constantString = "Highlander"
+// constantString += " and another Highlander"
+// コンパイルエラー - 定数は変更できません
