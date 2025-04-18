@@ -114,3 +114,19 @@ variableString += " and carriage"
 let constantString = "Highlander"
 // constantString += " and another Highlander"
 // コンパイルエラー - 定数は変更できません
+
+
+
+// 2025/04/18[金]
+// 文字配列の取扱(Working with Characters)
+// for-in ループを使用して文字列を繰り返し処理することで、
+// String の個々の Character にアクセスすることができます。
+for character in "Dog!🐶" {
+    print(character)
+}
+// D
+// o
+// g
+// !
+// 🐶
+
