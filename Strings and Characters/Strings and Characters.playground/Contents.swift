@@ -130,3 +130,10 @@ for character in "Dog!🐶" {
 // !
 // 🐶
 
+
+// 2025/04/19[土]
+// String は、Character の配列をイニシャライザの引数として渡して構築することができます:
+let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
+let catString = String(catCharacters)
+print(catString)
+// Cat!🐱
