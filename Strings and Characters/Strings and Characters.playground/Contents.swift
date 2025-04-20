@@ -137,3 +137,12 @@ let catCharacters: [Character] = ["C", "a", "t", "!", "🐱"]
 let catString = String(catCharacters)
 print(catString)
 // Cat!🐱
+
+
+// 2025/04/20[日]
+// 文字と文字列の連結(Concatenating Strings and Characters)
+// String 同士は、加算演算子(+)使用して新しい String を生成できます:
+let string1 = "hello"
+let string2 = " there"
+var welcome = string1 + string2
+// welcome は "hello there" と等しい
