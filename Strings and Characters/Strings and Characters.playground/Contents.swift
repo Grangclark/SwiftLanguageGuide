@@ -146,3 +146,11 @@ let string1 = "hello"
 let string2 = " there"
 var welcome = string1 + string2
 // welcome は "hello there" と等しい
+
+
+// 2025/04/21[月]
+// 加算代入演算子(+=)を使用して、既存の String 変数に String を追加することもできます:
+var instruction = "look over"
+instruction += string2
+// instruction は "look over there" と等しい
+
