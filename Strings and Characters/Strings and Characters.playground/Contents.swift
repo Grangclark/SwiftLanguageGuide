@@ -154,3 +154,10 @@ var instruction = "look over"
 instruction += string2
 // instruction は "look over there" と等しい
 
+
+// 2025/04/22[火]
+// String の append() メソッドを使用して Character を追加することもできます。
+let exclamationMark: Character = "!"
+welcome.append(exclamationMark)
+// welcome は "hello there!" と等しい
+
