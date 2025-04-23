@@ -161,3 +161,14 @@ let exclamationMark: Character = "!"
 welcome.append(exclamationMark)
 // welcome は "hello there!" と等しい
 
+
+// 2025/04/23[水]
+// 文字列補間(String Interpolation)
+// 文字列補間は、複数の定数、変数、リテラル、式を文字列リテラルの中に含めることで
+// 新しい String を構築する方法です。
+// 文字列補間は 1 行でも複数行でも使用することができます。
+// 文字列に入れるそれぞれの値は、両括弧で囲み、その前にバックスラッシュ(\)をつけます。
+let multiplier = 3
+let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
+// message は "3 times 2.5 is 7.5"
+
