@@ -172,3 +172,13 @@ let multiplier = 3
 let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 // message は "3 times 2.5 is 7.5"
 
+
+// 2025/04/24[木]
+// 文字列補間ではなく通常扱われる文字として文字列を生成したい場合、拡張区切り文字を使用することができます。例えば:
+print(#"Write an interpolated string in Swift using \(multiplier)."#)
+// Write an interpolated string in Swift using \(multiplier)
+
+// 拡張区切り文字を使った文字列の中で文字列補間を使用する場合、
+// バックスラッシュの後の番号記号の数を文字列の開始(終了)の番号記号の数に合わせます。例えば:
+print(#"6 times 7 is \#(6 * 7)."#)
+// 6 times 7 is 42.
