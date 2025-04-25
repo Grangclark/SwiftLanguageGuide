@@ -182,3 +182,14 @@ print(#"Write an interpolated string in Swift using \(multiplier)."#)
 // バックスラッシュの後の番号記号の数を文字列の開始(終了)の番号記号の数に合わせます。例えば:
 print(#"6 times 7 is \#(6 * 7)."#)
 // 6 times 7 is 42.
+
+
+// 2025/04/25[金]
+// Unicode（飛ばす）
+//
+// 文字数を数える(Counting Characters)
+// 文字列の中の Character の数を得るには、文字列の count プロパティを使いましょう。
+let unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
+print("unusualMenagerie has \(unusualMenagerie.count) characters")
+// unusualMenagerie has 40 characters
+
