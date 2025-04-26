@@ -193,3 +193,17 @@ let unusualMenagerie = "Koala 🐨, Snail 🐌, Penguin 🐧, Dromedary 🐪"
 print("unusualMenagerie has \(unusualMenagerie.count) characters")
 // unusualMenagerie has 40 characters
 
+
+// 2025/04/26[土]
+// 文字列のインデックス(String Indices)　は飛ばす
+//
+// 挿入と削除(Inserting and Removing)
+// 特定の文字列のインデックスに 1 つの文字を挿入するには、insert(_:at:) を使い、
+// 他の文字列を挿入したい場合は、insert(contentsOf:at:) を使います。
+var welcome = "hello"
+welcome.insert("!", at: welcome.endIndex)
+// welcome は "hello!" と等しい
+
+welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
+// welcome は "hello there!" と等しい
+
