@@ -207,3 +207,14 @@ welcome.insert("!", at: welcome.endIndex)
 welcome.insert(contentsOf: " there", at: welcome.index(before: welcome.endIndex))
 // welcome は "hello there!" と等しい
 
+
+// 2025/04/27[日]
+// 文字列の特定のインデックスの 1 つの文字を削除するには remove(at:) を使い、
+// 部分文字列を削除したい場合は removeSubrange(_:) を使います。
+welcome.remove(at: welcome.index(before: welcome.endIndex))
+// welcome は "hello there" と等しい
+
+let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
+welcome.removeSubrange(range)
+// welcome は "hello" と等しい
+
