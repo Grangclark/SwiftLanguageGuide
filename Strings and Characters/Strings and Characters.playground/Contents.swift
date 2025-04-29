@@ -158,7 +158,7 @@ instruction += string2
 // 2025/04/22[火]
 // String の append() メソッドを使用して Character を追加することもできます。
 let exclamationMark: Character = "!"
-welcome.append(exclamationMark)
+// welcome.append(exclamationMark)
 // welcome は "hello there!" と等しい
 
 
@@ -200,7 +200,7 @@ print("unusualMenagerie has \(unusualMenagerie.count) characters")
 // 挿入と削除(Inserting and Removing)
 // 特定の文字列のインデックスに 1 つの文字を挿入するには、insert(_:at:) を使い、
 // 他の文字列を挿入したい場合は、insert(contentsOf:at:) を使います。
-var welcome = "hello"
+// var welcome = "hello"
 welcome.insert("!", at: welcome.endIndex)
 // welcome は "hello!" と等しい
 
@@ -218,3 +218,14 @@ let range = welcome.index(welcome.endIndex, offsetBy: -6)..<welcome.endIndex
 welcome.removeSubrange(range)
 // welcome は "hello" と等しい
 
+
+// 2025/04/29[火]
+// 部分文字列(Substrings)
+// 処理の結果をより長い期間保持するときは、部分文字列を String のインスタンスに変換します。例えば:
+// let greeting = "Hello, world!"
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+let beginning = greeting[..<index]
+// beginning は "Hello"
+
+// より長期で使用するためにStringへ変換
+let newString = String(beginning)
