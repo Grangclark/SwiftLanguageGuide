@@ -229,3 +229,20 @@ let beginning = greeting[..<index]
 
 // より長期で使用するためにStringへ変換
 let newString = String(beginning)
+
+
+// 2025/04/30[水]
+// 文字列の比較(Comparing Strings)
+// Swift では、3 つの方法で文字列同士を比較する方法を提供しています:
+// String または Character の完全一致、前方一致、後方一致です。
+//
+// 文字と文字列の等価性(String and Character Equality)
+// String または Character の完全一致は、は等価演算子(==)と不等価演算子(!=)を使用してチェックします。
+// Comparison Operators(比較演算子)
+let quotation = "We're a lot alike, you and I."
+let sameQuotation = "We're a lot alike, you and I."
+if quotation == sameQuotation {
+    print("These two strings are considered equal")
+}
+// These two stringas are considered equal
+
