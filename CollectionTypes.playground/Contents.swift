@@ -44,3 +44,10 @@ someInts = []
 // someInts は空の配列だけど [Int] 型
 
 
+// 2025/05/05[月]
+// デフォルト値を使った配列の作成(Creating an Array with a Default Value)
+// Array は同じデフォルト値を設定した特定にサイズの配列を作成するイニシャライザも提供しています。
+// このイニシャライザに適切な型のデフォルト値(repeating)と、その値の繰り返し回数(count)を渡します。
+var threeDoubles = Array(repeating: 0.0, count: 3)
+// threeDoubles は [Doubles] 型で、 [0.0, 0.0, 0.0] と等しい
+
