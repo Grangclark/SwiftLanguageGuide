@@ -34,3 +34,13 @@ var someInts: [Int]()
 print("someInts は \(someInts.count) 個の要素を持つ [Int] 型です。")
 // someInts は 0 個の要素を持つ [Int] 型です。
 // どちらも結果は同じです。ただし、空の配列リテラルのほうが短く、たいていは読みやすくなります。
+
+
+// 2025/05/04[日]
+// また、どちらの場合も、空の配列リテラル（[]）を使用して既存の変数に空の配列を再割り当てすることができます。
+someInts.append(3)
+// someInts Int 型の 3 を含んでいます
+someInts = []
+// someInts は空の配列だけど [Int] 型
+
+
