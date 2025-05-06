@@ -21,7 +21,7 @@ import UIKit
 // コンテキストが既に型情報を提供している場合、
 // 空の配列リテラル（[]、空の角括弧のペア）を使用できます。
 var someInts: [Int] = []
-print("someInts は \(someInts.count) 個の要素を持つ [Int] 型です。")
+// print("someInts は \(someInts.count) 個の要素を持つ [Int] 型です。")
 // someInts は 0 個の要素を持つ [Int] 型です。
 
 
@@ -30,7 +30,7 @@ print("someInts は \(someInts.count) 個の要素を持つ [Int] 型です。")
 // あるいは、要素の型を角括弧で指定し、その後に括弧を付けることで、
 // 明示的な初期化構文を使用して特定の型の空の配列を作成することもできます。
 // たとえば、次のように [Int]() と記述します。
-var someInts: [Int]()
+// var someInts: [Int]()
 print("someInts は \(someInts.count) 個の要素を持つ [Int] 型です。")
 // someInts は 0 個の要素を持つ [Int] 型です。
 // どちらも結果は同じです。ただし、空の配列リテラルのほうが短く、たいていは読みやすくなります。
@@ -51,3 +51,13 @@ someInts = []
 var threeDoubles = Array(repeating: 0.0, count: 3)
 // threeDoubles は [Doubles] 型で、 [0.0, 0.0, 0.0] と等しい
 
+
+// 2025/05/06[火]
+// 2つの配列の結合(Creating an Array by Adding Two Arrays Together)
+// 加算演算子(+)を使用して、既存の型互換のある 2 つの配列を合成して、新しい配列を作成することもできます。
+// この新しい配列の型は連結させた配列の型から推論されます:
+var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
+// anotherThreeDoubles は [Double] 型で [2.5, 2.5, 2.5] と等しい
+
+var sixDoubles = threeDoubles + anotherThreeDoubles
+// sixDoubles は [Double] と推論され、 [0.0, 0.0, 0.0, 2.5, 2.5, 2.5] と等しい
