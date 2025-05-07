@@ -61,3 +61,12 @@ var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
 
 var sixDoubles = threeDoubles + anotherThreeDoubles
 // sixDoubles は [Double] と推論され、 [0.0, 0.0, 0.0, 2.5, 2.5, 2.5] と等しい
+
+
+
+// 2025/05/07[水]
+// 配列リテラルを使った配列の作成(Creating an Array with an Array Literal)
+// 配列リテラルからも配列を初期化できます。
+// 下記の例は、String を保持する shoppingList という配列を作成しています。
+var shoppingList: [String] = ["Eggs", "Milk"]
+// shoppingList は 2 つの 初期値で初期化されている
