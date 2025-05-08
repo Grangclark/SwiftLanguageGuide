@@ -70,3 +70,11 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 // 下記の例は、String を保持する shoppingList という配列を作成しています。
 var shoppingList: [String] = ["Eggs", "Milk"]
 // shoppingList は 2 つの 初期値で初期化されている
+
+
+// 2025/05/08[木]
+// 配列へのアクセスと変更(Accessing and Modifying an Array)
+// メソッドやプロパティ、サブスクリプト構文を通して配列の要素へのアクセス、変更ができます。
+// 配列のアイテムの数を調べるために、読み取り専用の count プロパティをチェックします。
+print("ショッピングリストには \(shoppingList.count) 個のアイテムがあります。")
+
