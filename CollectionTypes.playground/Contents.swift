@@ -78,3 +78,14 @@ var shoppingList: [String] = ["Eggs", "Milk"]
 // 配列のアイテムの数を調べるために、読み取り専用の count プロパティをチェックします。
 print("ショッピングリストには \(shoppingList.count) 個のアイテムがあります。")
 
+
+// 2025/05/09[金]
+// Bool 型の isEmpty プロパティは、count プロパティが 0 かどうかをチェックする簡略記法です。
+if shoppingList.isEmpty {
+    print("ショッピングリストは空です。")
+} else {
+    print("ショッピングリストは空ではありません。")
+}
+// ショッピングリストは空ではありません。
+
+
