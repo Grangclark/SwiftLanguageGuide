@@ -89,3 +89,13 @@ if shoppingList.isEmpty {
 // ショッピングリストは空ではありません。
 
 
+
+// 2025/05/10[土]
+// append(_:) メソッドを使用して、配列の末尾に新しいアイテムを追加することができます。
+shoppingList.append("Flour")
+// shoppingList は 3 つのアイテムを含んでいて、誰かがパンケーキを作っています
+
+
+
+
+
