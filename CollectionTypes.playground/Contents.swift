@@ -97,5 +97,9 @@ shoppingList.append("Flour")
 
 
 
-
-
+// 2025/05/11[日]
+// 加算代入演算子(+=)を使用して 1 つ以上の互換性のある型のアイテムを追加することもできます。
+shoppingList += ["Baking Powder"]
+// shoppingList 4 つのアイテムを含んでいます
+shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
+// shoppingList は 7 つのアイテムを含んでいます
