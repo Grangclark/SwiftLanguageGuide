@@ -103,3 +103,12 @@ shoppingList += ["Baking Powder"]
 // shoppingList 4 つのアイテムを含んでいます
 shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 // shoppingList は 7 つのアイテムを含んでいます
+
+
+// 2025/05/12[月]
+// サブスクリプト構文を使用すると、配列から値を取得します。
+// 配列名のすぐ後の角括弧([])の中に、取得したい値のインデックスを渡します。
+var firstItem = shoppingList[0]
+// firstItem は "Eggs" と等しい
+
+
