@@ -112,3 +112,8 @@ var firstItem = shoppingList[0]
 // firstItem は "Eggs" と等しい
 
 
+
+// 2025/05/13[火]
+// あるインデックスの既存の値を変更したい場合もサブスクリプト構文を使います。
+shoppingList[0] = "Six eggs"
+// リストの最初のアイテムは "Eggs" ではなく、 "Six eggs"
