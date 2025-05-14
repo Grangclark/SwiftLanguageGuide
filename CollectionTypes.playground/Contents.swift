@@ -105,6 +105,7 @@ shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
 // shoppingList は 7 つのアイテムを含んでいます
 
 
+
 // 2025/05/12[月]
 // サブスクリプト構文を使用すると、配列から値を取得します。
 // 配列名のすぐ後の角括弧([])の中に、取得したい値のインデックスを渡します。
@@ -117,3 +118,15 @@ var firstItem = shoppingList[0]
 // あるインデックスの既存の値を変更したい場合もサブスクリプト構文を使います。
 shoppingList[0] = "Six eggs"
 // リストの最初のアイテムは "Eggs" ではなく、 "Six eggs"
+
+
+
+// 2025/05/14[水]
+// ある一定範囲の値を一度に変更する場合にも、サブスクリプト構文を使用することができます。
+// これは置き換えたい値のセットの数と指定した置き換える範囲の長さが異なっていても可能です。
+// 次の例は "Chocolate Spread"、"Cheese"、"Butter" を "Bananas"、"Apples" に置き換えています。
+shoppingList[4...6] = ["Bananas", "Apples"]
+// shoppingList は 6 つのアイテムを含んでいます
+
+
+
