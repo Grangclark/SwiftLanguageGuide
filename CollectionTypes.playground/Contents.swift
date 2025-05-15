@@ -130,3 +130,8 @@ shoppingList[4...6] = ["Bananas", "Apples"]
 
 
 
+// 2025/05/15[木]
+// 配列の特定のインデックスにアイテムを挿入したい場合、insert(_:at:) メソッドを使います。
+shoppingList.insert("Maple Syrup", at: 0)
+// shoppingList は 7 つのアイテムを含んでいます
+// "Maple Syrup" は最初のアイテムです
