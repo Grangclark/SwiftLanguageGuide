@@ -135,3 +135,10 @@ shoppingList[4...6] = ["Bananas", "Apples"]
 shoppingList.insert("Maple Syrup", at: 0)
 // shoppingList は 7 つのアイテムを含んでいます
 // "Maple Syrup" は最初のアイテムです
+
+
+// 2025/05/16[木]
+// 同様に remove(at:) を使用して配列からアイテムを削除できます。
+let mapleSyrup = shoppingList.remove(at: 0)
+// インデックス 0 にあったアイテムは削除されました
+
