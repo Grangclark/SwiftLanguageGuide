@@ -147,3 +147,11 @@ let mapleSyrup = shoppingList.remove(at: 0)
 // アイテムが削除された時、配列内の隙間は埋められ、インデックス 0 の値は再び "Six eggs" になります。
 firstItem = shoppingList[0]
 // firstItem は "Six eggs" と等しい
+
+
+// 配列の最後の値を削除したい場合、count プロパティを探すコストを避けるためには、
+// remove(at:) よりも removeLast() を使います。
+// remove(at:) と同様に removeLast() も削除したアイテムを返します:
+let apples = shoppingList.removeLast()
+// 最後のアイテムは削除されました
+
