@@ -137,21 +137,29 @@ shoppingList.insert("Maple Syrup", at: 0)
 // "Maple Syrup" は最初のアイテムです
 
 
-// 2025/05/16[木]
+// 2025/05/16[金]
 // 同様に remove(at:) を使用して配列からアイテムを削除できます。
 let mapleSyrup = shoppingList.remove(at: 0)
 // インデックス 0 にあったアイテムは削除されました
 
 
-// 2025/05/17[金]
+// 2025/05/17[土]
 // アイテムが削除された時、配列内の隙間は埋められ、インデックス 0 の値は再び "Six eggs" になります。
 firstItem = shoppingList[0]
 // firstItem は "Six eggs" と等しい
 
 
+// 2025/05/18[日]
 // 配列の最後の値を削除したい場合、count プロパティを探すコストを避けるためには、
 // remove(at:) よりも removeLast() を使います。
 // remove(at:) と同様に removeLast() も削除したアイテムを返します:
 let apples = shoppingList.removeLast()
 // 最後のアイテムは削除されました
 
+
+// 2025/05/19[月]
+// 配列の繰り返し処理(Iterating Over an Array)
+// for-in ループを使用して配列の値全部に繰り返し処理をすることができます。
+for item in shoppingList {
+    print(item)
+}
