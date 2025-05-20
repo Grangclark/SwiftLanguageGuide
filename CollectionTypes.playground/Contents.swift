@@ -163,3 +163,19 @@ let apples = shoppingList.removeLast()
 for item in shoppingList {
     print(item)
 }
+
+
+// 2025/05/20[火]
+// 各アイテムのインデックスが必要な場合は、enumerated() を代わりに使いましょう。
+// enumerated() は数値のインデックスとアイテムを組み合わせたタプルを返します。
+// 数値の開始は 0 で、1 ずつ増加していきます。
+// つまり全体を繰り返し処理すると、数値はアイテムのインデックスと一致します。
+for (index, value) in shoppingList.enumerated() {
+    print("アイテム \(index + 1): \(value)")
+}
+// アイテム 1: Six eggs
+// アイテム 2: Milk
+// アイテム 3: Flour
+// アイテム 4: Baking Powder
+// アイテム 5: Bananas
+
