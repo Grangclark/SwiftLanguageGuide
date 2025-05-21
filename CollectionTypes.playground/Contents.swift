@@ -179,3 +179,13 @@ for (index, value) in shoppingList.enumerated() {
 // アイテム 4: Baking Powder
 // アイテム 5: Bananas
 
+
+// 2025/05/21[水]
+// セット型のハッシュ値(Hash Values for Set Types)
+// 空のセットの作成と初期化(Creating and Initializing an Empty Set)
+// イニシャライザの作成と初期化(Creating and Initializing an Empty Set)
+var letters = Set<Character>()
+print("letters は \(letters.count) 個の要素を持つ Set<Character> 型です。")
+// letters は 0 個の要素を持つ Set<Character> 型です。
+
+
