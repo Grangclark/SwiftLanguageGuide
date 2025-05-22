@@ -197,3 +197,14 @@ letters.insert("a")
 letters = []
 // letters は 空のセットですが、 型は Set<Character> のままです
 
+
+// 2025/05/23[金]
+// 配列リテラルを使ったセットの作成(Creating a Set with an Array Literal)
+// 簡略記法として、1 つ以上の値を配列リテラルを使用してセットを初期化することもできます。
+// 下記の例は、favoriteGenres という String の値を保持するセットを作成しています。
+var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop"]
+// favoriteGenres は 3 つ の初期値で初期化されている
+
+
+
+
