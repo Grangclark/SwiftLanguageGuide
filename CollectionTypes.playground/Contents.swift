@@ -189,3 +189,11 @@ print("letters は \(letters.count) 個の要素を持つ Set<Character> 型で�
 // letters は 0 個の要素を持つ Set<Character> 型です。
 
 
+// 2025/05/22[木]
+// 他の方法として、関数の引数や型が明示されている変数や定数など型情報が既にわかっている場合は、
+// 空の配列リテラルを使用して空のセットを作成することができます。
+letters.insert("a")
+// letters は Character 型の値を 1 つ含んでいます
+letters = []
+// letters は 空のセットですが、 型は Set<Character> のままです
+
