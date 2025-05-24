@@ -214,3 +214,13 @@ var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop"]
 print("私には \(favoriteGenres.count) 個の好きな音楽ジャンルがあります。")
 // 私には 3 個の好きな音楽ジャンルがあります。
 
+
+// 2025/05/25[日]
+// Bool 型の isEmpty プロパティは、count プロパティが 0 かどうかをチェックする簡略記法です。
+if favoriteGenres.isEmpty {
+    print("音楽に関しては、こだわりはありません。")
+} else {
+    print("私は音楽にこだわりがあります。")
+}
+// 私は音楽にこだわりがあります。
+
