@@ -207,4 +207,10 @@ var favoriteGenres: Set<String> = ["Rock", "Classical", "Hip hop"]
 
 
 
+// 2025/05/24[土]
+// セットへのアクセスと変更(Accessing and Modifying a Set)
+// メソッドやプロパティを通してセットにアクセスしたり、変更できます。
+// セットのアイテムの数を調べるために、読み取り専用の count プロパティをチェックします。
+print("私には \(favoriteGenres.count) 個の好きな音楽ジャンルがあります。")
+// 私には 3 個の好きな音楽ジャンルがあります。
 
