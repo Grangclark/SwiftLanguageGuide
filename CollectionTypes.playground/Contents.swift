@@ -224,3 +224,12 @@ if favoriteGenres.isEmpty {
 }
 // 私は音楽にこだわりがあります。
 
+
+
+// 2025/05/26[月]
+// insert(_:) メソッドを使用して、セットに新しいアイテムを追加することができます。
+favoriteGenres.insert("Jazz")
+// favoriteGenres 4 つのアイテムを含んでいます
+
+
+
