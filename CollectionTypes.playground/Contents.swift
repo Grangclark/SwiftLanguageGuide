@@ -232,4 +232,14 @@ favoriteGenres.insert("Jazz")
 // favoriteGenres 4 つのアイテムを含んでいます
 
 
-
+// 2025/05/27[火]
+// remove(_:) を使用してセットからアイテムを削除できます。
+// セットにアイテムが存在した場合は削除し、削除したアイテムを返します。
+// もし存在しなけば nil を返します。
+// 他の方法として、全アイテムを削除するには removeAll() を使います。
+if let removeGenre = favoriteGenres.remove("Rock") {
+    print("\(removeGenre)? もういいです。")
+} else {
+    print("そのジャンルはあんまり気にしたことがないです。")
+}
+// Rock? もういいです。
