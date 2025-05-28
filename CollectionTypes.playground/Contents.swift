@@ -243,3 +243,15 @@ if let removeGenre = favoriteGenres.remove("Rock") {
     print("そのジャンルはあんまり気にしたことがないです。")
 }
 // Rock? もういいです。
+
+
+// 2025/05/28[水]
+// 特定のアイテムが含まれているかどうかを調べるには、contains(_:) メソッドを使用することができます。
+if favoriteGenres.contains("Funk") {
+    print("James BrownのGet On The Good Footは最高です！")
+} else {
+    print("ちょっとファンキー（funky）すぎます。")
+}
+// ちょっとファンキー（funky）すぎます。
+
+
