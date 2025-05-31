@@ -255,3 +255,19 @@ if favoriteGenres.contains("Funk") {
 // ちょっとファンキー（funky）すぎます。
 
 
+// 2025/05/31[土]
+// セットの繰り返し処理(Iterating Over a Set)
+// for-in  ループを使用してセットの要素を繰り返し処理することができます。
+for genre in favoriteGenres {
+    print("\(genre)")
+}
+// Classical
+// Jazz
+// Hip hop
+
+
+
+
+
+
+
