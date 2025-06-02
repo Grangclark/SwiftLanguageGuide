@@ -267,7 +267,16 @@ for genre in favoriteGenres {
 
 
 
+// セットの操作(Performing Set Operations)
+// ２つのセットの、合成、共通の要素の発見、値が全部等しいのか、いくつか等しいのか、全く違うのかの比較など、
+// 基本的なセットの操作を効率的に行うことができます。
+let oddDigits: Set = [ Set[1, 3, 5, 7, 9]
+let evenDigits: Set[0, 2, 4, 6, 8]
+let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
 
-
+oddDigits.union(evenDigits).sorted()
+oddDigits.intersection(evenDigits).sorted()
+oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
+oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
 
 
