@@ -280,3 +280,11 @@ oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
 oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
 
 
+
+// 2025/06/03[火]
+// 空の辞書型の作成(Creating an Empty Dictionary)
+// 配列と同様に、ある型の空の Dictionary をイニシャライザの構文を使用して作成できます。
+var namesOfIntegers: [Int: String] = [:]
+// namesOfIntegers は空の [Int: String] 辞書
+// この例では、数字を人が理解できる名前として保持するために、
+// [Int: String] 型の空の辞書を作成しています。キーは Int 型でバリューは String 型です。
