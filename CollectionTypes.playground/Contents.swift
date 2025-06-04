@@ -270,6 +270,7 @@ for genre in favoriteGenres {
 // セットの操作(Performing Set Operations)
 // ２つのセットの、合成、共通の要素の発見、値が全部等しいのか、いくつか等しいのか、全く違うのかの比較など、
 // 基本的なセットの操作を効率的に行うことができます。
+/*
 let oddDigits: Set = [ Set[1, 3, 5, 7, 9]
 let evenDigits: Set[0, 2, 4, 6, 8]
 let singleDigitPrimeNumbers: Set = [2, 3, 5, 7]
@@ -278,7 +279,7 @@ oddDigits.union(evenDigits).sorted()
 oddDigits.intersection(evenDigits).sorted()
 oddDigits.subtracting(singleDigitPrimeNumbers).sorted()
 oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted()
-
+*/
 
 
 // 2025/06/03[火]
@@ -288,3 +289,13 @@ var namesOfIntegers: [Int: String] = [:]
 // namesOfIntegers は空の [Int: String] 辞書
 // この例では、数字を人が理解できる名前として保持するために、
 // [Int: String] 型の空の辞書を作成しています。キーは Int 型でバリューは String 型です。
+
+
+
+// 2025/06/04[水]
+// 既に型情報が分かっている場合は、空の辞書リテラルを [:] と書くことができます。(角括弧([])の中にコロン(:)):
+namesOfIntegers[16] = "sixteen"
+// namesOfIntegers は 1 つのキーバリューペアを含んでいます
+namesOfIntegers = [:]
+// namesOfIntegers は再び [Int: String] の空の辞書
+
