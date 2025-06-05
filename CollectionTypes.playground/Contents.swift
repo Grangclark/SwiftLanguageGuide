@@ -299,3 +299,15 @@ namesOfIntegers[16] = "sixteen"
 namesOfIntegers = [:]
 // namesOfIntegers は再び [Int: String] の空の辞書
 
+
+// 2025/06/05[木]
+// 辞書リテラルを使った辞書の作成(Creating a Dictionary with a Dictionary Literal)
+// 先ほど見た配列リテラルと似たような構文の辞書リテラルを使った初期化もできます。
+// 辞書リテラルは、1 つ以上のキーバリューペアから Dictionary のコレクションを作成する簡略記法です。
+// 下記の例では、国際空港の名前を保持する辞書を作成します。
+// この辞書は、3 文字の国際空港コードをキーに、空港名をバリューにしています。
+var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
+
+
+
+
