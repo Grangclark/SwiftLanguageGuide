@@ -310,4 +310,11 @@ var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 
 
 
+// 2025/06/06[金]
+// 辞書へのアクセスと変更(Accessing and Modifying a Dictionary)
+// メソッドやプロパティ、サブスクリプト構文を通して、辞書へのアクセス、変更ができます。
+// 配列と同様に、Dictionary のアイテムの数を調べるために、読み取り専用の count プロパティをチェックします。
+print("airports 辞書には \(airports.count) 個のアイテムがあります。")
+// airports 辞書には 2 個のアイテムがあります。
+
 
