@@ -318,3 +318,12 @@ print("airports 辞書には \(airports.count) 個のアイテムがあります
 // airports 辞書には 2 個のアイテムがあります。
 
 
+// 2025/06/07[土]
+// Bool 型の isEmpty プロパティは、count プロパティが 0 かどうかをチェックする簡略記法です。
+if airports.isEmpty {
+    print("airports 辞書は空です。")
+} else {
+    print("airports 辞書は空ではありません。")
+}
+// airports 辞書は空ではありません。
+
