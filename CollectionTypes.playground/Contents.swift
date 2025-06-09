@@ -340,3 +340,14 @@ airports["LHR"] = "London"
 airports["LHR"] = "London Hearthrow"
 // "LHR"の値は "London Heathrow" へ変更
 
+
+// 2025/06/10[火]
+// updateValue(_:forKey:) メソッドは、辞書のバリューの型のオプショナル値を返します。
+// 例えば辞書が String を保持している場合、このメソッドは String?(オプショナル String)を返します。
+// このオプショナル値は更新前にバリューが存在していた場合はその値のオプショナルを返し、
+// 存在していなかった場合は nil を返します:
+if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
+    print("DUB キーに対する更新前のバリューは \(oldValue) でした。")
+}
+// DUB キーに対する更新前のバリューは Dublin でした
+
