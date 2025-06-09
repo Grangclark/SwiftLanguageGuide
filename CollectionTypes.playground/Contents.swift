@@ -335,3 +335,8 @@ airports["LHR"] = "London"
 // airports 辞書は 3 つのアイテムを含んでいます
 
 
+// 2025/06/09[月]
+// サブスクリプト構文を使用すると、特定のキーのバリューを変更することもできます。
+airports["LHR"] = "London Hearthrow"
+// "LHR"の値は "London Heathrow" へ変更
+
