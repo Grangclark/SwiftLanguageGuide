@@ -351,3 +351,15 @@ if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB") {
 }
 // DUB キーに対する更新前のバリューは Dublin でした
 
+
+
+// 2025/06/11[水]
+// サブスクリプト構文を使用して特定のキーのバリューを取得することもできます。
+// バリューの存在しないキーに対してもリクエストすることが可能で、
+// バリューの型のオプショナル値を返します。存在しなければ nil を返します:
+if let airportName = airports["DUB"] {
+    print("この空港の名前は \(airportName) です。")
+} else {
+    print("その空港は airports 辞書にはありません。")
+}
+// この空港の名前は Dublin Airport です。
