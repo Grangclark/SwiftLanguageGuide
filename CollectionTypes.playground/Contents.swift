@@ -363,3 +363,13 @@ if let airportName = airports["DUB"] {
     print("その空港は airports 辞書にはありません。")
 }
 // この空港の名前は Dublin Airport です。
+
+
+
+// 2025/06/12[木]
+// サブスクリプト構文を使用して、キーに nil を代入することで、キーバリューペアを削除できます:
+airports["APL"] = "Apple International"
+// "Apple International" APL の空港ではないので削除します
+airports["APL"] = nil
+// APL は辞書から削除されました
+
