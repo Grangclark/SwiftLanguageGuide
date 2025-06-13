@@ -373,3 +373,16 @@ airports["APL"] = "Apple International"
 airports["APL"] = nil
 // APL は辞書から削除されました
 
+
+
+// 2025/06/13[金]
+// 他の方法として、removeValue(forKey:) メソッドを使用してキーバリューペアを削除できます。
+// バリューが存在すれば削除した値を返し、存在しなければ nil を返します:
+if let removedValue = airports.removeValue(forKey: "DUB") {
+    print("削除された空港の名前は \(removedValue) です。")
+} else {
+    print("airports 辞書には DUB キーに対する値がありません。")
+}
+// 削除された空港の名前は Dublin Airport です。
+
+
