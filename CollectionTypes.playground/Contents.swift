@@ -386,3 +386,13 @@ if let removedValue = airports.removeValue(forKey: "DUB") {
 // 削除された空港の名前は Dublin Airport です。
 
 
+// 2025/06/14[土]
+// 辞書の繰り返し処理(Iterating Over a Dictionary)
+// for-in ループを使用して辞書のキーバリューペア全部に繰り返し処理することができます。
+// 各アイテムは (key, value) のタプルを返し、繰り返し処理の中で、このタプルを一時的な定数や変数に展開することができます。
+for (airportCode, airportName) in airports {
+    print("\(airportCode): \(airportName)")
+}
+// LHR: London Heathrow
+// YYZ: Toronto Pearson
+
