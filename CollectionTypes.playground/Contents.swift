@@ -396,3 +396,22 @@ for (airportCode, airportName) in airports {
 // LHR: London Heathrow
 // YYZ: Toronto Pearson
 
+
+// 2025/06/15[日]
+// keys と values プロパティを使用して、キーとバリューそれぞれのリストを取得することもできます:
+for airportCode in airport.keys {
+    print("空港コード: \(airportCode)")
+}
+// 空港コード: LHR
+// 空港コード: YYZ
+
+for airportName in airports.values {
+    print("空港名: \(airportName)")
+}
+// 空港名: London Heathrow
+// 空港名: Toronto Pearson
+
+
+
+
+
