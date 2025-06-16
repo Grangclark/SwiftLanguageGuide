@@ -413,5 +413,13 @@ for airportName in airports.values {
 
 
 
+// 2025/06/16[月]
+// Array インスタンスを引数に受け取る API で辞書のキーとバリューを使いたい場合、
+// keys と values プロパティを使用して新しい配列を初期化してください:
+let airportCodes = [String](airports.keys)
+// 空港コードは ["LHR", "YYZ"]
+
+let airportNames = [String](airports.values)
+// 空港名は ["London Heathrow", "Toronto"Pearson"]
 
 
