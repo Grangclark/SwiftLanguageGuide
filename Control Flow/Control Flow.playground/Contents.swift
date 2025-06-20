@@ -31,3 +31,15 @@ for (animalName, legCount) in numberOfLegs {
 // spider には 8 本の足があります
 
 
+// 2025/06/20[金]
+// 数値の範囲にも for-in ループを使用することができます。
+// 下記の例では、5 の倍数の最初のいくつかを出力しています。
+for index in 1...5 {
+    print("\(index) x 5 は \(index * 5)")
+}
+// 1 x 5 は 5
+// 2 x 5 は 10
+// 3 x 5 は 15
+// 4 x 5 は 20
+// 5 x 5 は 25
+
