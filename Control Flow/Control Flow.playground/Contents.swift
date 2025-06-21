@@ -43,3 +43,19 @@ for index in 1...5 {
 // 4 x 5 は 20
 // 5 x 5 は 25
 
+
+
+// 2025/06/21[土]
+// 各ループの値が必要ない場合、変数名の位置にアンダースコア(_)を付けることで無視できます。
+let base = 3
+let power = 10
+var answer = 1
+for _ in 1...power {
+    answer *= base
+}
+print("\(base) to the power of \(power) is \(answer)")
+// 3 to the power of 10 is 59049
+
+
+
+
