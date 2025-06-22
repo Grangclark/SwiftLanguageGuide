@@ -58,4 +58,13 @@ print("\(base) to the power of \(power) is \(answer)")
 
 
 
+// 2025/06/22[日]
+// 範囲についての詳細は、Range Operators(範囲演算子)を参照ください。
+let minutes = 60
+for tickMark in 0..<minutes {
+    // 毎分ごとに 60 回目盛りを描きます
+}
+
+
+
 
