@@ -67,4 +67,12 @@ for tickMark in 0..<minutes {
 
 
 
+// 2025/06/23[月]
+// 表示上ではもっと目盛を少なくしたいかもしれません。
+// 5 分ごとに 1 目盛にしてみましょう。
+// stride(from:to:by:) 関数を使用すると不要な目盛をスキップすることができます
+let minuteInterval = 5
+for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
+    // 5 分ごと (0, 5, 10, 15 ... 45, 50, 55) に目盛を描きます
+}
 
