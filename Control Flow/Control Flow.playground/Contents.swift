@@ -76,3 +76,13 @@ for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
     // 5 分ごと (0, 5, 10, 15 ... 45, 50, 55) に目盛を描きます
 }
 
+
+
+
+// 2025/06/24[火]
+// 閉範囲も利用可能で、その場合は stride(from:through:by:) を使います:
+let hours = 12
+let hourInterval = 3
+for tickMark in stride(from: 3, through: hours, by: hourInterval) {
+    // 3 時間ごと (3, 6, 9, 12) に目盛を描きます
+}
