@@ -57,7 +57,7 @@ print("\(base) to the power of \(power) is \(answer)")
 // 3 to the power of 10 is 59049
 
 
-
+/*
 // 2025/06/22[日]
 // 範囲についての詳細は、Range Operators(範囲演算子)を参照ください。
 let minutes = 60
@@ -77,8 +77,6 @@ for tickMark in stride(from: 0, to: minutes, by: minuteInterval) {
 }
 
 
-
-
 // 2025/06/24[火]
 // 閉範囲も利用可能で、その場合は stride(from:through:by:) を使います:
 let hours = 12
@@ -86,3 +84,14 @@ let hourInterval = 3
 for tickMark in stride(from: 3, through: hours, by: hourInterval) {
     // 3 時間ごと (3, 6, 9, 12) に目盛を描きます
 }
+
+
+// 2025/06/25[水]
+// while
+// while ループは、条件を評価してからループを開始します。true ならば条件が false になるまでループ内の処理を繰り返します。
+// while ループの基本的な書き方は下記の通りです:
+while <#condition#> {
+    <#statements#>
+}
+*/
+
