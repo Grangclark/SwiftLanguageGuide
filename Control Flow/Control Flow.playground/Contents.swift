@@ -95,3 +95,14 @@ while <#condition#> {
 }
 */
 
+
+
+// 2025/06/26[木]
+// Repeat-While
+// while ループの別の形として、repeat-while があり、ループ条件を検証する前に、一度ループ内の処理を実行します。
+// その後、条件が false になるまで繰り返します。
+// 下記が repeat-while ループの一般的な形式です。
+repeat {
+    <#statements#>
+} while <#condition#>
+
