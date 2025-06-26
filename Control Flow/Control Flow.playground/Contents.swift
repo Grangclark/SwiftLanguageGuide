@@ -106,3 +106,20 @@ repeat {
     <#statements#>
 } while <#condition#>
 
+
+
+// 2025/06/27[金]
+// If
+// 最もシンプルな形式の if 文は単一の 1 つの if 条件です。条件が true の場合にのみ、内部の文が実行されます。
+var temperatureInFahrenheit = 30
+if temperatureInFahrenheit <= 32 {
+    print("とても寒いですね。マフラーを巻いたほうがいいでしょう。")
+}
+// とても寒いですね。マフラーを巻いたほうがいいでしょう。
+
+
+
+
+
+
+
