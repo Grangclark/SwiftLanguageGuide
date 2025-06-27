@@ -119,7 +119,14 @@ if temperatureInFahrenheit <= 32 {
 
 
 
-
-
-
+// 2025/06/28[土]
+// if 文は、条件が false の場合に if 文の代わりに実行する、else 句と呼ばれる文も提供できます。
+// この文は else キーワードを使用して書かれます。
+temperatureInFahrenheit = 40
+if temperatureInFahrenheit <= 32 {
+    print("とても寒いですね。マフラーを巻いたほうがいいでしょう。")
+} else {
+    print("そんなに寒くありません。Tシャツを着ましょう。")
+}
+// そんなに寒くありません。Tシャツを着ましょう。
 
