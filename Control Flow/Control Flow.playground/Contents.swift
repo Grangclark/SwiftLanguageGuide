@@ -130,3 +130,17 @@ if temperatureInFahrenheit <= 32 {
 }
 // そんなに寒くありません。Tシャツを着ましょう。
 
+
+
+// 2025/06/29[日]
+// さらに句を追加して、複数の if 文をつなげることもできます。
+temperatureInFahrenheit = 90
+if temperatureInFahrenheit <= 32 {
+    print("とても寒いですね。マフラーを巻いたほうがいいでしょう。")
+} else if temperatureInFahrenheit >= 86 {
+    print("とても暖かいですね。日焼け止めを忘れずにしましょう。")
+} else {
+    print("そんなに寒くありません。Tシャツを着ましょう。")
+}
+// とても暖かいですね。日焼け止めを忘れずにしましょう。
+
