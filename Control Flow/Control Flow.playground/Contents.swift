@@ -144,3 +144,14 @@ if temperatureInFahrenheit <= 32 {
 }
 // とても暖かいですね。日焼け止めを忘れずにしましょう。
 
+
+
+// 2025/06/30[月]
+// しかし、最後の else 句は必須ではなく、条件が絶対に必要でない場合は、除くこともできます。
+temperatureInFahrenheit = 72
+if temperatureInFahrenheit <= 32 {
+    print("とても寒いですね。マフラーを巻いたほうがいいでしょう。")
+} else if temperatureInFahrenheit >= 86 {
+    print("とても暖かいですね。日焼け止めを忘れずにしましょう。")
+}
+
