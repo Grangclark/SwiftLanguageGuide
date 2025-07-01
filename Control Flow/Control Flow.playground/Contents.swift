@@ -155,3 +155,22 @@ if temperatureInFahrenheit <= 32 {
     print("とても暖かいですね。日焼け止めを忘れずにしましょう。")
 }
 
+
+
+// 2025/07/01[火]
+// Swift は、値を設定するときに使用できる if の省略記法のスペルを提供します。例えば、以下のコードを考えてみましょう:
+let temperatureInCelsius = 25
+let weatherAdvice: String
+
+if temperatureInCelsius <= 0 {
+    weatherAdvice = "とても寒いですね。マフラーを巻いたほうがいいでしょう。"
+} else if temperatureInCelsius >= 30 {
+    weatherAdvice = "とても暖かいですね。日焼け止めを忘れずにしましょう。"
+} else {
+    weatherAdvice = "そんなに寒くありません。Tシャツを着ましょう。"
+}
+
+print(weatherAdvice)
+// "そんなに寒くありません。Tシャツを着ましょう。"
+
+
