@@ -174,3 +174,18 @@ print(weatherAdvice)
 // "そんなに寒くありません。Tシャツを着ましょう。"
 
 
+
+// 2025/07/02[水]
+// if 式と呼ばれる別の構文を使えば、このコードをより簡潔に書くことができます:
+if weatherAdvice = if temperatureInCelsius <= 0 {
+    "とても寒いですね。マフラーを巻いたほうがいいでしょう。"
+} else if temperatureInCelsius >= 30 {
+    "とても暖かいですね。日焼け止めを忘れずにしましょう。"
+} else {
+    "そんなに寒くありません。Tシャツを着ましょう。"
+}
+
+print(weatherAdvice)
+// "そんなに寒くありません。Tシャツを着ましょう。"
+
+
