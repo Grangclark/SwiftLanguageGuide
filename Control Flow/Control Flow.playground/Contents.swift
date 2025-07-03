@@ -189,3 +189,14 @@ print(weatherAdvice)
 // "そんなに寒くありません。Tシャツを着ましょう。"
 
 
+
+// 2025/07/03[木]
+// if 式は、予期せぬ失敗に対して、エラーを投げたり、fatalError(_:file:line:) のように、
+// 戻り値を返さない関数を呼び出して対応することができます。例えば、次のようなものです:
+if weatherAdvice = if temperatureInCelsius > 100 {
+    throw TemperatureError.boiling
+} else {
+    "適度な気温ですね。"
+}
+
+
