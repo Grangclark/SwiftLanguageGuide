@@ -200,3 +200,22 @@ if weatherAdvice = if temperatureInCelsius > 100 {
 }
 
 
+
+// 2025/07/04[金]
+// Switch
+// switch 文は、複数の可能性に対してパターンマッチを使用して比較を行い、値を検討します。
+// そして、一致した最初のパターンのコードのブロックを実行します。
+// switch 文は、複数の可能性がある状態に対して if 文の代わりに使用することができます。
+
+// 下記の例では、someCharacter という 1 つの小文字を検証する switch 文です。
+let someCharacter: Character = "2"
+switch someCharacter {
+case "a":
+    print("ラテンアルファベットの最初の文字")
+case "z":
+    print("ラテンアルファベットの最後の文字")
+default:
+    print("その他の文字")
+}
+// ラテンアルファベットの最後の文字
+
