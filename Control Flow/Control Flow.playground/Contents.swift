@@ -237,3 +237,17 @@ print(message)
 // "ラテンアルファベットの最初の文字"
 
 
+
+// 2025/07/06[日]
+// 暗黙的にfallthroughしない(No Implicit Fallthrough)
+// 各ケースの本文は少なくとも 1 つの文を実行しなければなりません。
+// 次のコードは最初のケースの本文が空なので不正です。
+let anotherCharacter: Character = "a"
+switch anotherCharacter {
+case "a": // 空の 本文 は不正
+case "A":
+    print("文字 A")
+default:
+    print("A 以外の文字")
+}
+// コンパイルエラーが発生します
