@@ -219,3 +219,21 @@ default:
 }
 // ラテンアルファベットの最後の文字
 
+
+
+// 2025/07/05[土]
+// if 文と同様に、switch 文にも式があります:
+let anotherCharacter: Character = "a"
+let message = switch anotherCharacter {
+case "a":
+    "ラテンアルファベットの最初の文字"
+case "z":
+    "ラテンアルファベットの最後の文字"
+default:
+    "その他の文字"
+}
+
+print(message)
+// "ラテンアルファベットの最初の文字"
+
+
