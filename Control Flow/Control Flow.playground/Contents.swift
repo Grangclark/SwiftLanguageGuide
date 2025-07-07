@@ -251,3 +251,21 @@ default:
     print("A 以外の文字")
 }
 // コンパイルエラーが発生します
+
+
+
+// 2025/07/07[月]
+// "a"と "A" の両方に合致させたい場合は、
+// カンマ区切り(,)で値を区切って、
+// 2 つの値を 1 つのケースに合成します。
+let anotherChracter: Character = "a"
+switch anotherCharacter {
+case "a", "A":
+    print("文字 A")
+default:
+    print("A 以外の文字")
+}
+// 文字 A
+
+
+
