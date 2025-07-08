@@ -269,3 +269,30 @@ default:
 
 
 
+// 2025/07/08[火]
+// 範囲マッチング(Interval Matching)
+// switch ケースの値には、範囲内に含まれるかどうかのチェックもできます。
+// 下記の例では、数値の範囲を使用して、任意のサイズの数値の自然言語カウントを提供します。
+let approximateCount = 62
+let countedThings = "土星を回る月"
+let naturalCount: String
+switch approximateCount {
+case 0:
+    naturalCount = "まったくない"
+case 1..<5:
+    naturalCount = "少しある"
+case 5..<12:
+    naturalCount = "多少ある"
+case 12..<100:
+    naturalCount = "数多くある"
+case 100..<1000:
+    naturalCount = "たくさんある"
+default:
+    naturalCount = "膨大にある"
+}
+print("\(naturalCount) は \(countedThings)。")
+// 土星を回る月 は 数多くある。
+
+
+
+
