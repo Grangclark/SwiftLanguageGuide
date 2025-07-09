@@ -295,4 +295,24 @@ print("\(naturalCount) は \(countedThings)。")
 
 
 
+// 2025/07/09[水]
+// タプル(Tuples)
+// タプルを使用して同じ switch 文の中で、複数の値を検証することができます。
+// タプルの個々の要素は、異なる値や範囲に対して検証できます。
+// 逆に、アンダースコア(_)を使用すると、ワイルドカードとしてどんな値にも合致させることができます。
+let somePoint = (1, 1)
+switch somePoint {
+case (0, 0):
+    print("\(somePoint) は原点にあります")
+case (_, 0):
+    print("\(somePoint) は x 軸上にあります")
+case (0, _):
+    print("\(somePoint) は y 軸上にあります")
+case (-2...2, -2...2):
+    print("\(somePoint) はボックスの中にあります")
+default:
+    print("\(somePoint) はボックスの外にあります")
+}
+// (1, 1) はボックスの中にあります
+
 
