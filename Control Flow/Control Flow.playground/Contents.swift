@@ -336,5 +336,19 @@ case let (x, y):
 
 
 
+// 2025/07/11[金]
+// Where
+// switch 文は、追加条件として where 句を使用することができます。
+// 下記の例では、(x, y) 座標を受け取り、グラフに分布しています。
+let yetAnotherPoint = (1, -1)
+switch yetAnotherPoint {
+case let (x, y) where x == y:
+    print("(\(x), \(y)) は x == y の線上にあります")
+case let (x, y) where x == -y:
+    print("(\(x), \(y)) は x == -y の線上にあります")
+case let (x, y):
+    print("(\(x), \(y)) は単なる任意の点です ")
+}
+// (1, -1) は x == -y 線上にあります
 
 
