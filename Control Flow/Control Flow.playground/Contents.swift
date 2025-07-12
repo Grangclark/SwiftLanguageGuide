@@ -352,3 +352,22 @@ case let (x, y):
 // (1, -1) は x == -y 線上にあります
 
 
+
+// 2025/07/12[土]
+// 複合ケース(Compound Cases)
+// 各ケースをカンマ(,)で区切ってケースの後に書くことで、
+// 同じ本文を共有する複数のケースを書くことができます。
+// その中の 1 つのケースに合致した場合に、合致したと見なされます。
+// ケースのリストが長くなるような場合は、複数行にまたがって書くことができます。例えば:
+let someCharacter: Character = "e"
+switch someCharacter {
+case "a", "e", "i", "o", "u":
+    print("\(someCharacter) は母音です")
+case "b", "c", "d", "f", "g", "h", "j", "k", "l", "m",
+     "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z":
+    print("\(someCharacter) は子音です")
+default:
+    print("\(someCharacter) は母音でも子音でもありません")
+}
+// e は母音です
+
