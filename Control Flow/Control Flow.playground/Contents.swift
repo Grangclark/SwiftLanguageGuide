@@ -445,3 +445,31 @@ for case let (x, y) in points where x == y || x == -y  {
 
 
 
+
+// 2025/07/18[金]
+// 制御転送文(Control Transfer Statements)
+// 制御転送文は、コードの一部の制御を他の部分へ転送させることで、コードの実行順序を変更します。Swift には 5 つの制御転送文があります:
+// continue
+// break
+// fallthrough
+// return
+// throw
+// continue、break と fallthrough は下記に記載しています。return はFunctions(関数)、throw はPropagating Errors Using Throwing Functionsに記載しています。
+
+// Continue
+// continue 文は、各ループ内の実行を止めて、次のループの最初から処理を開始します。つまり、ループを抜けることなく「今のループ処理を完了します」と伝えます。
+// 次の例は、全ての母音とスペースを小文字の文字列から除いて、暗号パズルフレーズを作成しています:
+let puzzleInput = "great minds think alike"
+var puzzleOutput = ""
+let charactersToRemove: [Character] = ["a", "e", "i", "o", "u", " "]
+for character in puzzleInput {
+    if charactersToRemove.contains(character) {
+        continue
+    }
+    puzzleOutput.append(character)
+}
+print(puzzleOutput)
+// grtmndsthnklk
+
+
+
