@@ -473,3 +473,32 @@ print(puzzleOutput)
 
 
 
+// 2025/07/19[土]
+// Break
+// Switch内でBreak(Break in a Switch Statement)
+// switch 文の内部で使用するとき、break は switch の実行を即座に終了し、switch の末尾の閉じ括弧(})の後に制御フローを移します。
+// 次の例では、Character 型の値が、4 つの言語内の 1 つの番号記号に合致するかどうかを判定しています。
+// 簡潔にするために、複数の値を 1 つの switch ケースで網羅しています。
+let numberSymbol: Character = "三"  // 中国語の数字 3
+var possibleIntegerValue: Int?
+switch numberSymbol {
+case "1", "١", "一", "๑":
+    possibleIntegerValue = 1
+case "2", "٢", "二", "๒":
+    possibleIntegerValue = 2
+case "3", "٣", "三", "๓":
+    possibleIntegerValue = 3
+case "4", "٤", "四", "๔":
+    possibleIntegerValue = 4
+default:
+    break
+}
+if let integerValue = possibleIntegerValue {
+    print("\(numberSymbol) の整数値は \(integerValue) です。")
+} else {
+    print("\(numberSymbol) の整数値は見つかりませんでした。")
+}
+// 三 の整数値は 3 です。
+
+
+
