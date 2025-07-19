@@ -502,3 +502,34 @@ if let integerValue = possibleIntegerValue {
 
 
 
+// 2025/07/20[日]
+// Switch内でBreak(Break in a Switch Statement)
+// switch 文の内部で使用するとき、break は switch の実行を即座に終了し、switch の末尾の閉じ括弧(})の後に制御フローを移します。
+// switch 文は網羅的で空のケースが許されないため、明示的に何もしないことを伝えるために、わざと合致させて無視するときに必要になります。
+// 無視したいケースの本文に break のみを書きます。
+// そのケースに合致した場合、ケース内の break が switch 文全体の実行を即時に終了させます。
+// 次の例では、Character 型の値が、4 つの言語内の 1 つの番号記号に合致するかどうかを判定しています。
+// 簡潔にするために、複数の値を 1 つの switch ケースで網羅しています。
+let numberSymbol: Character = "三"  // 中国語の数字 3
+var possibleIntegerValue: Int?
+switch numberSymbol {
+case "1", "١", "一", "๑":
+    possibleIntegerValue = 1
+case "2", "٢", "二", "๒":
+    possibleIntegerValue = 2
+case "3", "٣", "三", "๓":
+    possibleIntegerValue = 3
+case "4", "٤", "四", "๔":
+    possibleIntegerValue = 4
+default:
+    break
+}
+if let integerValue = possibleIntegerValue {
+    print("\(numberSymbol) の整数値は \(integerValue) です。")
+} else {
+    print("\(numberSymbol) の整数値は見つかりませんでした。")
+}
+// 三 の整数値は 3 です。
+
+// この例では、numberSymbol が 1〜4 のラテン語、アラビア語、中国語、タイ語に合致するかどうかをチェックしています。
+// 合致した場合、各ケースは、Int? の possibleIntegerValue 変数に適切な数字を設定しています。
