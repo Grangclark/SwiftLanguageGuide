@@ -533,3 +533,36 @@ if let integerValue = possibleIntegerValue {
 
 // この例では、numberSymbol が 1〜4 のラテン語、アラビア語、中国語、タイ語に合致するかどうかをチェックしています。
 // 合致した場合、各ケースは、Int? の possibleIntegerValue 変数に適切な数字を設定しています。
+
+
+
+// 2025/07/21[月]
+// Fallthrough
+// Swift の switch 文は、各ケースの底から次のケースに通り抜けることはしません。
+// つまり、最初に合致したケースが完了したらすぐに switch 文全体の実行が終了します。
+// 逆に、C 言語の switch 文では、各ケースへ通り抜けることを防ぐために、
+// 明示的に break を各ケースの末尾に書かなければなりません。
+// Swift の switch 文は、デフォルトで通り抜けないことで、C 言語とは反対に、
+// より簡潔で挙動が予測しやすくなっています。間違って複数のケースを実行することを防ぎます。
+// もし C 言語のような通り抜けが必要な場合は、fallthrough キーワードを使用してケースごとに設定することができます。
+// 下記の例では、fallthrough を使用して数値のテキストによる説明を作成します。
+let integerToDescribe = 5
+var description = "数字 \(integerToDescribe) は"
+switch integerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+    description += " 素数です。そして、"
+    fallthrough
+default:
+    description += "整数です。"
+}
+print(description)
+// 数字 5 は 素数です。そして、整数です。
+
+// この例では、description という新しい String 変数を宣言して、初期値を設定しています。
+// この関数は switch 文で integerToDescribe を検証しています。
+// integerToDescribe がリストの素数の 1 つの場合、この関数は description の末尾に、
+// 数字が素数だと説明したテキストを追加します。
+// default ケースにも「通り抜ける」ように、fallthrough キーワードを使用しています。
+// default ケースでは、説明の末尾に追加のテキストを追加して switch 文は完了します。
+// 数字の説明は、print(_:separator:terminator:) 関数を使用して出力されています。
+// この例では、素数として 5 が適切に特定されています。
