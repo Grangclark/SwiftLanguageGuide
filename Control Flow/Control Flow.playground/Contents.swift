@@ -566,3 +566,39 @@ print(description)
 // default ケースでは、説明の末尾に追加のテキストを追加して switch 文は完了します。
 // 数字の説明は、print(_:separator:terminator:) 関数を使用して出力されています。
 // この例では、素数として 5 が適切に特定されています。
+
+
+
+// 2025/07/22[火]
+// 早期リターン(Early Exit)
+// guard 文は if 文と同様に、式のブール値に応じて文を実行します。
+// guard 文は、guard の後のコードを実行するために、guard の条件が true でなければならない場合に使います。
+// if 文と異なり、guard 文は常に else 句が必要で、条件が false の場合に else 内が実行されます。
+func greet(person: [String: String]) {
+    guard let name = person["name"] else {
+        return
+    }
+
+    print("こんにちは \(name)!")
+
+    guard let location = person["location"] else {
+        print("そちらのお天気は良いといいですね。")
+        return
+    }
+
+    print("\(location) のお天気は良いといいですね。")
+}
+
+greet(person: ["name": "John"])
+// こんにちは John!
+// そちらのお天気は良いといいですね。
+greet(person: ["name": "Jane", "location": "Cupertino"])
+// こんにちは Jane!
+// Cupertino のお天気は良いといいですね。
+
+// guard 文の条件を満たした場合、guard の閉じ括弧(})以降のコードを続けて実行します。
+// 条件の一部としてオプショナルバインディングに使われている変数や定数は、
+// guard の後のコードで利用できるようになります。
+
+
+
