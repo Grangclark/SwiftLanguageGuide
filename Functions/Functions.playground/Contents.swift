@@ -15,3 +15,20 @@ func greet(person: String) -> String {
 }
 
 
+// 2025年7月25日(金)
+// 関数のパラメータと戻り値(Function Parameters and Return Values)
+// Swift では、関数のパラメータと戻り値は非常に柔軟です。
+// 名前のない単一のパラメータを持つシンプルなユーティリティ関数から、
+// 読みやすいように表現できるパラメータ名と様々なパラメータオプションを持つ複雑な関数まで、
+//あらゆるものを定義できます。
+
+// パラメータなし関数(Functions Without Parameters)
+// 入力パラメータは関数に必須ではありません。
+// 入力パラメータのない関数は次のとおりです。
+// この関数は、呼び出される度に、常に同じ String 型のメッセージを返します:
+func sayHelloWorld() -> String {
+    return "hello, world"
+}
+print(sayHelloWorld())
+// こんにちは、 world
+
