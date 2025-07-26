@@ -49,3 +49,16 @@ print(greet(person: "Tim", alreadyGreeted: true))
 // もう一度こんにちは、 Tim!
 
 
+
+// 2025年7月27日(日)
+// 戻り値なし関数(Functions Without Return Values)
+// 戻り値の型を定義することも必須ではありません。
+// greet(person:) バージョンは String 型の値を返すのではなく、その値を出力します。
+func greet(person: String) {
+    print("こんにちは、 \(person)!")
+}
+greet(person: "Dave")
+// こんにちは、 Dave!
+
+
+
