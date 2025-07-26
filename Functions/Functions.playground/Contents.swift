@@ -32,3 +32,20 @@ func sayHelloWorld() -> String {
 print(sayHelloWorld())
 // こんにちは、 world
 
+
+
+// 2025年7月26日(土)
+// 複数のパラメータがある関数(Functions With Multiple Parameters)
+// 関数は、カンマ(,)区切りで複数のパラメータを持つことができます。
+// この関数は、人の名前と、その人がすでに挨拶されているかどうかを入力値として受け取り、その人に適切な挨拶を返します:
+func greet(person: String, alreadyGreeted: Bool) -> String {
+    if alreadyGreeted {
+        return greetAgain(person: person)
+    } else {
+        return greet(person: person)
+    }
+}
+print(greet(person: "Tim", alreadyGreeted: true))
+// もう一度こんにちは、 Tim!
+
+
