@@ -62,3 +62,24 @@ greet(person: "Dave")
 
 
 
+// 2025年7月28日(月)
+// 複数の戻り値がある関数(Functions with Multiple Return Values)
+// タプル型を関数の戻り値の型として使用して、1 つの複合戻り値として複数の値を返すことができます。
+// 以下の例では、minMax(array:) という関数を定義しています。この関数は、Int 値の配列内の最小値と最大値を検索します。
+func minMax(array: [Int]) -> (min: Int, max: Int) {
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for value in array[1..<array.count] {
+        if value < currentMin {
+            currentMin = value
+        } else if value > currentMax {
+            currentMax = value
+        }
+    }
+    return (currentMin, currentMax)
+}
+// minMax(array:) 関数は、2 つの Int 値を含むタプルを返します。
+// これらの値には min と max のラベルが付いているため、関数の戻り値を使用するときにその名前でアクセスできます。
+
+
+
