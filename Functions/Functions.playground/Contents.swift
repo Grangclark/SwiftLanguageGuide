@@ -3,7 +3,7 @@ import UIKit
 var greeting = "Hello, playground"
 
 
-// 2025年7月24日(木)
+// 2025年7月24日[木]
 // 関数(Functions)
 // 関数の定義と呼び出し(Defining and Calling Functions)
 // 下記の例の関数は、greet(person:) という関数で、名前が示す通り、
@@ -15,7 +15,7 @@ func greet(person: String) -> String {
 }
 
 
-// 2025年7月25日(金)
+// 2025年7月25日[金]
 // 関数のパラメータと戻り値(Function Parameters and Return Values)
 // Swift では、関数のパラメータと戻り値は非常に柔軟です。
 // 名前のない単一のパラメータを持つシンプルなユーティリティ関数から、
@@ -34,7 +34,7 @@ print(sayHelloWorld())
 
 
 
-// 2025年7月26日(土)
+// 2025年7月26日[土]
 // 複数のパラメータがある関数(Functions With Multiple Parameters)
 // 関数は、カンマ(,)区切りで複数のパラメータを持つことができます。
 // この関数は、人の名前と、その人がすでに挨拶されているかどうかを入力値として受け取り、その人に適切な挨拶を返します:
@@ -50,7 +50,7 @@ print(greet(person: "Tim", alreadyGreeted: true))
 
 
 
-// 2025年7月27日(日)
+// 2025年7月27日[日]
 // 戻り値なし関数(Functions Without Return Values)
 // 戻り値の型を定義することも必須ではありません。
 // greet(person:) バージョンは String 型の値を返すのではなく、その値を出力します。
@@ -62,7 +62,7 @@ greet(person: "Dave")
 
 
 
-// 2025年7月28日(月)
+// 2025年7月28日[月]
 // 複数の戻り値がある関数(Functions with Multiple Return Values)
 // タプル型を関数の戻り値の型として使用して、1 つの複合戻り値として複数の値を返すことができます。
 // 以下の例では、minMax(array:) という関数を定義しています。この関数は、Int 値の配列内の最小値と最大値を検索します。
@@ -89,6 +89,29 @@ func minMax(array: [Int]) -> (min: Int, max: Int) {
 let bounds = minMax(array: [8, -6, 2, 109, 3, 71])
 print("最小値は \(bounds.min) で最大値は \(bounds.max)")
 // 最小値は -6 で最大値は 109
+
+
+
+// 2025年7月30日[水]
+// オプショナルのタプルの戻り値の型(Optional Tuple Return Types)
+// 関数から返されるタプル型が、「値が存在しない」可能性がある場合は、
+// オプショナルのタプル型を使用して、タプル全体が nil になる可能性があることを示すことができます。
+// (Int, Int)? や (String, Int, Bool)? のように、
+// タプル型の閉じ括弧())の後に疑問符(?)を配置して、オプショナルのタプル型を書きます。
+// 空の配列を安全に処理するには、オプショナルのタプルの戻り値の型を指定して、配列が空の場合は nil を返します。
+func minMax(array: [Int]) -> (min: Int, max: Int)? {
+    if array.isEmpty { return nil }
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for value in array[1..<array.count] {
+        if value < currentMin {
+            currentMin = value
+        } else if value > currentMax {
+            currentMax = value
+        }
+    }
+    return (currentMin, currentMax)
+}
 
 
 
