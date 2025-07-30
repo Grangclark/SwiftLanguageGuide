@@ -115,3 +115,25 @@ func minMax(array: [Int]) -> (min: Int, max: Int)? {
 
 
 
+// 2025年7月31日[木]
+// 暗黙的な戻り値がある関数(Functions With an Implicit Return)
+// 関数の本文全体が、単一式の場合は、関数は暗黙的にその式の結果を返します。例えば、下記の両方の関数の動作は同じです:
+func greeting(for person: String) -> String {
+    "Hello, " + person + "!"
+}
+print(greeting(for: "Dave"))
+// Hello, Dave!
+
+func anotherGreeting(for person: String) -> String {
+    return "Hello, " + person + "!"
+}
+print(anotherGreeting(for: "Dave"))
+// Hello, Dave!
+
+// greeting(for:) 関数の全体の定義は、戻り値の挨拶文です。
+// つまり、この短い形式を使用できます。
+// anotherGreeting(for:) 関数は、複数の式を持つ関数と同様に return キーワードを使用して、
+// 同じ挨拶文を返しています。
+// 1 つの戻り行として記述した関数は、return を省略できます。
+
+
