@@ -137,3 +137,22 @@ print(anotherGreeting(for: "Dave"))
 // 1 つの戻り行として記述した関数は、return を省略できます。
 
 
+
+// 2025年8月1日[木]
+// 引数ラベルとパラメータ名(Function Argument Labels and Parameter Names)
+// 各関数のパラメータには、引数ラベルとパラメータ名の両方持つことができます。
+// 引数ラベルは、関数を呼び出すときに使用されます。
+// 各引数は、その前に書かれた引数ラベルを使用して関数が呼び出されます。
+// 引数名は関数の内部で使用されます。
+// デフォルトでは、パラメータ名を引数ラベルとして使用します。
+func someFunction(firstParameterName: Int, secondParameterName: Int) {
+    // 関数の本文では、`firstParameterName`と`secondParameterName`は
+    // 最初と 2 番目のパラメータの値を参照します。
+}
+someFunction(firstParameterName: 1, secondParameterName: 2)
+// 全てのパラメータには一意の名前を付ける必要があります。
+// 複数のパラメータに同じ引数ラベルを付けることはできますが、
+// 一意の引数ラベルを使用すると、コードが読みやすくなります。
+
+
+
