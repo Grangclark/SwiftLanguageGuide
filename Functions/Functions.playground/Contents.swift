@@ -138,7 +138,7 @@ print(anotherGreeting(for: "Dave"))
 
 
 
-// 2025年8月1日[木]
+// 2025年8月1日[金]
 // 引数ラベルとパラメータ名(Function Argument Labels and Parameter Names)
 // 各関数のパラメータには、引数ラベルとパラメータ名の両方持つことができます。
 // 引数ラベルは、関数を呼び出すときに使用されます。
@@ -156,3 +156,9 @@ someFunction(firstParameterName: 1, secondParameterName: 2)
 
 
 
+// 2025年8月2日[土]
+// 引数ラベルの特定(Specifying Argument Labels)
+// 引数名の前に、スペースで区切って引数ラベルを記述します。
+func someFunction(argumentLabel parameterName: Int) {
+    // 関数の本文では、`parameterName` でパラメータの値を参照します
+}
