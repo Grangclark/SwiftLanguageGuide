@@ -174,3 +174,16 @@ print(greet(person: "Bill", from: "Cupertino"))
 // Hello Bill!  Glad you could visit from Cupertino.
 
 // 引数ラベルを使用すると、関数の本文に読みやすく明確な意図を持たせつつ、表現豊かな文章のように関数を呼び出すことができます。
+
+
+
+// 2025年8月4日[月]
+// 引数ラベルの省略(Omitting Argument Labels)
+// 引数ラベルが必要ない場合は、その引数ラベルの代わりにアンダースコア(_)を記述します。
+func someFunction(_ firstParameterName: Int, secondParameterName: Int) {
+    // 関数の本文では、`firstParameterName`と`secondParameterName`は
+    // 最初と 2 番目のパラメータの値を参照します。
+}
+someFunction(1, secondParameterName: 2)
+
+
