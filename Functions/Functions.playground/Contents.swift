@@ -162,3 +162,15 @@ someFunction(firstParameterName: 1, secondParameterName: 2)
 func someFunction(argumentLabel parameterName: Int) {
     // 関数の本文では、`parameterName` でパラメータの値を参照します
 }
+
+
+
+// 2025年8月3日[日]
+// これは、人の名前と出身地を受け取って挨拶を返す greet(person:) 関数の一種です:
+func greet(person: String, from hometown: String) -> String {
+    return "Hello \(person)!  Glad you could visit from \(hometown)."
+}
+print(greet(person: "Bill", from: "Cupertino"))
+// Hello Bill!  Glad you could visit from Cupertino.
+
+// 引数ラベルを使用すると、関数の本文に読みやすく明確な意図を持たせつつ、表現豊かな文章のように関数を呼び出すことができます。
