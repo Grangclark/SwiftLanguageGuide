@@ -187,3 +187,22 @@ func someFunction(_ firstParameterName: Int, secondParameterName: Int) {
 someFunction(1, secondParameterName: 2)
 
 
+
+// 2025年8月5日[火]
+// デフォルトパラメータ値(Default Parameter Values)
+// パラメータの型の後に値を代入することで、関数内の任意のパラメータのデフォルト値を定義できます。
+// デフォルト値が定義されている場合は、関数を呼び出すときにそのパラメータを省略できます。
+func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
+    // 関数を呼び出すときに 2 番目のパラメータを省略した場合、
+    // `parameterWithDefault` の値は 12 になります。
+}
+someFunction(parameterWithoutDefault: 3, parameterWithDefault: 6) // `parameterWithDefault` は 6
+someFunction(parameterWithoutDefault: 4) // `parameterWithDefault` は 12
+
+// デフォルト値のないパラメータは、関数のパラメータリストでデフォルト値のあるパラメータよりも前に置きましょう。
+// 通常、デフォルト値を持たないパラメータの方が重要です。
+// 最初にデフォルト値を持たないパラメータを置くと、
+// デフォルトパラメータが省略されているかどうかに関係なく、
+// 同じ関数が呼び出されていることを認識しやすくなります。
+
+
