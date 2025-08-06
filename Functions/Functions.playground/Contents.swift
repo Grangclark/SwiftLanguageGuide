@@ -206,3 +206,24 @@ someFunction(parameterWithoutDefault: 4) // `parameterWithDefault` は 12
 // 同じ関数が呼び出されていることを認識しやすくなります。
 
 
+
+// 2025年8月6日[水]
+// 可変長パラメータ(Variadic Parameters)
+// 可変長パラメータは、指定された型の 0 個以上の値を受け入れます。
+// 可変長パラメータを使用すると、関数が呼び出されたときに、
+// パラメータに様々な数の入力値を渡すことができます。
+// パラメータの型名の後に 3 つのピリオド文字(...)を挿入して、可変長パラメータを記述します。
+func arithmeticMean(_ numbers: Double...) -> Double {
+    var total: Double = 0
+    for number in numbers {
+        total += number
+    }
+    return total / Double(numbers.count)
+}
+arithmeticMean(1, 2, 3, 4, 5)
+// 5 つの数値の平均の 3.0 を返します
+arithmeticMean(3, 8.25, 18.75)
+// 3 つの数値の平均の 10.0 を返します
+
+
+
