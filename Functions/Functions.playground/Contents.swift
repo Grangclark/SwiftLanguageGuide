@@ -227,3 +227,23 @@ arithmeticMean(3, 8.25, 18.75)
 
 
 
+
+// 2025年8月7日[木]
+// 関数型(Function Types)
+// 全ての関数には特定の関数型があり、パラメータの型と戻り値の型で構成されています。
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a + b
+}
+func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a * b
+}
+// この例では、addTwoInts および multiplyTwoInts と呼ばれる 2 つのシンプルな数学関数を定義します。
+// これらの関数はそれぞれ 2 つの Int 値を取り、適切な数学演算を実行した結果の Int 値を返します。
+// これらの関数の両方の型は、(Int, Int) -> Int です。これは次のように読むことができます:
+// 「両方とも Int 型の 2 つの値を受け取り、Int 型の値を返す関数です」
+
+
+
+
+
+
