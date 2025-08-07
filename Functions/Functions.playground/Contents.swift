@@ -244,6 +244,11 @@ func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
 
 
 
-
-
-
+// 2025年8月8日[金]
+// 関数型の使用(Using Function Types)
+// Swift の他の型と同じように関数型を使用します。
+// 例えば、定数または変数を関数型として定義し、その変数に適切な関数を代入することができます:
+var mathFunction: (Int, Int) -> Int = addTwoInts
+// これは次のように読むことができます:
+// 「2 つの Int 値を取り、Int 値を返す関数の型を持つ mathFunction という変数を定義します。
+// この新しい変数が、addTwoInts という関数を参照するように設定します」
