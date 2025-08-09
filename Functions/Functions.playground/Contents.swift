@@ -252,3 +252,12 @@ var mathFunction: (Int, Int) -> Int = addTwoInts
 // これは次のように読むことができます:
 // 「2 つの Int 値を取り、Int 値を返す関数の型を持つ mathFunction という変数を定義します。
 // この新しい変数が、addTwoInts という関数を参照するように設定します」
+
+
+
+// 2025年8月9日[土]
+// addTwoInts(_:_:) 関数は mathFunction 変数と同じ型のため、この代入は Swift の型チェックを通ります。
+// 代入した関数を mathFunction という名前で呼び出すことができます。
+mathFunction = multiplyTwoInts
+print("結果: \(mathFunction(2, 3))")
+// 結果: 6
