@@ -261,3 +261,21 @@ var mathFunction: (Int, Int) -> Int = addTwoInts
 mathFunction = multiplyTwoInts
 print("結果: \(mathFunction(2, 3))")
 // 結果: 6
+
+
+
+// 2025年8月10日[日]
+// パラメータの型としての関数型(Function Types as Parameter Types)
+// (Int, Int) -> Int などの関数型を別の関数のパラメータの型として使用できます。
+// これにより、関数の呼び出し元で関数の一部の機能を決めることができます。
+// 下記は、上記の数学関数の結果を出力する例です:
+func printMathResult(_ mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    print("結果: \(mathFunction(a, b))")
+}
+printMathResult(addTwoInts, 3, 5)
+// 結果: 8
+// この例では、3 つのパラメータを持つ printMathResult(_:_:_:) という関数を定義します。
+// 最初のパラメータは mathFunction と呼ばれ、(Int, Int) -> Int 型です。
+// この最初のパラメータとして、その型の任意の関数を渡すことができます。
+// 2 番目と 3 番目のパラメータは a と b と呼ばれ、どちらも Int 型です。
+// これらは、提供されている数学関数の 2 つの入力値として使用されています。
