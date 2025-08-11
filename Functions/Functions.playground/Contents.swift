@@ -279,3 +279,20 @@ printMathResult(addTwoInts, 3, 5)
 // この最初のパラメータとして、その型の任意の関数を渡すことができます。
 // 2 番目と 3 番目のパラメータは a と b と呼ばれ、どちらも Int 型です。
 // これらは、提供されている数学関数の 2 つの入力値として使用されています。
+
+
+
+
+// 2025年8月11日[月]
+// 戻り値の型としての関数型(Function Types as Return Types)
+// 関数型を別の関数の戻り値の型として使用できます。これを行うには、関数の戻り矢印(->)の直後に完全な関数型を書きます。
+
+// 次の例では、stepForward(_:) と stepBackward(_:) という 2 つのシンプルな関数を定義します。
+// stepForward(_:) 関数は、入力値より 1 つ大きい値を返し、
+// stepBackward(_:) 関数は、入力値より 1 つ小さい値を返します。両方の関数の型は (Int) -> Int です:
+func stepForward(_ input: Int) -> Int {
+    return input + 1
+}
+func stepBackward(_ input: Int) -> Int {
+    return input - 1
+}
