@@ -296,3 +296,31 @@ func stepForward(_ input: Int) -> Int {
 func stepBackward(_ input: Int) -> Int {
     return input - 1
 }
+
+
+
+// 2025年8月12日[火]
+// ネスト関数(Nested Functions)
+// この章でこれまでに見てきた全ての関数は、
+// グローバルスコープで定義されたグローバル関数の例でしたが、
+// ネスト関数と呼ばれる、他の関数の本文内に関数を定義することもできます。
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    func stepForward(input: Int) -> Int { return input + 1 }
+    func stepBackward(input: Int) -> Int { return input - 1 }
+    return backward ? stepBackward : stepForward
+}
+var currentValue = -4
+let moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
+// moveNearerToZero は ネスト関数の stepForward() を参照しています
+while currentValue != 0 {
+    print("\(currentValue)... ")
+    currentValue = moveNearerToZero(currentValue)
+}
+print("0!")
+// -4...
+// -3...
+// -2...
+// -1...
+// 0!
+
+
