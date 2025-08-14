@@ -12,3 +12,17 @@ import UIKit
 enum SomeEnumeration {
     // 列挙型の定義をここに記載します
 }
+
+
+
+// 2025/08/15[金]
+// コンパスの 4 つの主要な方向の例を次に示します:
+enum CompassPoint {
+    case north
+    case south
+    case east
+    case west
+}
+// 列挙型で定義された値(north、south、east、west など)は、その列挙ケースです。
+// case キーワードを使用して、新しい列挙ケースを導入します。
+
