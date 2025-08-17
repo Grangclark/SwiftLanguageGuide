@@ -51,3 +51,18 @@ case .west:
 // …などなど。
 
 
+
+// 2025/08/17[日]
+// 全ての列挙ケースの case を並べることが適切でない場合は、明示的に対処されていないケースをカバーする default のケースを提供できます。
+let somePlanet = Planet.earth
+switch somePlanet {
+case .earth:
+    print("ほとんど無害")
+default:
+    print("人間にとっては安全な場所ではありません")
+}
+// ほとんど無害
+
+
+
+
