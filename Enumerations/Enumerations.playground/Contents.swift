@@ -65,4 +65,21 @@ default:
 
 
 
+// 2025/08/18[月]
+// 列挙ケースの繰り返し処理(Iterating over Enumeration Cases)
+// 一部の列挙型では、その列挙型の全てのケースのコレクションがあると便利です。
+// これを有効にするには、列挙型の名前の後に :CaseIterable を記述します。
+// Swift は、全てのケースのコレクションを列挙型の allCases プロパティとして提供しています。次に例を示します:
+enum Beverage: CaseIterable {
+    case coffee, tea, juice
+}
+let numberOfChoices = Beverage.allCases.count
+print("\(numberOfChoices) beverages available")
+// 3 種類の飲み物を用意しています
+
+// 上記の例では、Beverage.allCases を記述して、列挙型 Beverage の全てのケースを含むコレクションにアクセスします。
+// allCases は、他のコレクションと同じように使用できます。
+// コレクションの要素は列挙型のインスタンスで、今回は Beverage の値です。
+// 上記の例では、ケースの数をカウントし、下記の例では、for ループを使用して全てのケースを繰り返し処理しています。
+
 
