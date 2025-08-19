@@ -97,3 +97,18 @@ enum ASCIIControlCharacter: Character {
 }
 
 
+
+// 2025/08/20[水]
+// 暗黙的に割り当てられたRaw Value(Implicitly Assigned Raw Values)
+// 整数または文字列の Raw Value を格納する列挙型を操作する場合、それぞれのケースに Raw Value を明示的に割り当てる必要はありません。
+// 代わりに Swift が自動的に値を割り当てます。
+
+// 例えば、Raw Value に整数が使用されている場合、各ケースの暗黙の値は前のケースより 1 つ増えた値になります。
+// 最初のケースに値が設定されていない場合、その値は 0 です。
+
+// 以下の列挙型は、以前の Planet の列挙型を改良したもので、太陽からの各惑星の順序を表す整数の Raw Value が含まれています。
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+// 上記の例例では、Planet.mercury の明示的な Raw Value は 1 で、Planet.venus の暗黙的な Raw Value は 2 です。
+
