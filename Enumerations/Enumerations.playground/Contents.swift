@@ -83,3 +83,17 @@ print("\(numberOfChoices) beverages available")
 // 上記の例では、ケースの数をカウントし、下記の例では、for ループを使用して全てのケースを繰り返し処理しています。
 
 
+
+// 2025/08/19[火]
+// Raw Values
+// 関連値(Associated Values)のバーコードの例は、列挙ケースが、様々な型に関連値を格納して宣言する方法を示しています。
+// 関連値の代わりに、列挙型には、全て同じ型のデフォルト値(Raw Valuesと呼ばれる)を事前に定義することもできます。
+
+// 名前付きの列挙ケースと一緒に ASCII 値を格納する例を次に示します。
+enum ASCIIControlCharacter: Character {
+    case tab = "\t"
+    case lineFeed = "\n"
+    case carriageReturn = "\r"
+}
+
+
