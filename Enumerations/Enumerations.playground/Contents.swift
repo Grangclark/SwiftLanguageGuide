@@ -112,3 +112,15 @@ enum Planet: Int {
 }
 // 上記の例例では、Planet.mercury の明示的な Raw Value は 1 で、Planet.venus の暗黙的な Raw Value は 2 です。
 
+
+
+// 2025/08/21[木]
+// 文字列が Raw Value に使用される場合、各ケースの暗黙的な値は、そのケースの名前のテキストです。
+// 下記の列挙型は、以前の CompassPoint 列挙型を改良したもので、各方向の名前を表す文字列の Raw Value が含まれています。
+enum CompassPoint: String {
+    case north, south, east, west
+}
+// 上記の例では、CompassPoint.south には "south" という暗黙の Raw Value があります。
+
+
+
