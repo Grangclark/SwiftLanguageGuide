@@ -124,3 +124,12 @@ enum CompassPoint: String {
 
 
 
+// 2025/08/22[金]
+// rawValue プロパティを使用して列挙ケースの Raw Value にアクセスします。
+let earthsOrder = Planet.earth.rawValue
+// earthsOrder は 3
+
+let sunsetDirection = CompassPoint.west.rawValue
+// sunsetDirection は "west"
+
+
