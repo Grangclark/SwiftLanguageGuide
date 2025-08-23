@@ -133,3 +133,19 @@ let sunsetDirection = CompassPoint.west.rawValue
 // sunsetDirection は "west"
 
 
+
+// 2025/08/23[土]
+// 再帰的列挙型(Recursive Enumerations)
+// 再帰的列挙型は、1 つ以上の列挙ケースの関連値としてその列挙型の別のインスタンスを持つ列挙型です。
+// 列挙型が再帰的だということを示すには、その前に indirect を記述します。
+// これにより、コンパイラに indirect のネストがあることを伝えることができます。
+
+// 例えば、シンプルな算術式を格納する列挙型は次のとおりです。
+enum ArithmeticExpression {
+    case number(Int)
+    indirect case addition(ArithmeticExpression, ArithmeticExpression)
+    indirect case multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+
+
+
