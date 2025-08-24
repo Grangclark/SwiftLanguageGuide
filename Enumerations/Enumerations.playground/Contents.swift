@@ -149,3 +149,18 @@ enum ArithmeticExpression {
 
 
 
+// 2025/08/24[日]
+// 列挙型の開始前に indirect を記述して、関連値を持つ全てのケースを indirect にすることもできます。
+indirect enum ArithmeticExpression {
+    case number(Int)
+    case addition(ArithmeticExpression, ArithmeticExpression)
+    case multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+
+// この列挙型には、シンプルな数値、2 つの式の加算、および乗算の 3 種類の算術式を格納できます。
+// addition と multiplication のケースには、同じく算術式を関連値として格納しています。
+// これらの関連値により、式をネストできます。
+// 例えば、式 (5 + 4) * 2 には、乗算の右側に数値があり、乗算の左側に別の式があります。
+
+
+
