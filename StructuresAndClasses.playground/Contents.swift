@@ -2,6 +2,7 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+// 2025/08/25[月]
 // 構造体とクラス(Structures and Classes)
 // データをカプセル化する独自のデータ型をモデル化する。
 
@@ -23,4 +24,20 @@ class SomeClass {
 }
 
 
+// 2025/08/26[火]
+// 構造体とクラス定義の例を次に示します。
+struct Resolution {
+    var width = 0
+    var height = 0
+}
+class VideoMode {
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+    var name: String?
+}
 
+// 上記の例では、Resolution と呼ばれる新しい構造体を定義して、ピクセルベースのディスプレイ解像度を記述しています。
+// この構造体には、width と height という 2 つの格納プロパティがあります。
+// 格納プロパティは、構造体またはクラスの一部として紐付け、格納される定数または変数です。
+// これらの 2 つのプロパティは、初期値に 0 を設定することにより、Int 型だと推論されます。
