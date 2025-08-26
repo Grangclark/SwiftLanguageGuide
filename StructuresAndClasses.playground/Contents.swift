@@ -41,3 +41,15 @@ class VideoMode {
 // この構造体には、width と height という 2 つの格納プロパティがあります。
 // 格納プロパティは、構造体またはクラスの一部として紐付け、格納される定数または変数です。
 // これらの 2 つのプロパティは、初期値に 0 を設定することにより、Int 型だと推論されます。
+
+
+
+// 2025/08/27[水]
+// struct と class のインスタンス(Structure and Class Instances)
+// Resolution 構造体の定義と VideoMode クラスの定義は、Resolution または VideoMode がどのようなものかを説明しているだけです。
+// インスタンスを作成するための構文は、構造体とクラスの両方で非常に似ています。
+let someResolution = Resolution()
+let someVideoMode = VideoMode()
+
+
+
