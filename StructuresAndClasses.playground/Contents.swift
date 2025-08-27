@@ -53,3 +53,13 @@ let someVideoMode = VideoMode()
 
 
 
+// 2025/08/28[木]
+// プロパティへのアクセス(Accessing Properties)
+// ドット構文を使用して、インスタンスのプロパティにアクセスできます。
+// ドット構文では、インスタンス名の直後に、スペースを入れずにピリオド(.)で区切ってプロパティ名を記述します。
+print("The width of someResolution is \(someResolution.width)")
+// The width of someResolution is 0
+
+// この例では、someResolution.width は someResolution の width プロパティを参照し、デフォルトの初期値 0 を返します。
+
+
