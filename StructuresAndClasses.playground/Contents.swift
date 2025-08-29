@@ -63,3 +63,10 @@ print("The width of someResolution is \(someResolution.width)")
 // この例では、someResolution.width は someResolution の width プロパティを参照し、デフォルトの初期値 0 を返します。
 
 
+
+// 2025/08/29[金]
+// VideoMode の resolution プロパティの width プロパティなど、より深い階層へもアクセスできます。
+print("The width of someVideoMode is \(someVideoMode.resolution.width)")
+// The width of someVideoMode is 0
+
+
