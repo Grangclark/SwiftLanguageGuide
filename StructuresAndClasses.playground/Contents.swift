@@ -70,3 +70,11 @@ print("The width of someVideoMode is \(someVideoMode.resolution.width)")
 // The width of someVideoMode is 0
 
 
+
+// 2025/08/30[土]
+// ドット構文を使用して、変数プロパティに新しい値を代入することもできます。
+someVideoMode.resolution.width = 1280
+print("The width of someVideoMode is now \(someVideoMode.resolution.width)")
+// The width of someVideoMode is now 1280
+
+
