@@ -36,3 +36,41 @@ rangeOfFourItems.firstValue = 6
 // firstValue は変数ですがエラーになります
 
 
+
+// 2025/09/02[火]
+// 計算プロパティ(Computed Properties)
+// 格納プロパティに加えて、クラス、構造体、および列挙型は、計算プロパティを定義できます。
+// これは値を保持せず、代わりに間接的に他のプロパティの値を取得する get を提供します。
+// 他のプロパティに値を設定する set を提供することもできます。
+struct Point {
+    var x = 0.0, y = 0.0
+}
+struct Size {
+    var width = 0.0, height = 0.0
+}
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        set(newCenter) {
+            origin.x = newCenter.x - (size.width / 2)
+            origin.y = newCenter.y - (size.height / 2)
+        }
+    }
+}
+var square = Rect(origin: Point(x: 0.0, y: 0.0),
+                  size: Size(width: 10.0, height: 10.0))
+let initialSquareCenter = square.center
+square.center = Point(x: 15.0, y: 15.0)
+print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
+// square.origin is now at (10.0, 10.0)
+
+// この例では、幾何学的形状を操作するための 3 つの構造体を定義しています。
+// ・Point は、x 座標と y 座標をカプセル化しています
+// ・Size は width と height をカプセル化しています
+// ・Rect は、原点とサイズで四角形を定義しています
