@@ -2,6 +2,7 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+// 2025/08/31[日]
 // プロパティ(Properties)
 // インスタンスまたは型の一部である、格納および計算された値にアクセスする。
 // プロパティは、値を特定のクラス、構造体、または列挙型に関連付けます。
@@ -24,5 +25,14 @@ rangeOfThreeItems.firstValue = 6
 
 // FixedLengthRange のインスタンスには、firstValue と呼ばれる変数格納プロパティと length という定数格納プロパティがあります。上記の例では、定数のため、長さは新しい範囲が作成されたときに初期化され、それ以降は変更できません。
 
+
+
+// 2025/09/01[月]
+// 定数に割り当てられた構造体のインスタンスの格納プロパティ(Stored Properties of Constant Structure Instances)
+// 構造体のインスタンスを作成し、そのインスタンスを定数に割り当てる場合、インスタンスのプロパティは、変数で宣言されていても変更できません。
+let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
+// 0, 1, 2, 3 の整数の範囲を表しています
+rangeOfFourItems.firstValue = 6
+// firstValue は変数ですがエラーになります
 
 
