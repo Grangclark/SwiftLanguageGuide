@@ -74,3 +74,29 @@ print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
 // ・Point は、x 座標と y 座標をカプセル化しています
 // ・Size は width と height をカプセル化しています
 // ・Rect は、原点とサイズで四角形を定義しています
+
+
+
+// 2025/09/03[水]
+// 省略プロパティ set 宣言(Shorthand Setter Declaration)
+// 計算プロパティの set が、設定される新しい値の名前を定義しない場合、デフォルト名の newValue が使用されます。
+// 下記はこの省略表記を利用した Rect 構造体の代替バージョンを次に示します:
+struct AlternativeRect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        set {
+            origin.x = newValue.x - (size.width / 2)
+            origin.y = newValue.y - (size.height / 2)
+        }
+    }
+}
+
+
+
+
