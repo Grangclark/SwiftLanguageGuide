@@ -100,3 +100,24 @@ struct AlternativeRect {
 
 
 
+// 2025/09/04[木]
+// 省略プロパティ get 宣言(Shorthand Getter Declaration)
+// get の本文全体が単一式の場合、暗黙的にその式を返します。
+// この省略表記を利用した別のバージョンの Rect 構造体を次に示します:
+struct CompactRect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            Point(x: origin.x + (size.width / 2),
+                  y: origin.y + (size.height / 2))
+        }
+        set {
+            origin.x = newValue.x - (size.width / 2)
+            origin.y = newValue.y - (size.height / 2)
+        }
+    }
+}
+
+
+
