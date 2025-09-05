@@ -121,3 +121,26 @@ struct CompactRect {
 
 
 
+
+// 2025/09/05[金]
+// 読み取り専用計算プロパティ(Read-Only Computed Properties)
+// get のみの計算プロパティは、読み取り専用計算プロパティと呼ばれます。
+// 読み取り専用計算プロパティは常に値を返し、ドット構文を介してアクセスできますが、別の値を設定することはできません。
+struct Cuboid {
+    var width = 0.0, height = 0.0, depth = 0.0
+    var volume: Double {
+        return width * height * depth
+    }
+}
+let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
+// the volume of fourByFiveByTwo is 40.0
+
+// この例では、Cuboid という新しい構造体を定義します。
+// これは、width、height、depth プロパティを持つ 3D の長方形のボックスを表します。
+// この構造体には、volume と呼ばれる読み取り専用計算プロパティもあります。
+// これは、直方体の現在のボリュームを計算して返します。
+// 特定のボリューム値に width、height、depth のどの値が使用されているかがあいまいなため、
+// volume に set 可能にすることは意味がありません。
+// それでも、Cuboid が読み取り専用計算プロパティを提供して、
+// 外部ユーザーが現在の計算済みボリュームを見られようにすると便利です。
