@@ -144,3 +144,37 @@ print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
 // volume に set 可能にすることは意味がありません。
 // それでも、Cuboid が読み取り専用計算プロパティを提供して、
 // 外部ユーザーが現在の計算済みボリュームを見られようにすると便利です。
+
+
+
+// 2025/09/06[土]
+// 型プロパティ構文(Type Property Syntax)
+// C言語および Objective-C では、静的定数および型に関連付けられた変数をグローバル静的変数として定義します。
+// Swift では、型プロパティは型の定義の一部として、型定義の中括弧内({})に記述され、
+// 各型プロパティは、サポートする型に明示的にスコープされます。
+
+// static キーワードを使用して型プロパティを定義します。
+// クラス型の計算型プロパティの場合、
+// 代わりに class キーワードを使用して、サブクラスがスーパークラスの実装をオーバーライドできるようにすることもできます。
+// 下記の例は、格納および計算型プロパティの構文を示しています。
+struct SomeStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
+enum SomeEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 6
+    }
+}
+class SomeClass {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 27
+    }
+    class var overrideableComputedTypeProperty: Int {
+        return 107
+    }
+}
