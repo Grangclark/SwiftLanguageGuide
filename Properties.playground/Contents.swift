@@ -178,3 +178,23 @@ class SomeClass {
         return 107
     }
 }
+
+
+
+// 2025/09/07[日]
+// 型プロパティへのアクセスと設定(Querying and Setting Type Properties)
+// 型プロパティは、インスタンスプロパティと同様に、ドット構文でアクセスおよび設定できます。
+// ただし、型プロパティは、その型のインスタンスではなく、その型自体に対してクエリおよび設定します。例えば:
+print(SomeStructure.storedTypeProperty)
+// Some value.
+SomeStructure.storedTypeProperty = "Another value."
+print(SomeStructure.storedTypeProperty)
+// Another value.
+print(SomeEnumeration.computedTypeProperty)
+// 6
+print(SomeClass.computedTypeProperty)
+// 27
+
+
+
+
