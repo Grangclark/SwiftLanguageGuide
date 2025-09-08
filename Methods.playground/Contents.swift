@@ -36,3 +36,17 @@ class Counter {
 // reset() は、カウンタを 0 にリセットします
 
 
+
+// 2025/09/09[火]
+// Counter クラスは、現在のカウンタ値を追跡するために変数プロパティ count も宣言しています
+// プロパティと同じドット構文でインスタンスメソッドを呼び出します。
+let counter = Counter()
+// counter の初期値は 0
+counter.increment()
+// counter の値は 1
+counter.increment(by: 5)
+// counter の値は 6
+counter.reset()
+// counter の値は 0
+
+
