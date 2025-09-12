@@ -82,3 +82,26 @@ if somePoint.isToTheRightOf(x: 1.0) {
 // この点は x == 1.0 の直線の右側にあります
 
 
+
+
+// 2025/09/12[金]
+// インスタンスメソッド内からの値型の変更(Modifying Value Types from Within Instance Methods)
+// 構造体と列挙型は値型です。デフォルトでは、値型のプロパティはそのインスタンスメソッド内から変更できません。
+// この挙動を可能にするには、そのメソッドの func キーワードの前に mutating キーワードを配置します:
+struct Point {
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        x += deltaX
+        y += deltaY
+    }
+}
+var somePoint = Point(x: 1.0, y: 1.0)
+somePoint.moveBy(x: 2.0, y: 3.0)
+print("点は現在 (\(somePoint.x), \(somePoint.y)) です")
+// 点は現在 (3.0, 4.0) です
+
+// 上記の Point 構造体は、自身に変更を加える moveBy(x:y:) メソッドを定義します。
+// これは、Point インスタンスを一定量移動します。
+// 新しいポイントを返す代わりに、呼び出されたポイントを実際に変更します。
+// プロパティを変更できるようにするために、mutating キーワードがその定義に追加されてます。
+
