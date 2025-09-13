@@ -105,3 +105,19 @@ print("点は現在 (\(somePoint.x), \(somePoint.y)) です")
 // 新しいポイントを返す代わりに、呼び出されたポイントを実際に変更します。
 // プロパティを変更できるようにするために、mutating キーワードがその定義に追加されてます。
 
+
+
+// 2025/09/13[土]
+// mutating メソッド内からselfへの値の割り当て(Assigning to self Within a Mutating Method)
+struct Point {
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        self = Point(x: x + deltaX, y: y + deltaY)
+    }
+}
+
+// このバージョンの mutating moveBy(x:y:) メソッドは、x と y がターゲットの位置に設定された新しい構造体を作成します。
+// この代替バージョンのメソッドを呼び出した場合の最終結果は、先ほどのバージョンを呼び出した場合とまったく同じになります。
+
+
+
