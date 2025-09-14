@@ -121,3 +121,26 @@ struct Point {
 
 
 
+// 2025/09/15[日]
+// 列挙型の変更メソッドは、暗黙的な self パラメータを同じ列挙型とは異なるケースに設定できます。
+enum TriStateSwitch {
+    case off, low, high
+    mutating func next() {
+        switch self {
+        case .off:
+            self = .low
+        case .low:
+            self = .high
+        case .high:
+            self = .off
+        }
+    }
+}
+var ovenLight = TriStateSwitch.low
+ovenLight.next()
+// ovenLight は .high
+ovenLight.next()
+// ovenLight は .off
+
+// この例では、スイッチの 3 つの状態を列挙型で定義しています。
+// スイッチは、next() メソッドが呼び出されるたびに、3 つの異なる電源状態(off、low と high)を切り替えます。
