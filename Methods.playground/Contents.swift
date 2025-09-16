@@ -165,3 +165,42 @@ class SomeClass {
 }
 SomeClass.someTypeMethod()
 
+
+
+
+// 2025/09/17[水]
+// 下記では、ゲームの様々なレベルまたはステージを通じてプレーヤーの進行状況を追跡する LevelTracker と呼ばれる構造体を定義しています。
+// シングルプレイヤー用のゲームですが、1 つのデバイスに複数のプレイヤーの情報を保存できます。
+
+// ゲームの全てのレベル(レベル 1 を除く)は、ゲームを最初にプレイしたときに決定されます。
+// プレーヤーがそのレベルをクリアするたびに、そのレベルはデバイス上の全てのプレーヤーに対して解放されます。
+// LevelTracker 構造体は、型プロパティとメソッドを使用して、ゲームのどのレベルが解放されたのかを追跡します。
+// また、個々のプレーヤーの現在のレベルも追跡します。
+struct LevelTracker {
+    static var highestUnlockedLevel = 1
+    var currentLevel = 1
+
+    static func unlock(_ level: Int) {
+        if level > highestUnlockedLevel { highestUnlockedLevel = level }
+    }
+
+    static func isUnlocked(_ level: Int) -> Bool {
+        return level <= highestUnlockedLevel
+    }
+
+    @discardableResult
+    mutating func advance(to level: Int) -> Bool {
+        if LevelTracker.isUnlocked(level) {
+            currentLevel = level
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+// LevelTracker構造体は、任意のプレーヤーが解放した最高レベルを追跡します。
+// この値は、highestUnlockedLevel という型プロパティに格納されます。
+
+
+
