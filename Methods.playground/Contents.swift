@@ -199,8 +199,32 @@ struct LevelTracker {
     }
 }
 
-// LevelTracker構造体は、任意のプレーヤーが解放した最高レベルを追跡します。
+// LevelTracker 構造体は、任意のプレーヤーが解放した最高レベルを追跡します。
 // この値は、highestUnlockedLevel という型プロパティに格納されます。
+
+
+
+// 2025/09/18[木]
+// LevelTracker 構造体は、下記に示す Player クラスで使用され、個々のプレーヤーの進行状況を追跡および更新します:
+class Player {
+    var tracker = LevelTracker()
+    let playerName: String
+    func complete(level: Int) {
+        LevelTracker.unlock(level + 1)
+        tracker.advance(to: level + 1)
+    }
+    init(name: String) {
+        playerName = name
+    }
+}
+
+// Player クラスは、LevelTracker の新しいインスタンスを作成して、
+// そのプレーヤーの進行状況を追跡します。また、complete(level:) というメソッドも提供します。
+// これは、プレーヤーが特定のレベルをクリアするたびに呼び出されます。
+// このメソッドは、全てのプレーヤーの次のレベルを解放し、
+// プレーヤーの進行状況を更新して次のレベルに移動します。
+// (レベルは前の行の LevelTracker.unlock(_:) の呼び出しによって解放されていることがわかっているため、
+//  advance(to:) のブール値の戻り値は無視されています)
 
 
 
