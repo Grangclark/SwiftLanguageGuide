@@ -227,4 +227,13 @@ class Player {
 //  advance(to:) のブール値の戻り値は無視されています)
 
 
+// 2025/09/19[金]
+// 新しいプレーヤーの Player クラスのインスタンスを作成し、プレーヤーがレベル 1 をクリアしたときに何が起こるかを確認できます。
+var player = Player(name: "Argyrios")
+player.complete(level: 1)
+print("解放された最高レベルは現在 \(LevelTracker.highestUnlockedLevel) です")
+// 解放された最高レベルは現在 2 です
+
+
+
 
