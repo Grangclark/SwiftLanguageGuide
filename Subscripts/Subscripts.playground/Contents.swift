@@ -47,3 +47,24 @@ subscript(index: Int) -> Int {
 }
 
 
+
+// 2025/09/23[火]
+// これは、整数の n 倍数のテーブルを表す TimesTable 構造体を定義する読み取り専用のサブスクリプトの実装の例です。
+struct TimesTable {
+    let multiplier: Int
+    subscript(index: Int) -> Int {
+        return multiplier * index
+    }
+}
+let threeTimesTable = TimesTable(multiplier: 3)
+print("six times three is \(threeTimesTable[6])")
+// six times three is 18
+
+// この例では、TimesTable の新しいインスタンスが作成され、3 の倍数テーブルを表します。
+// 上記では、インスタンスの multiplier パラメータに使用する値として、構造体のイニシャライザに値 3 を渡しています。
+
+// threeTimesTable[6] で示されているように、サブスクリプトを呼び出すことで threeTimesTable インスタンスの検索を実行できます。
+// これは、3 の倍数テーブルの 6 番目のエントリを要求し、値 18、つまり 3 x 6 を返します。
+
+
+
