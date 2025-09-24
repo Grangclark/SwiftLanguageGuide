@@ -68,3 +68,21 @@ print("six times three is \(threeTimesTable[6])")
 
 
 
+// 2025/09/24[水]
+// 型サブスクリプト(Type Subscripts)
+// 上で説明したように、インスタンスのサブスクリプトは、特定の型のインスタンスで呼び出すサブスクリプトです。
+// 加えて、型自体で呼び出されるサブスクリプトを定義することもできます。
+// この種のサブスクリプトは、型サブスクリプトと呼ばれます。
+// subscript キーワードの前に static キーワードを記述して、型サブスクリプトを示します。
+// クラスは代わりに class キーワードを使用すると、サブクラスがそのサブスクリプトのスーパークラスの実装をオーバーライドすることができます。
+// 下記の例は、型サブスクリプトを定義して呼び出す方法を示しています。
+enum Planet: Int {
+    case mercury = 1, venus, earth, mars, jupiter, saturn, uranus, neptune
+    static subscript(n: Int) -> Planet {
+        return Planet(rawValue: n)!
+    }
+}
+let mars = Planet[4]
+print(mars)
+
+
