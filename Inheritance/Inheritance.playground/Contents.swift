@@ -2,6 +2,7 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+// 2025/09/25[木]
 // 継承(Inheritance)
 
 // 機能を追加またはオーバーライドするサブクラス。
@@ -35,5 +36,10 @@ class Vehicle {
     }
 }
 
+
+
+// 2025/09/26[金]
+// 初期化構文を使用して Vehicle の新しいインスタンスを作成します。これは、型名とそれに続く空の括弧(())として記述されます。
+let someVehicle = Vehicle()
 
 
