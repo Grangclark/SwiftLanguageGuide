@@ -83,3 +83,10 @@ class Bicycle: Vehicle {
 
 
 
+// 2025/09/30[火]
+// デフォルトでは、作成する新しい Bicycle インスタンスにはカゴがありません。
+// 特定の Bicycle インスタンスが作成された後、そのインスタンスに対して hasBasket プロパティを true に設定できます。
+let bicycle = Bicycle()
+bicycle.hasBasket = true
+
+
