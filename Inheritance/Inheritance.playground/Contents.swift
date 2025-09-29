@@ -70,3 +70,16 @@ class SomeSubclass: SomeSuperclass {
 
 
 
+// 2025/09/29[月]
+// 次の例では、Vehicle のスーパークラスを持つ Bicycle というサブクラスを定義しています。
+class Bicycle: Vehicle {
+    var hasBasket = false
+}
+
+// 新しい Bicycle クラスは、currentSpeed プロパティと description プロパティ、makeNoise() メソッドなど、
+// Vehicle の全ての特性を自動的に継承します。
+
+// 加えて、Bicycle クラスは新しい格納プロパティ hasBasket を定義し、デフォルト値は false です(プロパティは Bool 型と推論されます)。
+
+
+
