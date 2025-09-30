@@ -90,3 +90,12 @@ let bicycle = Bicycle()
 bicycle.hasBasket = true
 
 
+
+
+// 2025/10/01[水]
+// 継承した currentSpeed プロパティを変更し、インスタンスで継承した description プロパティにその変更を反映することもできます。
+bicycle.currentSpeed = 15.0
+print("自転車: \(bicycle.description)")
+// 自転車: 走行時速 15.0 マイル
+
+
