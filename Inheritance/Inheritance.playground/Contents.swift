@@ -99,3 +99,16 @@ print("自転車: \(bicycle.description)")
 // 自転車: 走行時速 15.0 マイル
 
 
+
+// 2025/10/02[木]
+// サブクラス自体をサブクラス化できます。次の例では、「タンデム」と呼ばれる 2 人乗り自転車のサブクラスを作成します。
+class Tandem: Bicycle {
+    var currentNumberOfPassengers = 0
+}
+// Tandem は Bicycle から全てのプロパティとメソッドを継承し、
+// Bicycle は Vehicle から全てのプロパティとメソッドを継承します。
+// Tandem サブクラスは、currentNumberOfPassengers と呼ばれる新しい格納プロパティも追加します。
+// デフォルト値は 0 です。
+
+
+
