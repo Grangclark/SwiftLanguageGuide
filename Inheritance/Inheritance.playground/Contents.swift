@@ -112,3 +112,16 @@ class Tandem: Bicycle {
 
 
 
+
+// 2025/10/03[金]
+// Tandem インスタンスを作成する場合、その新しいプロパティと継承したプロパティのいずれかを操作して、
+// Vehicle から継承した読み取り専用の description プロパティの変更を反映できます。
+let tandem = Tandem()
+tandem.hasBasket = true
+tandem.currentNumberOfPassengers = 2
+tandem.currentSpeed = 22.0
+print("タンデム: \(tandem.description)")
+// タンデム: 走行時速 22.0 マイル
+
+
+
