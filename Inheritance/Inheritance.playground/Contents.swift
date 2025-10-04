@@ -125,3 +125,17 @@ print("タンデム: \(tandem.description)")
 
 
 
+// 2025/10/04[土]
+// メソッドのオーバーライド(Overriding Methods)
+// 継承したインスタンスまたは型メソッドをオーバーライドして、
+// サブクラス内のメソッドの特定の目的に適合した、または代わりとなる実装を提供できます。
+
+// 次の例では、Train と呼ばれる Vehicle の新しいサブクラスを定義します。
+// これは、Train が Vehicle から継承した makeNoise() メソッドをオーバーライドしています。
+class Train: Vehicle {
+    override func makeNoise() {
+        print("シュッシュ、ポッポ")
+    }
+}
+
+
