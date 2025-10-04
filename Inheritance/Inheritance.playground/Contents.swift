@@ -139,3 +139,14 @@ class Train: Vehicle {
 }
 
 
+
+
+// 2025/10/05[日]
+// Train の新しいインスタンスを作成し、その makeNoise() メソッドを呼び出すと、
+// Train サブクラスのバージョンのメソッドが呼び出されていることがわかります。
+let train = Train()
+train.makeNoise()
+// シュッシュ、ポッポ
+
+
+
