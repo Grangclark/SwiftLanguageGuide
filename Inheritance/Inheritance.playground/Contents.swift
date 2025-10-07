@@ -177,3 +177,16 @@ override var description: String {
 
 
 
+
+// 2025/10/07[火]
+// Car クラスのインスタンスを作成し、その gear プロパティと currentSpeed プロパティを設定すると、
+// description プロパティが Car クラス内で定義されたカスタマイズされた説明を返します。
+let car = Car()
+car.currentSpeed = 25.0
+car.gear = 3
+print("自動車: \(car.description)")
+// 自動車: 走行時速 25.0 マイルでギアは 3
+
+
+
+
