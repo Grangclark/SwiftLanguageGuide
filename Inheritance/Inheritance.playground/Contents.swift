@@ -190,3 +190,21 @@ print("自動車: \(car.description)")
 
 
 
+// 2025/10/08[水]
+// プロパティオブザーバのオーバーライド(Overriding Property Observers)
+// プロパティのオーバーライドを使用して、継承したプロパティのプロパティオブザーバを追加できます。
+// これにより、継承したプロパティの値が変更されたときに、そのプロパティが最初にどのように実装されたかに関係なく通知を受け取ることができます。
+
+// 次の例では、Car のサブクラスの AutomaticCar という新しいクラスを定義しています。
+// AutomaticCar クラスは、現在の速度に基づいて使用する適切なギアを自動的に選択するギアボックスを備えた車、オートマ車を表します:
+class AutomaticCar: Car {
+    override var currentSpeed: Double {
+        didSet {
+            gear = Int(currentSpeed / 10.0) + 1
+        }
+    }
+}
+
+
+
+
