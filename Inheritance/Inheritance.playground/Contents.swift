@@ -208,3 +208,15 @@ class AutomaticCar: Car {
 
 
 
+// 2025/10/09[木]
+// AutomaticCar インスタンスの currentSpeed プロパティを設定するたびに、
+// プロパティの didSet オブザーバは、インスタンスの gear プロパティに新しい速度に適したギアを選択します。
+// 具体的には、プロパティオブザーバは、新しい currentSpeed 値を 10 で除算し、最も近い整数に切り捨てられた値に 1 を加えたギアを選択します。
+// 速度 35.0 はギア 4 を生成します。
+let automatic = AutomaticCar()
+automatic.currentSpeed = 35.0
+print("オートマ車: \(automatic.description)")
+// オートマ車: 走行時速 35.0 マイルでギアは 4
+
+
+
