@@ -24,3 +24,22 @@ init() {
 }
 
 
+
+// 2025年10月11日[土]
+// 下の例では、華氏で表された温度を保存するために Fahrenheit という新しい構造体を定義しています。
+// Fahrenheit 構造体には、Double 型の temperature という 1 つの格納プロパティがあります。
+struct Fahrenheit {
+    var temperature: Double
+    init() {
+        temperature = 32.0
+    }
+}
+var f = Fahrenheit()
+print("温度の初期値は華氏 \(f.temperature)°")
+// 温度の初期値は華氏 32.0°
+// この構造体はパラメータのない単一のイニシャライザ init を定義します。
+// これは、格納された温度を 32.0(華氏での水の凝固点)の値で初期化します。
+
+
+
+
