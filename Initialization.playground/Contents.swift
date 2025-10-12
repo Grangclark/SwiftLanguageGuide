@@ -43,3 +43,13 @@ print("温度の初期値は華氏 \(f.temperature)°")
 
 
 
+// 2025年10月12日[日]
+// プロパティのデフォルト値(Default Property Values)
+// プロパティが宣言された時点で temperature プロパティのデフォルト値を指定することにより、
+// 上記の Fahrenheit 構造体をよりシンプルな形式で書くことができます。
+struct Fahrenheit {
+    var temperature = 32.0
+}
+
+
+
