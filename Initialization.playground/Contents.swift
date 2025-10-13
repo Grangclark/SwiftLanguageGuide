@@ -53,3 +53,30 @@ struct Fahrenheit {
 
 
 
+
+// 2025年10月13日[月]
+// イニシャライザのパラメータ(Initialization Parameters)
+// 初期パラメータをイニシャライザの定義の一部として提供することで、
+// 初期化プロセスをカスタマイズするための値の型と名前を定義できます。
+// 初期化パラメータには、関数およびメソッドパラメータと同じ機能と構文があります。
+
+// 次の例では、摂氏で表された温度を格納する Celsius という構造体を定義しています。
+// Celsius 構造体は、init(fromFahrenheit:) および init(fromKelvin:) という
+// 2 つのカスタムイニシャライザを実装しています。
+// これらは、構造体の新しいインスタンスを異なる温度スケールの値で初期化しています。
+struct Celsius {
+    var temperatureInCelsius: Double
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+}
+let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+// boilingPointOfWater.temperatureInCelsius は 100.0
+let freezingPointOfWater = Celsius(fromKelvin: 273.15)
+// freezingPointOfWater.temperatureInCelsius は 0.0
+
+
+
