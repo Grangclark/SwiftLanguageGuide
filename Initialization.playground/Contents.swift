@@ -115,3 +115,10 @@ struct Color {
 
 
 
+// 2025年10月15日[水]
+// 両方のイニシャライザを使用して、各イニシャライザのパラメータに名前付きの値を指定することで、新しい Color インスタンスを作成できます。
+let magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
+let halfGray = Color(white: 0.5)
+
+
+
