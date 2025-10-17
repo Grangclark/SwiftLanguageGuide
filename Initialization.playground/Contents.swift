@@ -131,3 +131,34 @@ let veryGreen = Color(0.0, 1.0, 0.0)
 
 
 
+
+// 2025年10月17日[金]
+// 引数ラベルのないイニシャライザパラメータ(Initializer Parameters Without Argument Labels)
+// 初期化パラメータに引数ラベルを使用したくない場合は、
+// そのパラメータの明示的な引数ラベルの代わりにアンダースコア (_) を記述して、
+// デフォルトの挙動をオーバーライドします。
+struct Celsius {
+    var temperatureInCelsius: Double
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+    init(_ celsius: Double) {
+        temperatureInCelsius = celsius
+    }
+}
+let bodyTemperature = Celsius(37.0)
+// bodyTemperature.temperatureInCelsius は 37.0
+
+// イニシャライザの呼び出し Celsius(37.0) は、意図が明確なので引数ラベルを必要としません。
+// したがって、このイニシャライザを init(_ celsius: Double) と記述して、
+// 名前のない Double 値を指定して呼び出すことができるのは妥当です。
+
+
+
+
+
+
+
