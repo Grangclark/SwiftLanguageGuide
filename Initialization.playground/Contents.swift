@@ -160,5 +160,38 @@ let bodyTemperature = Celsius(37.0)
 
 
 
+// 2025年10月18日[土]
+// オプショナルのプロパティ型(Optional Property Types)
+// 独自に定義した型に、論理的に「値なし」が許される格納プロパティがある場合
+// (おそらく、初期化中にその値を設定できないか、後で「値なし」になる可能性があるため)、
+// プロパティをオプショナル型を使って宣言できます。
+// オプショナル型のプロパティは、値 nil で自動的に初期化されます。
+// こうすることで、プロパティが初期化中に意図的に「まだ値がない」ことを示すことができます。
+
+// 次の例では、SurveyQuestion というクラスを定義し、
+// オプショナルの String プロパティとして response を定義しています。
+class SurveyQuestion {
+    var text: String
+    var response: String?
+    init(text: String) {
+        self.text = text
+    }
+    func ask() {
+        print(text)
+    }
+}
+let cheeseQuestion = SurveyQuestion(text: "チーズは好きですか？")
+cheeseQuestion.ask()
+// チーズは好きですか？
+cheeseQuestion.response = "ええ、大好きです。"
+
+// アンケートの質問への回答は質問されるまでわからないため、
+// 回答プロパティは String? または Optional<String> で宣言されています。
+// SurveyQuestion の新しいインスタンスが初期化されると、
+// デフォルト値の nil、つまり「文字列はまだありません」が自動的に割り当てられます。
+
+
+
+
 
 
