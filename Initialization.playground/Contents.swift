@@ -193,5 +193,29 @@ cheeseQuestion.response = "ええ、大好きです。"
 
 
 
+// 2025年10月19日[日]
+// 初期化中の定数プロパティの割り当て(Assigning Constant Properties During Initialization)
+// 初期化が完了するまでに明確な値が設定されている限り、
+// 初期化中の任意の時点で定数プロパティに値を割り当てることができます。
+// 定数プロパティに値が割り当てられると、それ以上変更することはできません。
+// 上記の SurveyQuestion の例を修正して、質問の text プロパティに変数プロパティではなく定数プロパティを使用して、
+// SurveyQuestion のインスタンスが作成されたら質問が変更されないことを示すことができます。
+// text プロパティは定数ですが、クラスのイニシャライザ内で設定できます。
+class SurveyQuestion {
+    let text: String
+    var response: String?
+    init(text: String) {
+        self.text = text
+    }
+    func ask() {
+        print(text)
+    }
+}
+let beetsQuestion = SurveyQuestion(text: "ビーツはどうでしょう？")
+beetsQuestion.ask()
+// ビーツはどうでしょう？
+beetsQuestion.response = "ビーツも好きですよ。(でもチーズと一緒にはしないでください。)"
+
+
 
 
