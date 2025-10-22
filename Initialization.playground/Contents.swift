@@ -269,6 +269,19 @@ let twoByTwo = Size(width: 2.0, height: 2.0)
 
 
 
+// 2025年10月22日[水]
+// メンバワイザイニシャライザを呼び出すときは、デフォルト値を持つ全てのプロパティの値を省略できます。
+// 上記の例では、Size 構造体の height と width の両方のプロパティにデフォルト値があります。
+// プロパティのいずれかまたは両方を省略できます。
+// イニシャライザは、省略した全てのプロパティにデフォルト値を使用します。
+// 例えば、次のようになります:
+let zeroByTwo = Size(height: 2.0)
+print(zeroByTwo.width, zeroByTwo.height)
+// 0.0 2.0
+
+let zeroByZero = Size()
+print(zeroByZero.width, zeroByZero.height)
+// 0.0 0.0
 
 
 
