@@ -305,6 +305,22 @@ struct Point {
 
 
 
-
-
+// 2025年10月24日[金]
+// 下記の 3 つの方法のいずれかで、Rect 構造体を初期化できます。
+// つまり、0 で初期化されたデフォルトの origin と size のプロパティ値を使用するか、特定の原点とサイズを指定するか、特定の中心点とサイズを指定します。
+// これらの初期化の選択肢は、Rect 構造体の定義の一部として 3 つのカスタムイニシャライザで表されます：
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    init() {}
+    init(origin: Point, size: Size) {
+        self.origin = origin
+        self.size = size
+    }
+    init(center: Point, size: Size) {
+        let originX = center.x - (size.width / 2)
+        let originY = center.y - (size.height / 2)
+        self.init(origin: Point(x: originX, y: originY), size: size)
+    }
+}
 
