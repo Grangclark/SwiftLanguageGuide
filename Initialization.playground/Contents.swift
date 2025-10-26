@@ -339,3 +339,14 @@ let basicRect = Rect()
 
 
 
+// 2025年10月26日[日]
+// 2番目の Rect イニシャライザ init(origin:size:) は、
+// 独自のカスタムイニシャライザがない場合に構造体に自動で定義されるメンバワイズイニシャライザと機能的に同じです。
+// このイニシャライザは、単に origin および size 引数の値を適切な格納されたプロパティに割り当てます:
+let originRect = Rect(origin: Point(x: 2.0, y: 2.0),
+                      size: Size(width: 5.0, height: 5.0))
+// originRect の origin は (2.0, 2.0) で size は (5.0, 5.0)
+
+
+
+
