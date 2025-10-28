@@ -350,7 +350,7 @@ let originRect = Rect(origin: Point(x: 2.0, y: 2.0),
 
 
 
-// 2025年10月26日[日]
+// 2025年10月27日[月]
 // 3番目の Rect イニシャライザ init(center:size:) は、もう少し複雑です。
 // center と size 値に基づいて適切な原点を計算することから始めます。
 // 次に、init(origin:size:) イニシャライザを呼び出し(委譲)します。
@@ -358,6 +358,14 @@ let originRect = Rect(origin: Point(x: 2.0, y: 2.0),
 let centerRect = Rect(center: Point(x: 4.0, y: 4.0),
                       size: Size(width: 3.0, height: 3.0))
 // centerRect の origin は (2.5, 2.5) で size は (3.0, 3.0)
+
+
+
+// 2025年10月28日[火]
+// 指定イニシャライザとconvenience イニシャライザの構文(Syntax for Designated and Convenience Initializers)
+init(<#parameters#>) {
+   <#statements#>
+}
 
 
 
