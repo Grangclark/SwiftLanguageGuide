@@ -369,3 +369,10 @@ init(<#parameters#>) {
 
 
 
+// 2025年10月29日[水]
+// convenience イニシャライザは同じスタイルで記述できますが、init キーワードの前にスペース区切りで convenience 修飾子を配置します:
+convenience init(<#parameters#>) {
+   <#statements#>
+}
+
+
