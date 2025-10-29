@@ -376,3 +376,22 @@ convenience init(<#parameters#>) {
 }
 
 
+// 2025年10月30日[木]
+// イニシャライザの継承とオーバーライド(Initializer Inheritance and Overriding)
+// Objective-C のサブクラスとは異なり、Swift のサブクラスはデフォルトでスーパークラスのイニシャライザを継承しません。
+// Swift のアプローチは、スーパークラスからのシンプルなイニシャライザが、
+// より具体的なサブクラスによって継承され、
+// 完全または正しく初期化されていないサブクラスの新しいインスタンスを作成すること防ぎます。
+
+// 下記の例では、Vehicle という基本クラスを定義しています。
+// この基本クラスは、デフォルトの Int 値が 0 の numberOfWheels という格納プロパティを宣言しています。
+// numberOfWheels プロパティは、description という計算プロパティで使用され、乗り物の特性を説明しています:
+class Vehicle {
+    var numberOfWheels = 0
+    var description: String {
+        return "\(numberOfWheels) 輪車"
+    }
+}
+
+
+
