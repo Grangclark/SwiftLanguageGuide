@@ -408,3 +408,16 @@ print("乗り物: \(vehicle.description)")
 
 
 
+// 2025年11月1日[土]
+// 次の例では、Bicycle という Vehicle のサブクラスを定義しています:
+class Bicycle: Vehicle {
+    override init() {
+        super.init()
+        numberOfWheels = 2
+    }
+}
+
+
+
+
+
