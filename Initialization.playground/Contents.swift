@@ -419,5 +419,12 @@ class Bicycle: Vehicle {
 
 
 
+// 2025年11月2日[日]
+// Bicycle のインスタンスを作成する場合、継承した description 計算プロパティを呼び出して、
+// numberOfWheels プロパティがどのように更新されたかを確認できます:
+let bicycle = Bicycle()
+print("自転車: \(bicycle.description)")
+// 自転車: 2 輪車
+
 
 
