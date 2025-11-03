@@ -428,3 +428,22 @@ print("自転車: \(bicycle.description)")
 
 
 
+
+// 2025年11月3日[月]
+// この例では、Hoverboard と呼ばれる Vehicle の別のサブクラスを定義しています。
+// イニシャライザでは、Hoverboard クラスはその color プロパティのみを設定します。
+// このイニシャライザは、super.init() を明示的に呼び出す代わりに、
+// スーパークラスのイニシャライザを暗黙的に呼び出してプロセスを完了しています。
+class Hoverboard: Vehicle {
+    var color: String
+    init(color: String) {
+        self.color = color
+        // super.init() は暗黙的に呼ばれています
+    }
+    override var description: String {
+        return "キレイな \(color) の \(super.description)"
+    }
+}
+
+
+
