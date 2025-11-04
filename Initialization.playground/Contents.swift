@@ -457,3 +457,28 @@ print("ホバーボード: \(hoverboard.description)")
 
 
 
+// 2025年11月5日[水]
+// 失敗可能イニシャライザ(Failable Initializers)
+// 失敗可能イニシャライザは、数値型変換のために実装されます。
+// 数値型間の変換で値が正確に維持されるようにするには、init(exactly:) イニシャライザを使用します。
+// 型変換で値を維持できない場合、イニシャライザは失敗します:
+let wholeNumber: Double = 12345.0
+let pi = 3.14159
+
+if let valueMaintained = Int(exactly: wholeNumber) {
+    print("\(wholeNumber) を Int に変換すると \(valueMaintained) になります")
+}
+// 12345.0 を Int に変換すると 12345 になります
+
+let valueChanged = Int(exactly: pi)
+// valueChanged は Int? で Int ではありません
+
+if valueChanged == nil {
+    print("\(pi) を Int に変換することはできません")
+}
+// 3.14159 を Int に変換することはできません
+
+
+
+
+
