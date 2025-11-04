@@ -447,3 +447,13 @@ class Hoverboard: Vehicle {
 
 
 
+
+// 2025年11月4日[火]
+// Hoverboard のインスタンスは、Vehicle イニシャライザによって提供されるデフォルトのホイール数を使用します。
+let hoverboard = Hoverboard(color: "silver")
+print("ホバーボード: \(hoverboard.description)")
+// ホバーボード: キレイな silver の 0 車輪
+
+
+
+
