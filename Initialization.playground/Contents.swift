@@ -497,3 +497,15 @@ struct Animal {
 
 
 
+// 2025年11月7日[金]
+// この失敗可能イニシャライザを使用して、新しい Animal インスタンスの初期化を試み、初期化が成功したかどうかを確認できます:
+let someCreature = Animal(species: "Giraffe")
+// someCreature は Animal? で Animal ではありません
+
+if let giraffe = someCreature {
+    print("動物の種類は \(giraffe.species) として初期化されました")
+}
+// 動物の種類は Giraffe として初期化されました
+
+
+
