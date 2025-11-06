@@ -481,4 +481,19 @@ if valueChanged == nil {
 
 
 
+// 2025年11月6日[木]
+// 下記の例では、Animal と呼ばれる構造体を定義し、species と呼ばれる String の定数プロパティを使用しています。
+// Animal 構造体は、species と呼ばれる単一のパラメータを持つ失敗可能イニシャライザも定義します。
+// このイニシャライザは、イニシャライザに渡された species の値が空の文字列かどうかをチェックします。
+// 空の文字列が見つかった場合、初期化に失敗します。
+// それ以外の場合、species のプロパティの値が設定され、初期化が成功します:
+struct Animal {
+    let species: String
+    init?(species: String) {
+        if species.isEmpty { return nil }
+        self.species = species
+    }
+}
+
+
 
