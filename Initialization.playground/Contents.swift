@@ -509,3 +509,16 @@ if let giraffe = someCreature {
 
 
 
+// 2025年11月8日[土]
+// 空の文字列を失敗可能イニシャライザの species パラメータに渡すと、イニシャライザは初期化に失敗します:
+let anonymousCreature = Animal(species: "")
+// anonymousCreature は Animal? で Animal ではありません
+
+if anonymousCreature == nil {
+    print("この未知の生き物は初期化ができませんでした")
+}
+// この未知の生き物は初期化ができませんでした
+
+
+
+
