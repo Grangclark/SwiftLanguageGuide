@@ -522,3 +522,29 @@ if anonymousCreature == nil {
 
 
 
+// 2025年11月9日[日]
+// 列挙型の失敗可能イニシャライザ(Failable Initializers for Enumerations)
+// 失敗可能イニシャライザを使用して、1 つ以上のパラメータに基づいて適切な列挙ケースを選択できます。
+// 提供されたパラメータが適切な列挙ケースと一致しない場合、イニシャライザは失敗する可能性があります。
+
+// 以下の例では、3 つの可能な状態(kelvin、celsius、fahrenheit)を使用して、
+// TemperatureUnit という列挙型を定義しています。
+// 温度記号を表す Character 値の適切な列挙ケースを見つけるために、失敗可能イニシャライザが使用されます:
+enum TemperatureUnit {
+    case kelvin, celsius, fahrenheit
+    init?(symbol: Character) {
+        switch symbol {
+        case "K":
+            self = .kelvin
+        case "C":
+            self = .celsius
+        case "F":
+            self = .fahrenheit
+        default:
+            return nil
+        }
+    }
+}
+
+
+
