@@ -548,3 +548,22 @@ enum TemperatureUnit {
 
 
 
+// 2025年11月10日[月]
+// この失敗可能イニシャライザを使用して、3 つの可能な状態に対して適切な列挙ケースを選択し、
+// パラメータがこれらの状態のいずれかに一致しない場合に初期化を失敗する可能性があります。
+let fahrenheitUnit = TemperatureUnit(symbol: "F")
+if fahrenheitUnit != nil {
+    print("これは温度の単位として定義されているので、初期化に成功しました。")
+}
+// これは温度の単位として定義されているので、初期化に成功しました。
+
+let unknownUnit = TemperatureUnit(symbol: "X")
+if unknownUnit == nil {
+    print("これは温度の単位としては定義されていないので、初期化に失敗しました。")
+}
+// これは温度の単位としては定義されていないので、初期化に失敗しました。
+
+
+
+
+
