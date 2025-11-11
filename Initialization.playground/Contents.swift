@@ -567,3 +567,28 @@ if unknownUnit == nil {
 
 
 
+// 2025年11月11日[火]
+// Raw Value を持つ列挙型の失敗可能イニシャライザ(Failable Initializers for Enumerations with Raw Values)
+// Raw Value を持つ列挙型は、適切な Raw Value 型の rawValue と呼ばれるパラメータを受け取り、
+// 一致する列挙ケースが見つかった場合はそれを選択するか、
+// 一致する値がない場合は初期化に失敗する失敗可能イニシャライザ init?(rawValue:) を自動的に生成します。
+
+// 上記の TemperatureUnit の例を書き直して、Character 型の Raw Value を使用し、init?(rawValue:) イニシャライザを利用できます:
+enum TemperatureUnit: Character {
+    case kelvin = "K", celsius = "C", fahrenheit = "F"
+}
+
+let fahrenheitUnit = TemperatureUnit(rawValue: "F")
+if fahrenheitUnit != nil {
+    print("これは温度の単位として定義されているので、初期化に成功しました。")
+}
+// これは温度の単位として定義されているので、初期化に成功しました。
+
+let unknownUnit = TemperatureUnit(rawValue: "X")
+if unknownUnit == nil {
+    print("これは温度の単位としては定義されていないので、初期化に失敗しました。")
+}
+// これは温度の単位としては定義されていないので、初期化に失敗しました。
+
+
+
