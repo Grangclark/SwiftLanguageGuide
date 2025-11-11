@@ -592,3 +592,34 @@ if unknownUnit == nil {
 
 
 
+
+// 2025年11月12日[水]
+// 初期化の失敗の伝播(Propagation of Initialization Failure)
+// クラス、構造体、または列挙型の失敗可能イニシャライザは、同じクラス、構造体、または列挙型から別の失敗可能イニシャライザに委譲できます。
+// 同様に、サブクラスの失敗可能イニシャライザは、スーパークラスの失敗可能イニシャライザに委譲できます。
+
+// いずれの場合も、委譲した別のイニシャライザで初期化に失敗すると、初期化プロセス全体がすぐに失敗し、それ以上の初期化コードは実行されません。
+
+// 下記の例では、CartItem という Product のサブクラスを定義しています。
+// CartItem クラスは、オンラインショッピングカート内のアイテムをモデル化しています。
+// CartItem は、quantity と呼ばれる定数格納プロパティを導入し、
+// このプロパティが常に少なくとも 1 の値を持つようにします:
+class Product {
+    let name: String
+    init?(name: String) {
+        if name.isEmpty { return nil }
+        self.name = name
+    }
+}
+
+class CartItem: Product {
+    let quantity: Int
+    init?(name: String, quantity: Int) {
+        if quantity < 1 { return nil }
+        self.quantity = quantity
+        super.init(name: name)
+    }
+}
+
+
+
