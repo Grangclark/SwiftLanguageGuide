@@ -623,3 +623,14 @@ class CartItem: Product {
 
 
 
+
+// 2025年11月13日[木]
+// name が空でなく、quantity が 1 以上の CartItem インスタンスを作成すると、初期化は成功します:
+if let twoSocks = CartItem(name: "sock", quantity: 2) {
+    print("商品: \(twoSocks.name), 在庫数: \(twoSocks.quantity)")
+}
+// 商品: sock, 在庫数: 2
+
+
+
+
