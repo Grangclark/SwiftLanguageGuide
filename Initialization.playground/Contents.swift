@@ -634,3 +634,14 @@ if let twoSocks = CartItem(name: "sock", quantity: 2) {
 
 
 
+// 2025年11月14日[金]
+// quantity  の値が 0 の CartItem インスタンスを作成しようとすると、CartItem のイニシャライザによって初期化が失敗します:
+if let zeroShirts = CartItem(name: "shirt", quantity: 0) {
+    print("商品: \(zeroShirts.name), 在庫数: \(zeroShirts.quantity)")
+} else {
+    print("0 個のワイシャツは初期化できません")
+}
+// 0 個のワイシャツは初期化できません
+
+
+
