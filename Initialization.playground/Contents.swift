@@ -645,3 +645,16 @@ if let zeroShirts = CartItem(name: "shirt", quantity: 0) {
 
 
 
+
+// 2025年11月15日[土]
+// 同様に、 name の値が空の CartItem インスタンスを作成しようとすると、スーパークラスの Product イニシャライザによって初期化が失敗します。
+if let oneUnnamed = CartItem(name: "", quantity: 1) {
+    print("商品: \(oneUnnamed.name), 在庫数: \(oneUnnamed.quantity)")
+} else {
+    print("名前のない商品は初期化できません")
+}
+// 名前のない商品は初期化できません
+
+
+
+
