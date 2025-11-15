@@ -658,3 +658,25 @@ if let oneUnnamed = CartItem(name: "", quantity: 1) {
 
 
 
+// 2025年11月16日[日]
+// 失敗可能イニシャライザのオーバーライド(Overriding a Failable Initializer)
+// 他のイニシャライザと同様に、サブクラスでスーパークラスの失敗可能イニシャライザをオーバーライドできます。
+// または、スーパークラスの失敗可能イニシャライザをサブクラスの失敗しないイニシャライザでオーバーライドできます。
+// これにより、スーパークラスの初期化が失敗しても、初期化が失敗しないサブクラスを定義できます。
+
+// 下記の例では、Document というクラスを定義しています。
+// このクラスは、空ではない文字列値または nil のいずれかが可能ですが、
+// 空文字列にすることはできない name プロパティで初期化できるドキュメントをモデル化しています。
+class Document {
+    var name: String?
+    // このイニシャライザは name が nil の Document を作成します
+    init() {}
+    // このイニシャライザは name が 空文字ではない Document を作成します
+    init?(name: String) {
+        if name.isEmpty { return nil }
+        self.name = name
+    }
+}
+
+
+
