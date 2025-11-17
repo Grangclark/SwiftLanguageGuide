@@ -680,3 +680,27 @@ class Document {
 
 
 
+
+// 2025年11月17日[月]
+// 次の例では、AutomaticallyNamedDocument という Document のサブクラスを定義しています。
+// AutomaticNamedDocument サブクラスは、Document の指定イニシャライザの両方をオーバーライドします。
+// これらのオーバーライドにより、インスタンスが名前なしで初期化された場合、
+// または空の文字列が init(name:) イニシャライザに渡された場合に、
+// AutomaticallyNamedDocument インスタンスは "[Untitled]" を name の初期値として持つことが保証されます。
+class AutomaticallyNamedDocument: Document {
+    override init() {
+        super.init()
+        self.name = "[Untitled]"
+    }
+    override init(name: String) {
+        super.init()
+        if name.isEmpty {
+            self.name = "[Untitled]"
+        } else {
+            self.name = name
+        }
+    }
+}
+
+
+
