@@ -704,3 +704,19 @@ class AutomaticallyNamedDocument: Document {
 
 
 
+
+// 2025年11月18日[火]
+// イニシャライザで強制アンラップを使用して、
+// サブクラスの失敗しないイニシャライザの実装の一部として、
+// スーパークラスから失敗可能イニシャライザを呼び出すことができます。
+// 例えば、以下の UntitledDocument サブクラスは常に "[Untitled]" という名前で、
+// 初期化中にスーパークラスの失敗可能イニシャライザ(init(name:))を使用します:
+class UntitledDocument: Document {
+    override init() {
+        super.init(name: "[Untitled]")!
+    }
+}
+
+
+
+
