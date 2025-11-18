@@ -720,3 +720,15 @@ class UntitledDocument: Document {
 
 
 
+// 2025年11月19日[水]
+// 必須イニシャライザ(Required Initializers)
+// クラスの全てのサブクラスがそのイニシャライザを実装する必要があることを示すために、
+// クラスのイニシャライザの定義の前に required 修飾子を記述します。
+class SomeClass {
+    required init() {
+        // ここにイニシャライザの実装を書きます
+    }
+}
+
+
+
