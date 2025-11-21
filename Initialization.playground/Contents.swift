@@ -744,3 +744,19 @@ class SomeSubclass: SomeClass {
 }
 
 
+
+
+// 2025年11月21日[金]
+// クロージャまたは関数を使用したプロパティのデフォルト値の設定(Setting a Default Property Value with a Closure or Function)
+// 格納プロパティのデフォルト値にカスタマイズまたは設定が必要な場合は、
+// クロージャまたはグローバル関数を使用して、そのプロパティにカスタマイズされたデフォルト値を提供できます。
+// プロパティが属する型の新しいインスタンスが初期化されるたびに、
+// クロージャまたは関数が呼び出され、その戻り値がプロパティのデフォルト値として割り当てられます。
+class SomeClass {
+    let someProperty: SomeType = {
+        // このクロージャ内に someProperty のデフォルト値を作成します
+        // someValue は SomeType と同じ型である必要があります
+        return someValue
+    }()
+}
+
