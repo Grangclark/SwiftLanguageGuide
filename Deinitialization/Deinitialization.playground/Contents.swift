@@ -1,6 +1,7 @@
 
 // デイニシャライゼーション(Deinitialization)
 
+// 2025年11月22日[土]
 // デイニシャライザの挙動(Deinitializers in Action)
 // デイニシャライザの例を次に示します。
 // この例では、シンプルなゲーム用に 2 つの新しいタイプ Bank と Player を定義しています。
@@ -18,3 +19,25 @@ class Bank {
         coinsInBank += coins
     }
 }
+
+
+
+
+// 2025年11月23日[日]
+// Player クラスは、ゲーム内のプレイヤーを表します。
+// 各プレイヤーは、常に一定数のコインを財布に保管しています。
+// これは、プレイヤーの coinsInPurse プロパティによって表されます:
+class Player {
+    var coinsInPurse: Int
+    init(coins: Int) {
+        coinsInPurse = Bank.distribute(coins: coins)
+    }
+    func win(coins: Int) {
+        coinsInPurse += Bank.distribute(coins: coins)
+    }
+    deinit {
+        Bank.receive(coins: coinsInPurse)
+    }
+}
+
+
