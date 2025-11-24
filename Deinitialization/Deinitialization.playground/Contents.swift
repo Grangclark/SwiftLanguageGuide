@@ -56,3 +56,17 @@ print("現在、銀行には \(Bank.coinsInBank) コインが残っています"
 
 
 
+// 2025年11月25日[火]
+// playerOne はオプショナルのため、
+// デフォルトのコイン数を出力するためにその coinsInPurse プロパティにアクセスするとき、
+// および win(coins:) メソッドが呼び出されるときはいつでも、感嘆符 (!) を付けています:
+playerOne!.win(coins: 2_000)
+print("PlayerOne は 2000 コインを獲得しました。そして現在 \(playerOne!.coinsInPurse) コインを持っています")
+// PlayerOne は 2000 コインを獲得しました。そして現在 2100 コインを持っています
+print("現在、銀行には \(Bank.coinsInBank) コインしか残っていません")
+// 現在銀行には 7900 コインしか残っていません
+
+
+
+
+
