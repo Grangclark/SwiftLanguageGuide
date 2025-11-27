@@ -24,3 +24,14 @@ class Residence {
 
 
 
+
+
+// 2025年11月28日[金]
+// 新しい Person インスタンスを作成する場合、その residence プロパティはオプショナルなため、
+// デフォルトで nil で初期化されています。
+// 下記のコードでは、john の residence プロパティは nil です。
+let john = Person()
+
+
+
+
