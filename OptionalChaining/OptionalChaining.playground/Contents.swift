@@ -35,3 +35,15 @@ let john = Person()
 
 
 
+// 2025年11月29日[土]
+// この人の residence の numberOfRooms プロパティにアクセスしようとすると、
+// residence の後に感嘆符(!)を置いてその値を強制アンラップすると、residence に値がないため、実行時エラーが発生します。
+let roomCount = john.residence!.numberOfRooms
+// 実行時エラーが起きます
+
+// 上記のコードは、john.residence の値が nil 以外の場合に成功し、
+// roomCount に適切な部屋数を含む Int 値を設定します。
+// ただし、上に示したように、このコードは、residence が nil の場合、常に実行時エラーを引き起こします。
+
+
+
