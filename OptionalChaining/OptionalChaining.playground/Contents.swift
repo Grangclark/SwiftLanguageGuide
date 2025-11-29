@@ -47,3 +47,21 @@ let roomCount = john.residence!.numberOfRooms
 
 
 
+
+// 2025年11月30日[日]
+// オプショナルチェーンは、numberOfRooms の値にアクセスする別の方法を提供します。
+// オプショナルチェーンを使用するには、感嘆符(!)の代わりに疑問符(?)を使用します:
+if let roomCount = john.residence?.numberOfRooms {
+    print("John's residence has \(roomCount) room(s).")
+} else {
+    print("Unable to retrieve the number of rooms.")
+}
+// Unable to retrieve the number of rooms.
+
+// これは、オプショナルの residence プロパティを「チェーン」し、
+// residence が存在する場合は numberOfRooms の値を取得するように Swift に指示します。
+
+
+
+
+
