@@ -65,3 +65,8 @@ if let roomCount = john.residence?.numberOfRooms {
 
 
 
+// 2025年12月1日[月]
+// Residence インスタンスを john.residence に割り当てて、nil 値を持たないようにすることができます。
+john.residence = Residence()
+
+
