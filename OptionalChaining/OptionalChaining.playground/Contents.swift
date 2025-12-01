@@ -70,3 +70,18 @@ if let roomCount = john.residence?.numberOfRooms {
 john.residence = Residence()
 
 
+
+
+// 2025年12月2日[火]
+// john.residence には、nil ではなく Residence インスタンスが含まれるようになりました。
+// 以前と同じオプショナルチェーンを使用して numberOfRooms にアクセスすると、numberOfRooms のデフォルト値 1 を含んだ Int? が返されます:
+if let roomCount = john.residence?.numberOfRooms {
+    print("John's residence has \(roomCount) room(s).")
+} else {
+    print("Unable to retrieve the number of rooms.")
+}
+// John's residence has 1 room(s).
+
+
+
+
