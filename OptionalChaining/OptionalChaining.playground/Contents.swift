@@ -85,3 +85,14 @@ if let roomCount = john.residence?.numberOfRooms {
 
 
 
+// 2025年12月3日[水]
+// オプショナルチェーンモデルのクラスの定義(Defining Model Classes for Optional Chaining)
+// １階層以上の深さのプロパティ、メソッド、およびサブスクリプトの呼び出しにもオプショナルチェーンを使用できます。
+// これにより、複雑なモデル内の関連する型のサブプロパティまで掘り下げて、
+// それらのプロパティ、メソッド、およびサブスクリプトにアクセスできるかどうかを確認できます。
+
+// Person クラスは、以前と同じ方法で定義されています:
+class Person {
+    var residence: Residence?
+}
+
