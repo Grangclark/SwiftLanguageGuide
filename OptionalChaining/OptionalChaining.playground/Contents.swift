@@ -96,3 +96,30 @@ class Person {
     var residence: Residence?
 }
 
+
+
+// 2025年12月4日[木]
+// Residence クラスは以前よりも複雑になっています。
+// 今回、Residence クラスは、[Room] 型の空の配列で初期化される rooms と呼ばれる変数プロパティを定義します:
+class Residence {
+    var rooms: [Room] = []
+    var numberOfRooms: Int {
+        return rooms.count
+    }
+    subscript(i: Int) -> Room {
+        get {
+            return rooms[i]
+        }
+        set {
+            rooms[i] = newValue
+        }
+    }
+    func printNumberOfRooms() {
+        print("The number of rooms is \(numberOfRooms)")
+    }
+    var address: Address?
+}
+
+
+
+
