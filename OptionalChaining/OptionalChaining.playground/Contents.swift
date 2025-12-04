@@ -123,3 +123,15 @@ class Residence {
 
 
 
+// 2025年12月5日[金]
+// rooms 配列に使用される Room クラスは、name という 1 つのプロパティと、
+// そのプロパティを適切な部屋名に設定するイニシャライザを持つシンプルなクラスです:
+class Room {
+    let name: String
+    init(name: String) { self.name = name }
+}
+
+
+
+
+
