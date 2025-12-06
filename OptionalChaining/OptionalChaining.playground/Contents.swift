@@ -134,4 +134,25 @@ class Room {
 
 
 
+// 2025年12月6日[土]
+// このモデルの最後のクラスは Address と呼ばれます。このクラスには、String? 型の 3 つのオプショナルプロパティがあります。
+// 最初の 2 つのプロパティ buildingName と buildingNumber は、特定の建物を住所の一部として識別する別の方法です。
+// 3 番目のプロパティ street は、その住所の通りに名前を付けるために使用されます。
+class Address {
+    var buildingName: String?
+    var buildingNumber: String?
+    var street: String?
+    func buildingIdentifier() -> String? {
+        if let buildingNumber, let street {
+            return "\(buildingNumber) \(street)"
+        } else if buildingName != nil {
+            return buildingName
+        } else {
+            return nil
+        }
+    }
+}
+
+
+
 
