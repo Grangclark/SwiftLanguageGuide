@@ -156,3 +156,19 @@ class Address {
 
 
 
+// 2025年12月7日[日]
+// オプショナルチェーンを通したプロパティへのアクセス(Accessing Properties Through Optional Chaining)
+// Optional Chaining as an Alternative to Forced Unwrapping(強制アンラップの代替としてのオプショナルチェーン)で示されているように、
+// オプショナルチェーンを使用してオプショナル値のプロパティにアクセスし、アクセスが成功したかどうかを確認できます。
+
+// 上で定義したクラスを使用して新しい Person インスタンスを作成し、以前と同じように numberOfRooms プロパティにアクセスしてみます:
+let john = Person()
+if let roomCount = john.residence?.numberOfRooms {
+    print("John's residence has \(roomCount) room(s).")
+} else {
+    print("Unable to retrieve the number of rooms.")
+}
+// Unable to retrieve the number of rooms.
+
+
+
