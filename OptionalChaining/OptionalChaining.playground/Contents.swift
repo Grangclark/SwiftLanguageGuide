@@ -172,3 +172,13 @@ if let roomCount = john.residence?.numberOfRooms {
 
 
 
+
+// 2025年12月8日[月]
+// オプショナルチェーンを通じてプロパティの値を設定することもできます:
+let someAddress = Address()
+someAddress.buildingNumber = "29"
+someAddress.street = "Acacia Road"
+john.residence?.address = someAddress
+// この例では、john.residence が現在 nil のため、john.residence の address のプロパティの設定に失敗します。
+
+
