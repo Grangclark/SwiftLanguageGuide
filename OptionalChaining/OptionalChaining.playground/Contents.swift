@@ -182,3 +182,25 @@ john.residence?.address = someAddress
 // この例では、john.residence が現在 nil のため、john.residence の address のプロパティの設定に失敗します。
 
 
+
+
+// 2025年12月9日[火]
+// 値の割り当てはオプショナルチェーンの一部です。
+// つまり、= 演算子の右側のコードはどれも評価されません。
+// 前の例では、定数へのアクセスには副作用がないため、someAddress が評価されないことを確認するのは簡単ではありません。
+// 下記のリストは同じ割り当てを行いますが、関数を使用して住所を作成します。
+// この関数は、値を返す前に "Function was called." と出力します。これにより、= 演算子の右側が評価されたかどうかを確認できます:
+func createAddress() -> Address {
+    print("Function was called.")
+
+    let someAddress = Address()
+    someAddress.buildingNumber = "29"
+    someAddress.street = "Acacia Road"
+
+    return someAddress
+}
+john.residence?.address = createAddress()
+
+
+
+
