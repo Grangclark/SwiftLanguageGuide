@@ -204,3 +204,16 @@ john.residence?.address = createAddress()
 
 
 
+// 2025年12月10日[水]
+// オプショナルチェーンを通したメソッドの呼び出し(Calling Methods Through Optional Chaining)
+// オプショナルチェーンを使用して、オプショナル値でメソッドを呼び出し、そのメソッドの呼び出しが成功したかどうかを確認できます。
+// そのメソッドが戻り値を定義していなくても、これを行うことができます。
+
+// Residence クラスの printNumberOfRooms() メソッドは、numberOfRooms の現在の値を出力します。メソッドの外観は次のとおりです:
+func printNumberOfRooms() {
+    print("The number of rooms is \(numberOfRooms)")
+}
+
+
+
+
