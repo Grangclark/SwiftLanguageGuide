@@ -217,3 +217,17 @@ func printNumberOfRooms() {
 
 
 
+// 2025年12月11日[木]
+// オプショナルチェーンを使用してオプショナル値でこのメソッドを呼び出す場合、
+// メソッドの戻り値の型は Void ではなく Void? になります。
+// これにより、メソッド自体が戻り値を定義していなくても、if 文を使用して、printNumberOfRooms() メソッドを呼び出すことができたかどうかを確認できます。
+// printNumberOfRooms の呼び出しからの戻り値を nil と比較して、メソッド呼び出しが成功したかどうかを確認します:
+if john.residence?.printNumberOfRooms() != nil {
+    print("It was possible to print the number of rooms.")
+} else {
+    print("It was not possible to print the number of rooms.")
+}
+// It was not possible to print the number of rooms.
+
+
+
