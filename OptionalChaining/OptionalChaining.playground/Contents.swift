@@ -248,3 +248,19 @@ if (john.residence?.address = someAddress) != nil {
 
 
 
+// 2025年12月13日[土]
+// オプショナルチェーンを通したサブスクリプトへのアクセス(Accessing Subscripts Through Optional Chaining)
+// オプショナルチェーンを使用して、オプショナル値のサブスクリプトから値を取得・設定し、
+// そのサブスクリプト呼び出しが成功したかどうかを確認することができます。
+// 下記の例では、Residence クラスで定義されたサブスクリプトを使用して、
+// john.residence プロパティの rooms 配列内の最初の部屋の名前を取得しようとしています。
+// john.residence は現在 nil のため、サブスクリプトの呼び出しは失敗します。
+if let firstRoomName = john.residence?[0].name {
+    print("The first room name is \(firstRoomName).")
+} else {
+    print("Unable to retrieve the first room name.")
+}
+// Unable to retrieve the first room name.
+
+
+
