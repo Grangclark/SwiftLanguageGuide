@@ -231,3 +231,20 @@ if john.residence?.printNumberOfRooms() != nil {
 
 
 
+
+// 2025年12月12日[金]
+// オプショナルチェーンによってプロパティを設定しようとする場合も同様です。
+// Accessing Properties Through Optional Chaining(オプショナルチェーンを通したプロパティへのアクセス)の上記の例では、
+// residence プロパティが nil にもかかわらず、john.residence のアドレス値を設定しようとしています。
+// オプショナルチェーンによってプロパティを設定しようとすると、Void? 型の値が返されます。
+// これにより、nil と比較して、プロパティが正常に設定されたかどうかを確認できます:
+if (john.residence?.address = someAddress) != nil {
+    print("It was possible to set the address.")
+} else {
+    print("It was not possible to set the address.")
+}
+// It was not possible to set the address.
+
+
+
+
