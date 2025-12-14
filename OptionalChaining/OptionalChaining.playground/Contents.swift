@@ -264,3 +264,13 @@ if let firstRoomName = john.residence?[0].name {
 
 
 
+
+// 2025年12月14日[日]
+// john.redidence がオプショナル値のため、疑問符(?)は、john.residence の直後、サブスクリプトの括弧([)の前に置かれます。
+// 同様に、オプショナルチェーンを使用して、サブスクリプトを介して新しい値の設定を試みることができます:
+john.residence?[0] = Room(name: "Bathroom")
+// このサブスクリプト設定の試みも現在、residence は nil のため失敗します。
+
+
+
+
