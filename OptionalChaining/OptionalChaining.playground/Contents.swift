@@ -274,3 +274,22 @@ john.residence?[0] = Room(name: "Bathroom")
 
 
 
+// 2025年12月15日[月]
+// john.residence に Residence インスタンスを作成して割り当て、
+// その rooms 配列に 1 つ以上の Room インスタンスを設定すると、
+// Residence のサブスクリプトを使用して、オプショナルチェーンによって rooms 配列内の項目にアクセスできます:
+let johnsHouse = Residence()
+johnsHouse.rooms.append(Room(name: "Living Room"))
+johnsHouse.rooms.append(Room(name: "Kitchen"))
+john.residence = johnsHouse
+
+if let firstRoomName = john.residence?[0].name {
+    print("The first room name is \(firstRoomName).")
+} else {
+    print("Unable to retrieve the first room name.")
+}
+// The first room name is Living Room.
+
+
+
+
