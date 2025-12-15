@@ -293,3 +293,15 @@ if let firstRoomName = john.residence?[0].name {
 
 
 
+// 2025年12月16[火]
+// オプショナル型のサブスクリプトへのアクセス(Accessing Subscripts of Optional Type)
+// サブスクリプトがオプショナル型の値 (Swift の Dictionary 型のキーのサブスクリプトなど) を返す場合、
+// そのオプショナルの戻り値をチェーンさせるために、サブスクリプトの閉じ括弧(])の後に疑問符(?)を置きます:
+var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
+testScores["Dave"]?[0] = 91
+testScores["Bev"]?[0] += 1
+testScores["Brian"]?[0] = 72
+// "Dave" 配列 は [91, 82, 84] で "Bev" 配列 は [80, 94, 81]
+
+
+
