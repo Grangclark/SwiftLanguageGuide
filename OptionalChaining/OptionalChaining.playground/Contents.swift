@@ -293,7 +293,7 @@ if let firstRoomName = john.residence?[0].name {
 
 
 
-// 2025年12月16[火]
+// 2025年12月16日[火]
 // オプショナル型のサブスクリプトへのアクセス(Accessing Subscripts of Optional Type)
 // サブスクリプトがオプショナル型の値 (Swift の Dictionary 型のキーのサブスクリプトなど) を返す場合、
 // そのオプショナルの戻り値をチェーンさせるために、サブスクリプトの閉じ括弧(])の後に疑問符(?)を置きます:
@@ -302,6 +302,24 @@ testScores["Dave"]?[0] = 91
 testScores["Bev"]?[0] += 1
 testScores["Brian"]?[0] = 72
 // "Dave" 配列 は [91, 82, 84] で "Bev" 配列 は [80, 94, 81]
+
+
+
+
+// 2025年12月17日[水]
+// 複数階層のチェーンへのリンク(Linking Multiple Levels of Chaining)
+// オプショナルチェーンの複数の階層を一気にリンクして、
+// モデル内のより深いプロパティ、メソッド、およびサブスクリプトまで掘り下げることができます。
+// ただし、複数階層のオプショナルチェーンは、戻り値に階層分のオプショナルを追加しません。
+
+// 下記の例では、john の residence プロパティの address プロパティの street プロパティにアクセスしようとしています。
+// ここでは、residence と address のプロパティに 2 階層のオプショナルチェーンを使用しています。どちらもオプショナルの型です:
+if let johnsStreet = john.residence?.address?.street {
+    print("John's street name is \(johnsStreet).")
+} else {
+    print("Unable to retrieve the address.")
+}
+// Unable to retrieve the address.
 
 
 
