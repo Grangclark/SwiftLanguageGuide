@@ -323,3 +323,22 @@ if let johnsStreet = john.residence?.address?.street {
 
 
 
+
+// 2025年12月18日[木]
+// john.residence.addressの値として Address インスタンスを設定し、
+// 住所の street プロパティに値を設定すると、複数階層のオプショナルチェーンを通じて street プロパティの値にアクセスできます:
+let johnsAddress = Address()
+johnsAddress.buildingName = "The Larches"
+johnsAddress.street = "Laurel Street"
+john.residence?.address = johnsAddress
+
+if let johnsStreet = john.residence?.address?.street {
+    print("John's street name is \(johnsStreet).")
+} else {
+    print("Unable to retrieve the address.")
+}
+// John's street name is Laurel Street.
+
+
+
+
