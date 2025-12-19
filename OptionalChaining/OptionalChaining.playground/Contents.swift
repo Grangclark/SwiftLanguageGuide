@@ -357,3 +357,18 @@ if let buildingIdentifier = john.residence?.address?.buildingIdentifier() {
 
 
 
+// 2025年12月20日[土]
+// このメソッドの戻り値に対してさらにオプショナルチェーンを実行する場合は、メソッドの括弧())の後に疑問符(?)を配置します。
+if let beginsWithThe =
+    john.residence?.address?.buildingIdentifier()?.hasPrefix("The") {
+    if beginsWithThe {
+        print("John's building identifier begins with \"The\".")
+    } else {
+        print("John's building identifier doesn't begin with \"The\".")
+    }
+}
+// John's building identifier begins with "The".
+
+
+
+
