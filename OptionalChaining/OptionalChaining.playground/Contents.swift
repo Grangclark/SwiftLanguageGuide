@@ -342,3 +342,18 @@ if let johnsStreet = john.residence?.address?.street {
 
 
 
+// 2025年12月19日[金]
+// オプショナルの戻り値を持つメソッドのチェーン(Chaining on Methods with Optional Return Values)
+// 前の例は、オプショナルチェーンを通じてオプショナルの型のプロパティの値を取得する方法を示しています。
+// また、オプショナルチェーンを使用して、オプショナル型の値を返すメソッドを呼び出し、必要に応じてそのメソッドの戻り値をチェーンすることもできます。
+
+// 下記の例では、オプショナルチェーンを通じて Address クラスの buildingIdentifier() メソッドを呼び出します。
+// このメソッドは、String? 型の値を返します。上で説明したように、オプショナルチェーン後のこのメソッド呼び出しの最終的な戻り値の型も String? です。
+if let buildingIdentifier = john.residence?.address?.buildingIdentifier() {
+    print("John's building identifier is \(buildingIdentifier).")
+}
+// John's building identifier is The Larches.
+
+
+
+
