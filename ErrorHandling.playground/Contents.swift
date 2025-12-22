@@ -28,3 +28,16 @@ throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
 
 
 
+
+// 2025年12月22日[月]
+// エラー処理(Handling Errors)
+// スロー関数を使用したエラーの伝播(Propagating Errors Using Throwing Functions)
+// 関数、メソッド、またはイニシャライザがエラーをスローできることを示すには、関数の宣言のパラメータの後に throws キーワードを記述します。
+// throws でマークされた関数は、スロー関数と呼ばれます。
+// 関数が戻り値の型を指定する戻り矢印 (->) の前に throws キーワードを記述します:
+func canThrowErrors() throws -> String
+
+func cannotThrowErrors() -> String
+
+
+
