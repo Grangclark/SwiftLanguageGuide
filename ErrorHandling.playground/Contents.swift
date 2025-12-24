@@ -20,7 +20,7 @@ enum VendingMachineError: Error {
 
 
 
-// 2025年12月21日[日]
+// 2025年12月22日[月]
 // エラーをスローすると、予期しないことが発生し、通常の実行フローを続行できないことを示すことができます。
 // エラーをスローするには、throw 文を使用します。
 // 例えば、次のコードはエラーをスローして、自動販売機で 5 枚の追加のコインが必要だということを示します。
@@ -29,7 +29,7 @@ throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
 
 
 
-// 2025年12月22日[月]
+// 2025年12月23日[火]
 // エラー処理(Handling Errors)
 // スロー関数を使用したエラーの伝播(Propagating Errors Using Throwing Functions)
 // 関数、メソッド、またはイニシャライザがエラーをスローできることを示すには、関数の宣言のパラメータの後に throws キーワードを記述します。
