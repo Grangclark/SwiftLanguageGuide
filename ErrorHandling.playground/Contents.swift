@@ -83,7 +83,7 @@ class VendingMachine {
 
 
 
-// 2025年12月26日[木]
+// 2025年12月26日[金]
 // vend(itemNamed:) メソッドはスローしたエラーを全て伝播するため、
 // このメソッドを呼び出すコードは、
 // do-catch 文、try?、または try! を使用してエラーを処理するか、
@@ -100,6 +100,20 @@ func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
     try vendingMachine.vend(itemNamed: snackName)
 }
 
+
+
+
+// 2025年12月27日[土]
+// イニシャライザがスローすると、関数をスローするのと同じ方法でエラーを伝播できます。
+// 例えば、下記のリストにある PurchasedSnack 構造体のイニシャライザは、初期化プロセスの一部としてスロー関数を呼び出し、
+// 発生したエラーを呼び出し元に伝播させることで処理します。
+struct PurchasedSnack {
+    let name: String
+    init(name: String, vendingMachine: VendingMachine) throws {
+        try vendingMachine.vend(itemNamed: name)
+        self.name = name
+    }
+}
 
 
 
