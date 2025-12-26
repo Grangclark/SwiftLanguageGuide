@@ -83,3 +83,23 @@ class VendingMachine {
 
 
 
+// 2025年12月26日[木]
+// vend(itemNamed:) メソッドはスローしたエラーを全て伝播するため、
+// このメソッドを呼び出すコードは、
+// do-catch 文、try?、または try! を使用してエラーを処理するか、
+// エラーを伝播し続ける必要があります。
+// 例えば、下記の例の buyFavoriteSnack(person：vendingMachine:) もスロー関数で、
+// vend(itemNamed:) メソッドがスローするエラーを buyFavoriteSnack(person：vendingMachine:) 関数が呼ばれる部分まで伝播しています。
+let favoriteSnacks = [
+    "Alice": "Chips",
+    "Bob": "Licorice",
+    "Eve": "Pretzels",
+]
+func buyFavoriteSnack(person: String, vendingMachine: VendingMachine) throws {
+    let snackName = favoriteSnacks[person] ?? "Candy Bar"
+    try vendingMachine.vend(itemNamed: snackName)
+}
+
+
+
+
