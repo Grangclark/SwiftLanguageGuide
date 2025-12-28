@@ -117,3 +117,24 @@ struct PurchasedSnack {
 
 
 
+// 2025年12月28日[日]
+// do catchを使ったエラー処理(Handling Errors Using Do-Catch)
+// do-catch文を使用して、コードブロックを実行することでエラーを処理します。
+// do 句のコードによってエラーがスローされた場合、catch 句と照合され、エラーを処理できる catch 句を判断します。
+
+// do-catch 文の一般的な形式は次のとおりです:
+do {
+    try <#expression#>
+    <#statements#>
+} catch <#pattern 1#> {
+    <#statements#>
+} catch <#pattern 2#> where <#condition#> {
+    <#statements#>
+} catch <#pattern 3#>, <#pattern 4#> where <#condition#> {
+    <#statements#>
+} catch {
+    <#statements#>
+}
+
+
+
