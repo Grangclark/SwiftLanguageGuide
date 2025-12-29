@@ -164,3 +164,23 @@ do {
 
 
 
+// 2025年12月30日[火]
+// 例えば、上記の例は、VendingMachineError ではないエラーが代わりに呼び出し関数によってキャッチされるように記述できます:
+func nourish(with item: String) throws {
+    do {
+        try vendingMachine.vend(itemNamed: item)
+    } catch is VendingMachineError {
+        print("自動販売機から買うことができませんでした。")
+    }
+}
+
+do {
+    try nourish(with: "Beet-Flavored Chips")
+} catch {
+    print("予期せぬ自動販売機とは関係ないエラーが発生: \(error)")
+}
+// 自動販売機から買うことができませんでした。
+
+
+
+
