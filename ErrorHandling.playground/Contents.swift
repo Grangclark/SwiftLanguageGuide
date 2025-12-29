@@ -138,3 +138,29 @@ do {
 
 
 
+
+// 2025年12月29日[月]
+// その句が処理できるエラーを示すには、catch の後にパターンを記述します。
+// catch 句にパターンがない場合、句は全てのエラーに一致し、エラーを error という名前のローカル定数にバインドします。
+// パターンマッチングの詳細については、Patterns(パターン)を参照ください。
+
+// 例えば、次のコードは、VendingMachineError 列挙型の 3 つのケース全てに一致します:
+var vendingMachine = VendingMachine()
+vendingMachine.coinsDeposited = 8
+do {
+    try buyFavoriteSnack(person: "Alice", vendingMachine: vendingMachine)
+    print("成功! おいしい。")
+} catch VendingMachineError.invalidSelection {
+    print("無効な選択です。")
+} catch VendingMachineError.outOfStock {
+    print("在庫切れです。")
+} catch VendingMachineError.insufficientFunds(let coinsNeeded) {
+    print("お金が足りません。あと \(coinsNeeded) コイン投入してください。")
+} catch {
+    print("予期しないエラー: \(error)。")
+}
+// お金が足りません。あと 2 コイン投入してください。
+
+
+
+
