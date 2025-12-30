@@ -184,3 +184,15 @@ do {
 
 
 
+// 2025年12月31日[水]
+// いくつかの関連するエラーをキャッチする別の方法は、キャッチの後にカンマ(,)で区切ってそれらをリストすることです。例えば:
+func eat(item: String) throws {
+    do {
+        try vendingMachine.vend(itemNamed: item)
+    } catch VendingMachineError.invalidSelection, VendingMachineError.insufficientFunds, VendingMachineError.outOfStock {
+        print("無効な選択、在庫切れ、またはお金がたりません。")
+    }
+}
+
+
+
