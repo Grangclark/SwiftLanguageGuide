@@ -196,3 +196,24 @@ func eat(item: String) throws {
 
 
 
+
+// 2026年01月01日[木]
+// エラーからオプショナル値への変換(Converting Errors to Optional Values)
+// エラーをオプショナル値に変換して処理するには try? を使います。
+// try? 式を評価中にエラーがスローされた場合、式の値は nil です。例えば、次のコードでは、x と y の値は挙動が同じです:
+func someThrowingFunction() throws -> Int {
+    // ...
+}
+
+let x = try? someThrowingFunction()
+
+let y: Int?
+do {
+    y = try someThrowingFunction()
+} catch {
+    y = nil
+}
+
+
+
+
