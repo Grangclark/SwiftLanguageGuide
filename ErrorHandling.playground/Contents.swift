@@ -217,3 +217,15 @@ do {
 
 
 
+// 2026年01月02日[金]
+// 全てのエラーを同じ方法で処理したい場合、try? を使って簡潔にエラー処理のコードを記述できます。
+// 例えば、次のコードはいくつかのアプローチを使用してデータを取得するか、全てのアプローチが失敗した場合は nil を返します:
+func fetchData() -> Data? {
+    if let data = try? fetchDataFromDisk() { return data }
+    if let data = try? fetchDataFromServer() { return data }
+    return nil
+}
+
+
+
+
