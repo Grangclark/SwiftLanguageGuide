@@ -242,3 +242,15 @@ let photo = try! loadImage(atPath: "./Resources/John Appleseed.jpg")
 
 
 
+
+// 2026年01月04日[日]
+// エラーの型の特定(Specifying the Error Type)
+// 例えば、評価を要約し、次のようなエラー型を使用するコードを考えてみましょう:
+enum StatisticsError: Error {
+    case noRatings
+    case invalidRating(Int)
+}
+
+
+
+
