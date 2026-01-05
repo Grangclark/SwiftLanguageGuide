@@ -254,3 +254,21 @@ enum StatisticsError: Error {
 
 
 
+// 2026年01月05日[月]
+// 関数がエラーとして StatisticsError の値のみをスローするように指定するには、
+// 関数を宣言するときに、ただ throws と記述するのではなく、 throws(StatisticsError) と記述します。
+// この構文は、宣言で throws の後にエラーの型を記述するため、型付きスロー とも呼ばれます。
+// 例えば、次の関数は、エラーとして StatisticsError の値をスローします。
+func summarize(_ ratings: [Int]) throws(StatisticsError) {
+    guard !ratings.isEmpty else { throw .noRatings }
+
+    var counts = [1: 0, 2: 0, 3: 0]
+    for rating in ratings {
+        guard rating > 0 && rating <= 3 else { throw .invalidRating(rating) }
+        counts[rating]! += 1
+    }
+
+    print("*", counts[1]!, "-- **", counts[2]!, "-- ***", counts[3]!)
+}
+
+
