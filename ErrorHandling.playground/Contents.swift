@@ -272,3 +272,17 @@ func summarize(_ ratings: [Int]) throws(StatisticsError) {
 }
 
 
+
+// 2026年01月06日[火]
+// 関数の先頭に特定のエラー型を記述すると、Swift は他のエラーがスローされないかどうかをチェックします。
+// たとえば、このチャプターの前半に出てきた例の VendingMachineError を上記の summary(_:) 関数で使用しようとすると、
+// そのコードはコンパイル時にエラーを出力します。
+
+// 通常のエラーをスローする関数内から、型付きスローを使用する関数を呼び出せます。
+func someThrowingFunction() -> throws {
+    let ratings = [1, 2, 3, 2, 2, 1]
+    try summarize(ratings)
+}
+
+
+
