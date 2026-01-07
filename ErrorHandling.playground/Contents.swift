@@ -286,3 +286,15 @@ func someThrowingFunction() -> throws {
 
 
 
+
+// 2026年01月07日[水]
+// 上記のコードでは、someThrowingFunction() がエラーの型を指定していないため、any Error がスローされます。
+// エラーの型を明示的に throws(any Error) として記述することもできます。以下のコードは、上記のコードと同等です。
+func someThrowingFunction() -> throws(any Error) {
+    let ratings = [1, 2, 3, 2, 2, 1]
+    try summarize(ratings)
+}
+
+
+
+
