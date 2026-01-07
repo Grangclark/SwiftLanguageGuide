@@ -298,3 +298,14 @@ func someThrowingFunction() -> throws(any Error) {
 
 
 
+// 2026年01月08日[木]
+// このコードでは、someThrowingFunction() は、summarize(_:) がスローするエラーをすべて伝播します。
+// summarize(_:) からのエラーは常に StatisticsError の値であり、これは、someThrowingFunction() がスローする有効なエラーでもあります。
+
+// 戻り値の型を Never にして戻り値を返さない関数を記述できるのと同様に、throws(Never) を使ってエラーをスローしない関数を記述できます。
+func nonThrowingFunction() throws(Never) {
+  // ...
+}
+
+
+
