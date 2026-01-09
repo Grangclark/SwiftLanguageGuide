@@ -309,3 +309,22 @@ func nonThrowingFunction() throws(Never) {
 
 
 
+// 2026年01月09日[金]
+// Never 型をスローする値は作成できないため、この関数はスローできません。
+
+// 関数のエラーの型を指定するだけでなく、do-catch 文に特定のエラーの型を記述することもできます。例えば:
+let ratings = []
+do throws(StatisticsError) {
+    try summarize(ratings)
+} catch {
+    switch error {
+    case .noRatings:
+        print("No ratings available")
+    case .invalidRating(let rating):
+        print("Invalid rating: \(rating)")
+    }
+}
+// Prints "No ratings available"
+
+
+
