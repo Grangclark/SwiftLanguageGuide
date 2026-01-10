@@ -328,3 +328,23 @@ do throws(StatisticsError) {
 
 
 
+
+// 2026年01月10日[土]
+// 関数または do ブロックが単一のタイプのエラーのみをスローする場合、
+// Swift はこのコードが型付きスロー を使用していると推論します。
+// この短い構文を使用すると、上記の do-catch の例を次のように記述できます。
+let ratings = []
+do {
+    try summarize(ratings)
+} catch {
+    switch error {
+    case .noRatings:
+        print("No ratings available")
+    case .invalidRating(let rating):
+        print("Invalid rating: \(rating)")
+    }
+}
+// Prints "No ratings available"
+
+
+
