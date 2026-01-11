@@ -348,3 +348,24 @@ do {
 
 
 
+
+// 2026年01月11日[日]
+// クリーンアップアクションの指定(Specifying Cleanup Actions)
+// defer 文は、終了するまで現在のスコープの実行を延期します。
+// この文は、defer キーワードと後で実行される文で構成されます。
+// defer 文には、break や return 文など、またはエラーをスローするなど、
+// 文から制御を他に移すコードを含めることはできません defer 文は、ソースコードに記述された順序とは逆の順序で実行されます。
+// つまり、最初の defer 文のコードは最後に実行され、2 番目の defer 文のコードは最後から 2 番目に実行されます。
+// ソースコードの順序で最後の defer 文が最初に実行されます。
+func processFile(filename: String) throws {
+    if exists(filename) {
+        let file = open(filename)
+        defer {
+            close(file)
+        }
+        while let line = try file.readline() {
+            // ファイルを使って処理をします
+        }
+        // close(file) がスコープの最後に呼ばれます
+    }
+}
