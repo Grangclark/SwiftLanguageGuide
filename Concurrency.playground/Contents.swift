@@ -13,3 +13,18 @@ listPhotos(inGallery: "夏休み") { photoNames in
 
 
 
+
+// 2026年01月13日[火]
+// 非同期関数の定義と呼び出し(Defining and Calling Asynchronous Functions)
+// 関数またはメソッドが非同期だということを示すには、
+// エラーをスローすることを示すために throws を使用するのと同様に、
+// パラメータの後に async キーワードをその宣言に書きます。
+// 関数またはメソッドが値を返す場合は、戻り値の型の矢印(->)の前に async を書いてください。
+// 例えば、ギャラリ内の写真の名前を取得する方法が次のとおりです:
+func listPhotos(inGallery name: String) async -> [String] {
+    let result = // ... ある非同期のネットワークコード...
+    return result
+}
+
+
+
