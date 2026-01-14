@@ -28,3 +28,14 @@ func listPhotos(inGallery name: String) async -> [String] {
 
 
 
+// 2026年01月14日[水]
+// 例えば、下記のコードは、ギャラリ内の全ての写真名を取得し、最初の写真を表示します:
+let photoNames = await listPhotos(inGallery: "夏休み")
+let sortedNames = photoNames.sorted()
+let name = sortedNames[0]
+let photo = await downloadPhoto(named: name)
+show(photo)
+
+
+
+
