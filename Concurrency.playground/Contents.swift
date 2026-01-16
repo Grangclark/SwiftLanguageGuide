@@ -39,3 +39,12 @@ show(photo)
 
 
 
+// 2026年01月16日[金]
+func listPhotos(inGallery name: String) async throws -> [String] {
+    try await Task.sleep(for: .seconds(2))
+    return ["IMG001", "IMG99", "IMG0404"]
+}
+
+
+
+
