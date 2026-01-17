@@ -48,3 +48,11 @@ func listPhotos(inGallery name: String) async throws -> [String] {
 
 
 
+// 2026年01月17日[土]
+// 上記のコードのバージョンの listPhotos(inGallery:) は、Task.sleep(until:tolerance:clock:) がエラーをするため、
+// 非同期かつ throwing です。このバージョンの listPhotos(inGallery:) を呼び出す際は、try と await 両方書きます。
+let photos = try await listPhotos(inGallery: "雨の週末")
+
+
+
+
