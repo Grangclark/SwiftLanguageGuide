@@ -56,3 +56,21 @@ let photos = try await listPhotos(inGallery: "雨の週末")
 
 
 
+// 2026年01月18日[日]
+// 非同期関数は throwing 関数といくつか似ている点があります。
+// 非同期や throwing 関数を定義する際は、async と throws を付け、呼び出し側は await と try を付けます。
+// throwing 関数は他の throwing 関数を呼び出すことができるのと同じように、非同期関数は他の非同期関数を呼び出すことができます。
+
+// しかし、重要な違いがあります。エラーをハンドリングをするために、
+// エラーをスローするコードを do-catch ブロックで囲めたり、
+// 他の場所でエラーをハンドリングするために、
+// コードで起こったエラー保持するために Result を使うことができます。
+// これらのアプローチは、エラーをスローしない関数から throwing 関数を呼び出せるようにします。 例えば、
+func availableRainyWeekendPhotos() -> Result<[String], Error> {
+    return Result {
+        try listDownloadedPhotos(inGallery: "雨の週末")
+    }
+}
+
+
+
