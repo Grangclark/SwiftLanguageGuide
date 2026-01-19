@@ -74,3 +74,20 @@ func availableRainyWeekendPhotos() -> Result<[String], Error> {
 
 
 
+
+
+// 2026年01月19日[月]
+// 非同期シーケンス(Asynchronous Sequences)
+// 前のセクションのの listPhotos(inGallery:) は、非同期に、全ての配列の要素が取得できてから配列全体を一度にまとめて返します。
+// もう 1 つの方法として、非同期シーケンス(asynchronous sequence)を使用して、
+// コレクションの要素を 1 つずつ待機することができます。
+// 下記では非同期シーケンスを使って配列の要素を 1 つ 1 つ取得しています:
+import Foundation
+
+let handle = FileHandle.standardInput
+for try await line in handle.bytes.lines {
+    print(line)
+}
+
+
+
