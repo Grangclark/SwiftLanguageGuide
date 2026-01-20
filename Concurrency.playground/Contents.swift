@@ -91,3 +91,20 @@ for try await line in handle.bytes.lines {
 
 
 
+
+// 2026年01月20日[火]
+// 非同期関数を並列に呼び出す(Calling Asynchronous Functions in Parallel)
+// await を使用して非同期関数を呼び出すと、一度に 1 つのコードしか実行されません。
+// 非同期コードが実行されている間、呼び出し側は、次のコード行を実行する前にそのコードが終了するのを待ちます。
+// 例えば、ギャラリから最初の 3 つの写真を取得するには、
+// 次のように downloadPhoto(named:) 関数を 3 回呼び出して、結果を待つことができます:
+let firstPhoto = await downloadPhoto(named: photoNames[0])
+let secondPhoto = await downloadPhoto(named: photoNames[1])
+let thirdPhoto = await downloadPhoto(named: photoNames[2])
+
+let photos = [firstPhoto, secondPhoto, thirdPhoto]
+show(photos)
+
+
+
+
