@@ -108,3 +108,14 @@ show(photos)
 
 
 
+// 2026年01月21日[水]
+// 非同期関数を並行に実行するには、let の前に async を書き、この定数を使用する度に await を書きます。
+async let firstPhoto = downloadPhoto(named: photoNames[0])
+async let secondPhoto = downloadPhoto(named: photoNames[1])
+async let thirdPhoto = downloadPhoto(named: photoNames[2])
+
+let photos = await [firstPhoto, secondPhoto, thirdPhoto]
+show(photos)
+
+
+
