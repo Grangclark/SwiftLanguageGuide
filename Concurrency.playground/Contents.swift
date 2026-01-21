@@ -119,3 +119,23 @@ show(photos)
 
 
 
+
+// 2026年01月22日[木]
+// タスクとタスクグループ(Tasks and Task Groups)
+// タスク(task)は、プログラムの一部として非同期に実行できる作業単位です。
+// 全ての非同期コードはいくつかのタスクの一部として実行されます。
+// タスク自体は一度に 1 つのことしか行いませんが、複数のタスクを作成した際、
+// Swift はそれらのタスクを同時に実行するためにスケジューリングします。
+await withTaskGroup(of: Data.self) { group in
+    let photoNames = await listPhotos(inGallery: "夏休み")
+    for name in photoNames {
+        group.addTask { await downloadPhoto(named: name) }
+    }
+
+    for await photo in group {
+        show(photo)
+    }
+}
+
+
+
