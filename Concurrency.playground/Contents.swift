@@ -139,3 +139,25 @@ await withTaskGroup(of: Data.self) { group in
 
 
 
+
+// 2026年01月23日[金]
+// 上のコードリストでは、各写真はダウンロードされてから表示されるので、タスクグループは結果を返しません。
+// 結果を返すタスクグループの場合は、withTaskGroup(of:returning:body:) に渡すクロージャの中に結果を蓄積するコードを追加します。
+let photos = await withTaskGroup(of: Data.self) { group in
+    let photoNames = await listPhotos(inGallery: "夏休み")
+    for name in photoNames {
+        group.addTask {
+            return await downloadPhoto(named: name)
+        }
+    }
+
+    var results: [Data] = []
+    for await photo in group {
+        results.append(photo)
+    }
+
+    return results
+}
+
+
+
