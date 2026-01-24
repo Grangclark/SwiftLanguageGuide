@@ -185,3 +185,17 @@ let photos = await withTaskGroup { group in
 
 
 
+
+// 2026年01月25日[日]
+// キャンセルの即時通知が必要な作業には、Task.withTaskCancellationHandler(operation:onCancel:))メソッドを使用します。たとえば:
+let task = await Task.withTaskCancellationHandler {
+    // ...
+} onCancel: {
+    print("キャンセルされた!")
+}
+
+// ... 少し経って...
+task.cancel()  // Prints "キャンセルされた!"
+
+
+
