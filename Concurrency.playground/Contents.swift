@@ -161,3 +161,27 @@ let photos = await withTaskGroup(of: Data.self) { group in
 
 
 
+
+// 2026年01月24日[土]
+// タスクキャンセル(Task Cancellation)
+// Swift の並行処理では、協調キャンセルモデルを使用します。
+// 各タスクは、実行中の適切な時点でキャンセルされたかどうかをチェックし、キャンセルに適切に応答します。
+// タスクがどのような作業をしているかに応じて、キャンセルに応答することは、通常、次のいずれかを意味します:
+let photos = await withTaskGroup { group in
+    let photoNames = await listPhotos(inGallery: "夏休み")
+    for name in photoNames {
+        let added = group.addTaskUnlessCancelled {
+            Task.isCancelled ? nil : await downloadPhoto(named: name)
+        }
+        guard added else { break }
+    }
+
+    var results: [Data] = []
+    for await photo in group {
+        if let photo { results.append(photo) }
+    }
+    return results
+}
+
+
+
