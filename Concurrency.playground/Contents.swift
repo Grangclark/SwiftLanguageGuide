@@ -199,3 +199,20 @@ task.cancel()  // Prints "キャンセルされた!"
 
 
 
+
+// 2026年01月26日[月]
+// 非構造化並行処理(Unstructured Concurrency)
+// 前のセクションで説明されている構造化された並行処理のアプローチに加えて、
+// Swift は非構造化並行処理(unstructured concurrency)もサポートしています。
+// タスクグループの一部のタスクとは異なり、非構造化タスク(unstructured task)には親タスクがありません。
+// どんな方法で使われたとしても、非構造化タスクを完全に柔軟に管理することができます。
+// しかし、それらの正しい動作を保証することは完全に開発者の責任です。
+let newPhoto = // ... ある写真データ ...
+let handle = Task {
+    return await add(newPhoto, toGalleryNamed: "Spring Adventures")
+}
+let result = await handle.value
+
+
+
+
