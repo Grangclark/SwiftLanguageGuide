@@ -229,3 +229,17 @@ func show(_: Data) {
 
 
 
+
+// 2026年01月28日[水]
+// 上のコードでは、show(_:) 関数にある @MainActor 属性は、この関数がメインアクター上でのみ実行されることを要求します。
+// メインアクター上で実行されている他のコード内では、show(_:) を同期関数として呼び出すことができます。
+// しかし、メインアクター上で実行されていないコードから show(_:) を呼び出すには、
+// メインアクターへの切り替えが潜在的な中断ポイントになるため、await をマークして非同期関数として呼び出す必要があります。
+// 例えば、
+func downloadAndShowPhoto(named name: String) async {
+    let photo = await downloadPhoto(named: name)
+    await show(photo)
+}
+
+
+
