@@ -243,3 +243,13 @@ func downloadAndShowPhoto(named name: String) async {
 
 
 
+
+// 2026年01月29日[木]
+// クロージャがメインアクター上で実行されるようにするには、クロージャの先頭、キャプチャリストの前、かつ in の前に @MainActor を書きます。
+let photo = await downloadPhoto(named: "Trees at Sunrise")
+Task { @MainActor in
+    show(photo)
+}
+
+
+
