@@ -253,3 +253,16 @@ Task { @MainActor in
 
 
 
+
+// 2026年01月30日[金]
+// 上記のコードは、前のコードリストの downloadAndShowPhoto(named:) に似ていますが、
+// この例のコードは UI の更新を待機しません。また、構造体、クラス、または列挙型に @MainActor を書くことで、
+// その全てのメソッドとプロパティへの全てのアクセスがメインアクター上で実行されるようにできます。
+@MainActor
+struct PhotoGallery {
+    var photoNames: [String]
+    func drawUI() { /* ... その他のUIコード ... */ }
+}
+
+
+
